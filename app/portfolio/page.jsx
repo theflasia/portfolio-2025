@@ -22,77 +22,77 @@ const portfolioItems = [
     id: "1",
     title: "新規プロジェクト",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-kaijyu8.png?height=400&width=762",
+    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
     description: "新規開発プロジェクトに関する説明になります。",
   },
   {
     id: "2",
     title: "TRIBE NINE",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-tribenine.png?height=400&width=762",
+    thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
     description: "新規開発プロジェクトに関する説明になります。",
   },
   {
     id: "3",
     title: "KonMari Spark Joy!",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-konmari.png?height=400&width=600",
+    thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
     description: "브랜딩 디자인 프로젝트 설명입니다.",
   },
   {
     id: "4",
     title: "ONE PIECE ボン！ボン！ジャーニー!!",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-bonbonjourney.png?height=400&width=600",
+    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
     description: "모션 그래픽 디자인 프로젝트 설명입니다.",
   },
   {
     id: "5",
     title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事 - Akatsuki VOICE(アカツキ ボイス)",
     category: "インタビュー",
-    thumbnail: "/portfolio-thumb-interview-2.png?height=400&width=600",
+    thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
     description: "アカツキのオウンドメディアのインタビュー記事になります。",
   },
   {
     id: "6",
     title: "HoneyWorks Premium Live",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-honeyworks.png?height=400&width=600",
+    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
     description: "추가 웹 개발 프로젝트 설명입니다.",
   },
   {
     id: "7",
     title: "アイドルマスター SideM LIVE ON ST@GE!",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-idolmastersidem.png?height=400&width=600",
+    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
     id: "8",
     title: "サモンソウルバトル",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
+    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
     id: "9",
     title: "Wake Up, Girls! ステージの天使",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-wakeupgirls.png?height=375&width=600",
+    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
     id: "10",
     title: "SKYLOCK(スカイロック)",
     category: "ゲーム",
-    thumbnail: "/portfolio-thumb-skylock.png?height=280&width=600",
+    thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
 ]
 
 export default function PortfolioPage() {
   const router = useRouter()
-  const [selectedCategory, setSelectedCategory] = useState("전체")
+  const [selectedCategory, setSelectedCategory] = useState("全て")
   const [filteredItems, setFilteredItems] = useState(portfolioItems)
   const { theme } = useTheme()
   const isDark = theme === "dark"
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
   const { isMobile, isTablet } = useBreakpoint()
 
   useEffect(() => {
-    if (selectedCategory === "전체" || selectedCategory === t("portfolio.categories.all")) {
+    if (selectedCategory === "全て" || selectedCategory === t("portfolio.categories.all")) {
       setFilteredItems(portfolioItems)
     } else {
       setFilteredItems(portfolioItems.filter((item) => item.category === selectedCategory))
@@ -141,10 +141,10 @@ export default function PortfolioPage() {
 
         {/* 히어로 섹션 */}
         <ParallaxHero
-          imageUrl="/portfolio-top.png?height=630&width=1200"
+          imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="30vh"
+          height="25vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -289,7 +289,7 @@ export default function PortfolioPage() {
 
           {/* 중간 배경 이미지 섹션 */}
           <div className="my-20">
-            <ParallaxHero imageUrl="/placeholder.svg?height=1080&width=1920" height="400px" overlayOpacity={0.6}>
+            <ParallaxHero imageUrl="/images/placeholder.svg?height=1080&width=1920" height="400px" overlayOpacity={0.6}>
               <MouseParallax>
                 <div className="max-w-3xl">
                   <h2 className={`mb-4 text-3xl font-bold md:text-4xl ${isDark ? "text-enhanced" : ""}`}>

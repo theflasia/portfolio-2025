@@ -7,10 +7,10 @@ const translations = {
   ko: {
     // 네비게이션
     nav: {
-      portfolio: "작품 모음",
+      portfolio: "포트폴리오",
       about: "소개",
       contact: "연락처",
-      theme: "테마 전환",
+      theme: "테마변경",
     },
     // 포트폴리오 페이지
     portfolio: {
@@ -45,6 +45,9 @@ const translations = {
       client: "클라이언트",
       duration: "기간",
       year: "연도",
+      detailsTitle: "개요",
+      processTitle: "프로세스",
+      toolsTitle: "사용 도구",
       details: "프로젝트 상세 정보",
       process: "디자인 프로세스",
       tools: "사용 도구",
@@ -55,6 +58,8 @@ const translations = {
     about: {
       title: "소개",
       subtitle: "UI 디자이너의 경력과 스킬에 대해 알아보세요",
+      name: "이름",
+      job: "UI/UX디자이너",
       intro: "소개",
       introText:
         "7년 이상의 경력을 가진 UI/UX 디자이너입니다. 사용자 중심 디자인과 시각적으로 매력적인 인터페이스 제작에 열정을 가지고 있습니다. 다양한 산업 분야의 프로젝트를 통해 사용자 경험을 개선하고 비즈니스 목표를 달성하는 디자인을 제공합니다.",
@@ -73,7 +78,8 @@ const translations = {
       info: "연락처 정보",
       email: "이메일",
       phone: "전화번호",
-      address: "주소",
+      addresstitle: "주소",
+      address: "서울특별시 강남구 테헤란로 123",
       socialMedia: "소셜 미디어",
       sendMessage: "메시지 보내기",
       name: "이름",
@@ -138,6 +144,9 @@ const translations = {
       client: "Client",
       duration: "Duration",
       year: "Year",
+      detailsTitle: "Details",
+      processTitle: "Process",
+      toolsTitle: "Tools",
       details: "Project Details",
       process: "Design Process",
       tools: "Tools Used",
@@ -148,6 +157,8 @@ const translations = {
     about: {
       title: "About",
       subtitle: "Learn about the UI designer's career and skills",
+      name: "Name",
+      job: "UI/UX Designer",
       intro: "Introduction",
       introText:
         "I am a UI/UX designer with over 7 years of experience. I am passionate about user-centered design and creating visually appealing interfaces. Through various industry projects, I provide designs that improve user experience and achieve business goals.",
@@ -166,6 +177,7 @@ const translations = {
       info: "Contact Information",
       email: "Email",
       phone: "Phone",
+      addresstitle: "Address",
       address: "Address",
       socialMedia: "Social Media",
       sendMessage: "Send Message",
@@ -193,18 +205,18 @@ const translations = {
   ja: {
     // ナビゲーション
     nav: {
-      portfolio: "ポートフォリオ",
-      about: "紹介",
-      contact: "お問い合わせ",
-      theme: "テーマ切替",
+      portfolio: "Portfolio", // ポートフォリオ
+      about: "About", // 紹介
+      contact: "Contact", // お問い合わせ
+      theme: "テーマ変更",
     },
     // ポートフォリオページ
     portfolio: {
-      title: "ポートフォリオ",
-      subtitle: "UI演出アーティストの創造的な作品集です",
-      viewWorks: "作品を見る",
-      worksCollection: "作品集",
-      description: "様々なプロジェクトとデザイン作品をご覧ください",
+      title: "PORTFOLIO",
+      subtitle: "UIアニメーションデザイナーのポートフォリオサイトです",
+      viewWorks: "制作物を見る",
+      worksCollection: "クリエイティブ",
+      description: "様々なプロジェクトで制作を担当した制作物と経験内容をご覧ください",
       categories: {
         all: "全て",
         game: "ゲーム",
@@ -231,6 +243,9 @@ const translations = {
       client: "クライアント",
       duration: "期間",
       year: "年度",
+      detailsTitle: "概要",
+      processTitle: "プロセス",
+      toolsTitle: "使用ツール",
       details: "プロジェクト詳細",
       process: "デザインプロセス",
       tools: "使用ツール",
@@ -241,6 +256,8 @@ const translations = {
     about: {
       title: "紹介",
       subtitle: "UIデザイナーのキャリアとスキルについて知る",
+      name: "申政淳",
+      job: "UIアニメーションデザイナー",
       intro: "紹介",
       introText:
         "7年以上の経験を持つUI/UXデザイナーです。ユーザー中心のデザインと視覚的に魅力的なインターフェース制作に情熱を持っています。様々な産業分野のプロジェクトを通じて、ユーザー体験を改善し、ビジネス目標を達成するデザインを提供します。",
@@ -259,6 +276,7 @@ const translations = {
       info: "連絡先情報",
       email: "メール",
       phone: "電話番号",
+      addresstitle: "住所",
       address: "住所",
       socialMedia: "ソーシャルメディア",
       sendMessage: "メッセージを送る",
@@ -291,9 +309,12 @@ const LanguageContext = createContext()
 // 언어 제공자 컴포넌트
 export function LanguageProvider({ children }) {
   // 브라우저의 기본 언어 감지 (기본값: 한국어)
-  const [language, setLanguage] = useState("ko")
+  const [language, setLanguage] = useState("ja")
 
   useEffect(() => {
+    setLanguage("ja")
+
+    /*
     // 로컬 스토리지에서 언어 설정 불러오기
     const savedLanguage = localStorage.getItem("language")
     if (savedLanguage) {
@@ -306,6 +327,7 @@ export function LanguageProvider({ children }) {
         localStorage.setItem("language", browserLang)
       }
     }
+      */
   }, [])
 
   // 언어 변경 함수

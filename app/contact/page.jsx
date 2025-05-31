@@ -12,6 +12,8 @@ import ParallaxHero from "@/components/parallax-hero"
 import ScrollReveal from "@/components/scroll-reveal"
 import InteractiveCard from "@/components/interactive-card"
 import ScrollProgress from "@/components/scroll-progress"
+import { useTheme } from "next-themes"
+import { useLanguage } from "@/i18n"
 
 export default function ContactPage() {
   const router = useRouter()
@@ -24,6 +26,9 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
+  const { t } = useLanguage()
 
   useEffect(() => {
     // 로딩 상태 업데이트
@@ -73,9 +78,9 @@ export default function ContactPage() {
       {/* 히어로 섹션 */}
       <ParallaxHero
         imageUrl="/placeholder.svg?height=1080&width=1920"
-        title="연락처"
-        subtitle="궁금한 점이 있으시면 언제든지 연락해주세요"
-        height="30vh"
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
+        height="25vh"
         overlayOpacity={0.7}
       />
 
@@ -84,7 +89,7 @@ export default function ContactPage() {
           {/* 연락처 정보 */}
           <ScrollReveal direction="left">
             <InteractiveCard className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
-              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">연락처 정보</h2>
+              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("contact.info")}</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -92,7 +97,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">이메일</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{t("contact.email")}</h3>
                     <p className="text-gray-700 dark:text-gray-300">email@example.com</p>
                   </div>
                 </div>
@@ -102,7 +107,7 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">전화번호</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{t("contact.phone")}</h3>
                     <p className="text-gray-700 dark:text-gray-300">010-1234-5678</p>
                   </div>
                 </div>
@@ -112,14 +117,14 @@ export default function ContactPage() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">주소</h3>
-                    <p className="text-gray-700 dark:text-gray-300">서울특별시 강남구 테헤란로 123</p>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{t("contact.addresstitle")}</h3>
+                    <p className="text-gray-700 dark:text-gray-300">{t("contact.address")}</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">소셜 미디어</h3>
+                <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">{t("contact.socialMedia")}</h3>
                 <div className="flex space-x-4">
                   <a
                     href="#"
@@ -153,7 +158,7 @@ export default function ContactPage() {
           {/* 연락 폼 */}
           <ScrollReveal direction="right" /*delay={0.2}*/>
             <InteractiveCard className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
-              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">메시지 보내기</h2>
+              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("contact.sendMessage")}</h2>
 
               {submitSuccess ? (
                 <div className="animate-scale-in flex flex-col items-center justify-center rounded-lg bg-gray-50 p-8 text-center dark:bg-gray-700">

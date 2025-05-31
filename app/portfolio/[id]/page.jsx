@@ -11,34 +11,37 @@ import ScrollReveal from "@/components/scroll-reveal"
 import InteractiveCard from "@/components/interactive-card"
 import ImageGallery from "@/components/image-gallery"
 import ScrollProgress from "@/components/scroll-progress"
+import { useTheme } from "next-themes"
+import { useLanguage } from "@/i18n"
 
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
   {
     id: 1,
-    title: "모바일 앱 UI 디자인",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
     videoUrl: "https://example.com/video1.mp4",
-    description: "핀테크 앱을 위한 UI/UX 디자인 프로젝트",
-    category: "모바일",
+    description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイル・PC",
+    subTitle: "怪獣８号のモバイル・PCゲーム",
     details:
-      "이 프로젝트는 핀테크 스타트업을 위한 모바일 앱 UI/UX 디자인입니다. 사용자 경험을 개선하고 복잡한 금융 정보를 직관적으로 표현하는 것에 중점을 두었습니다. 디자인 과정에서 사용자 리서치, 와이어프레임, 프로토타입 제작 등 다양한 단계를 거쳤습니다.",
+      "このプロジェクトは現在開発中のプロジェクトで、モバイルとPCに向けたバトルRPGゲームです",
     process: [
-      "사용자 리서치 및 요구사항 분석",
-      "와이어프레임 및 정보 구조 설계",
-      "시각적 디자인 및 프로토타입 제작",
-      "사용성 테스트 및 피드백 반영",
-      "최종 디자인 완성 및 구현 가이드 작성",
+      "開発からプロジェクトに参画",
+      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "プロモーションムービー制作",
+      "外部の制作会社さんとの連携",
+      "UI最適化",
     ],
-    tools: ["Figma", "Adobe XD", "Principle", "Maze", "Zeplin"],
-    duration: "8주",
-    client: "핀테크 스타트업 A사",
-    year: "2023",
+    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
+    duration: "3ヶ月~",
+    client: "-",
+    year: "2025",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "거래 내역 화면", caption: "거래 내역 화면" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "계좌 관리 화면", caption: "계좌 관리 화면" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "설정 화면", caption: "설정 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "거래 내역 화면", caption: "거래 내역 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "계좌 관리 화면", caption: "계좌 관리 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "설정 화면", caption: "설정 화면" },
     ],
   },
   {
@@ -62,9 +65,9 @@ const portfolioItems = [
     client: "B 기업",
     year: "2022",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "홈페이지", caption: "홈페이지" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "서비스 소개 페이지", caption: "서비스 소개 페이지" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "모바일 버전", caption: "모바일 버전" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "홈페이지", caption: "홈페이지" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "서비스 소개 페이지", caption: "서비스 소개 페이지" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 버전", caption: "모바일 버전" },
     ],
   },
   {
@@ -88,10 +91,10 @@ const portfolioItems = [
     client: "테크 스타트업 C사",
     year: "2023",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "로고 디자인", caption: "로고 디자인" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "컬러 팔레트", caption: "컬러 팔레트" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "명함 디자인", caption: "명함 디자인" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "브랜드 가이드라인", caption: "브랜드 가이드라인" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "로고 디자인", caption: "로고 디자인" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "컬러 팔레트", caption: "컬러 팔레트" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "명함 디자인", caption: "명함 디자인" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "브랜드 가이드라인", caption: "브랜드 가이드라인" },
     ],
   },
   {
@@ -115,9 +118,9 @@ const portfolioItems = [
     client: "전자제품 제조사 D사",
     year: "2022",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "스토리보드", caption: "스토리보드" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 1", caption: "애니메이션 장면 1" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 2", caption: "애니메이션 장면 2" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "스토리보드", caption: "스토리보드" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 1", caption: "애니메이션 장면 1" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 2", caption: "애니메이션 장면 2" },
     ],
   },
   {
@@ -141,13 +144,13 @@ const portfolioItems = [
     client: "데이터 분석 기업 E사",
     year: "2023",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
       {
         src: "/placeholder.svg?height=600&width=800",
         alt: "데이터 시각화 컴포넌트",
         caption: "데이터 시각화 컴포넌트",
       },
-      { src: "/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
     ],
   },
   {
@@ -171,10 +174,10 @@ const portfolioItems = [
     client: "패션 리테일 기업 F사",
     year: "2023",
     gallery: [
-      { src: "/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "상품 상세 페이지", caption: "상품 상세 페이지" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "장바구니", caption: "장바구니" },
-      { src: "/placeholder.svg?height=600&width=800", alt: "결제 프로세스", caption: "결제 프로세스" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "상품 상세 페이지", caption: "상품 상세 페이지" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "장바구니", caption: "장바구니" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "결제 프로세스", caption: "결제 프로세스" },
     ],
   },
 ]
@@ -183,6 +186,9 @@ export default function PortfolioDetailPage({ params }) {
   const router = useRouter()
   const [portfolio, setPortfolio] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
+  const { t } = useLanguage()
 
   useEffect(() => {
     // 포트폴리오 아이템 찾기
@@ -225,7 +231,7 @@ export default function PortfolioDetailPage({ params }) {
       <Navbar />
 
       {/* 히어로 섹션 */}
-      <ParallaxHero imageUrl={portfolio.thumbnail} height="60vh" overlayOpacity={0.7}>
+      <ParallaxHero imageUrl={portfolio.thumbnail} height="25vh" overlayOpacity={0.7}>
         <div className="animate-fade-in-down text-center">
           <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
             {portfolio.category}
@@ -244,7 +250,7 @@ export default function PortfolioDetailPage({ params }) {
               onClick={() => router.push("/portfolio")}
             >
               <ArrowLeft className="h-4 w-4" />
-              모든 작품 보기
+              {t("project.viewAll")}
             </Button>
           </div>
         </ScrollReveal>
@@ -254,23 +260,23 @@ export default function PortfolioDetailPage({ params }) {
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h2 className="mt-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
-                  프로젝트 개요
+                  {t("project.overview")}
                 </h2>
                 <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
-                  {portfolio.client}와 함께한 {portfolio.duration} 프로젝트
+                  {portfolio.subTitle}
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 text-sm">
                 <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">클라이언트</p>
+                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.client")}</p>
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.client}</p>
                 </InteractiveCard>
                 <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">기간</p>
+                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.duration")}</p>
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.duration}</p>
                 </InteractiveCard>
                 <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">연도</p>
+                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.year")}</p>
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.year}</p>
                 </InteractiveCard>
               </div>
@@ -300,24 +306,24 @@ export default function PortfolioDetailPage({ params }) {
             <Tabs defaultValue="overview" className="w-full">
               <TabsList className="mb-6 grid w-full grid-cols-3 rounded-lg bg-gray-100 dark:bg-gray-800">
                 <TabsTrigger value="overview" className="rounded-md">
-                  개요
+                  {t("project.detailsTitle")}
                 </TabsTrigger>
                 <TabsTrigger value="process" className="rounded-md">
-                  프로세스
+                  {t("project.processTitle")}
                 </TabsTrigger>
                 <TabsTrigger value="tools" className="rounded-md">
-                  사용 도구
+                  {t("project.toolsTitle")}
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="overview" className="mt-6">
                 <div className="prose max-w-none dark:prose-invert">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">프로젝트 상세 정보</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.details")}</h2>
                   <p className="text-gray-700 dark:text-gray-300">{portfolio.details}</p>
                 </div>
               </TabsContent>
               <TabsContent value="process" className="mt-6">
                 <div className="prose max-w-none">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">디자인 프로세스</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.process")}</h2>
                   <div className="mt-6">
                     {portfolio.process.map((step, index) => (
                       <div className="mb-4 flex items-start gap-4" key={index}>
@@ -334,7 +340,7 @@ export default function PortfolioDetailPage({ params }) {
               </TabsContent>
               <TabsContent value="tools" className="mt-6">
                 <div className="prose max-w-none">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">사용 도구</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
                   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     {portfolio.tools.map((tool, index) => (
                       <InteractiveCard
@@ -359,7 +365,7 @@ export default function PortfolioDetailPage({ params }) {
           <ScrollReveal delay={0.3}>
             <div className="mb-12">
               <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
-                프로젝트 갤러리
+                {t("project.gallery")}
               </h2>
               <ImageGallery images={portfolio.gallery} />
             </div>
@@ -374,7 +380,7 @@ export default function PortfolioDetailPage({ params }) {
               onClick={() => window.open("https://example.com", "_blank")}
             >
               <ExternalLink className="h-4 w-4" />
-              프로젝트 웹사이트 방문하기
+              {t("project.visitWebsite")}
             </Button>
           </div>
         </ScrollReveal>

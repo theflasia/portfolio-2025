@@ -116,6 +116,7 @@ export default function Navbar() {
                   {t("nav.about")}
                 </Link>
               </motion.div>
+              {/*
               <motion.div variants={itemVariants}>
                 <Link
                   href="/contact"
@@ -132,15 +133,18 @@ export default function Navbar() {
                   {t("nav.contact")}
                 </Link>
               </motion.div>
+              */}
               
               {/*
               <motion.div variants={itemVariants}>
                 <LanguageSwitcher />
               </motion.div>
               */}
+              {/*}
               <motion.div variants={itemVariants}>
                 <ThemeToggle />
               </motion.div>
+              */}
             </div>
           </div>
 
