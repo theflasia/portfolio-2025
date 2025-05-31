@@ -3,14 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   
-  /*
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  }
-    */
+  // output: 'export',
+  // distDir: 'dist',
+  // trailingSlash: true,
+  // reactStrictMode: true,
+  // swcMinify: false,
+  // images: {
+  //   unoptimized: true
+  // }
 };
 
 export default nextConfig;
-// module.exports = nextConfig

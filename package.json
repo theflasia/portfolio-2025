@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format-html": "prettier --write out/**/*.html"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -35,6 +36,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4.1.8",
     "typescript": "^5"
   }
