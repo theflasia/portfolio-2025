@@ -1,0 +1,384 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import { ArrowLeft, Play, ExternalLink } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Navbar from "@/components/navbar"
+import ParallaxHero from "@/components/parallax-hero"
+import ScrollReveal from "@/components/scroll-reveal"
+import InteractiveCard from "@/components/interactive-card"
+import ImageGallery from "@/components/image-gallery"
+import ScrollProgress from "@/components/scroll-progress"
+
+// 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
+const portfolioItems = [
+  {
+    id: 1,
+    title: "모바일 앱 UI 디자인",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video1.mp4",
+    description: "핀테크 앱을 위한 UI/UX 디자인 프로젝트",
+    category: "모바일",
+    details:
+      "이 프로젝트는 핀테크 스타트업을 위한 모바일 앱 UI/UX 디자인입니다. 사용자 경험을 개선하고 복잡한 금융 정보를 직관적으로 표현하는 것에 중점을 두었습니다. 디자인 과정에서 사용자 리서치, 와이어프레임, 프로토타입 제작 등 다양한 단계를 거쳤습니다.",
+    process: [
+      "사용자 리서치 및 요구사항 분석",
+      "와이어프레임 및 정보 구조 설계",
+      "시각적 디자인 및 프로토타입 제작",
+      "사용성 테스트 및 피드백 반영",
+      "최종 디자인 완성 및 구현 가이드 작성",
+    ],
+    tools: ["Figma", "Adobe XD", "Principle", "Maze", "Zeplin"],
+    duration: "8주",
+    client: "핀테크 스타트업 A사",
+    year: "2023",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "거래 내역 화면", caption: "거래 내역 화면" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "계좌 관리 화면", caption: "계좌 관리 화면" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "설정 화면", caption: "설정 화면" },
+    ],
+  },
+  {
+    id: 2,
+    title: "웹사이트 리디자인",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video2.mp4",
+    description: "기업 웹사이트 리디자인 프로젝트",
+    category: "웹",
+    details:
+      "기존 기업 웹사이트의 사용성과 시각적 디자인을 개선하는 리디자인 프로젝트입니다. 모던한 디자인 요소를 적용하고 반응형 레이아웃을 구현하여 다양한 디바이스에서 최적의 경험을 제공합니다.",
+    process: [
+      "기존 웹사이트 분석 및 문제점 파악",
+      "사용자 페르소나 및 사용자 여정 맵 작성",
+      "정보 구조 재설계 및 와이어프레임 제작",
+      "시각적 디자인 및 프로토타입 제작",
+      "반응형 디자인 구현 및 테스트",
+    ],
+    tools: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "InVision", "Google Analytics"],
+    duration: "12주",
+    client: "B 기업",
+    year: "2022",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "홈페이지", caption: "홈페이지" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "서비스 소개 페이지", caption: "서비스 소개 페이지" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "모바일 버전", caption: "모바일 버전" },
+    ],
+  },
+  {
+    id: 3,
+    title: "브랜딩 & 아이덴티티",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video3.mp4",
+    description: "스타트업을 위한 브랜드 아이덴티티 디자인",
+    category: "브랜딩",
+    details:
+      "신생 스타트업의 브랜드 아이덴티티를 개발한 프로젝트입니다. 로고, 컬러 팔레트, 타이포그래피, 그래픽 요소 등을 포함한 종합적인 브랜드 가이드라인을 제작했습니다.",
+    process: [
+      "브랜드 전략 및 포지셔닝 수립",
+      "경쟁사 분석 및 시장 조사",
+      "브랜드 아이덴티티 컨셉 개발",
+      "로고 및 시각적 요소 디자인",
+      "브랜드 가이드라인 문서화",
+    ],
+    tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Procreate"],
+    duration: "10주",
+    client: "테크 스타트업 C사",
+    year: "2023",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "로고 디자인", caption: "로고 디자인" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "컬러 팔레트", caption: "컬러 팔레트" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "명함 디자인", caption: "명함 디자인" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "브랜드 가이드라인", caption: "브랜드 가이드라인" },
+    ],
+  },
+  {
+    id: 4,
+    title: "모션 그래픽 디자인",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video4.mp4",
+    description: "제품 소개를 위한 모션 그래픽 디자인",
+    category: "모션",
+    details:
+      "신제품 출시를 위한 모션 그래픽 디자인 프로젝트입니다. 제품의 특징과 장점을 시각적으로 표현하고 사용자의 관심을 끌 수 있는 애니메이션을 제작했습니다.",
+    process: [
+      "스토리보드 및 컨셉 개발",
+      "스타일 프레임 및 디자인 요소 제작",
+      "애니메이션 및 모션 디자인",
+      "사운드 디자인 및 음향 효과 추가",
+      "최종 렌더링 및 출력",
+    ],
+    tools: ["Adobe After Effects", "Adobe Illustrator", "Cinema 4D", "Adobe Premiere Pro", "Audition"],
+    duration: "6주",
+    client: "전자제품 제조사 D사",
+    year: "2022",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "스토리보드", caption: "스토리보드" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 1", caption: "애니메이션 장면 1" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 2", caption: "애니메이션 장면 2" },
+    ],
+  },
+  {
+    id: 5,
+    title: "대시보드 UI 디자인",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video5.mp4",
+    description: "데이터 시각화 대시보드 UI 디자인",
+    category: "웹",
+    details:
+      "복잡한 데이터를 직관적으로 시각화하는 대시보드 UI 디자인입니다. 사용자가 중요한 정보를 빠르게 파악할 수 있도록 차트, 그래프, 인포그래픽 등 다양한 시각화 요소를 활용했습니다.",
+    process: [
+      "데이터 분석 및 요구사항 정의",
+      "정보 구조 및 데이터 시각화 전략 수립",
+      "와이어프레임 및 UI 컴포넌트 디자인",
+      "인터랙티브 프로토타입 제작",
+      "사용성 테스트 및 최적화",
+    ],
+    tools: ["Figma", "Tableau", "D3.js", "Sketch", "Abstract"],
+    duration: "14주",
+    client: "데이터 분석 기업 E사",
+    year: "2023",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
+      {
+        src: "/placeholder.svg?height=600&width=800",
+        alt: "데이터 시각화 컴포넌트",
+        caption: "데이터 시각화 컴포넌트",
+      },
+      { src: "/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
+    ],
+  },
+  {
+    id: 6,
+    title: "이커머스 앱 디자인",
+    thumbnail: "/placeholder.svg?height=720&width=1280",
+    videoUrl: "https://example.com/video6.mp4",
+    description: "온라인 쇼핑몰 모바일 앱 디자인",
+    category: "모바일",
+    details:
+      "사용자 친화적인 이커머스 모바일 앱 디자인 프로젝트입니다. 상품 탐색, 장바구니, 결제 프로세스 등 쇼핑 경험의 모든 단계를 최적화하여 전환율을 높이는 데 중점을 두었습니다.",
+    process: [
+      "경쟁사 분석 및 벤치마킹",
+      "사용자 여정 맵 및 플로우 차트 작성",
+      "와이어프레임 및 UI 디자인",
+      "프로토타입 제작 및 사용성 테스트",
+      "디자인 시스템 구축 및 문서화",
+    ],
+    tools: ["Figma", "Protopie", "Framer", "Hotjar", "Optimizely"],
+    duration: "16주",
+    client: "패션 리테일 기업 F사",
+    year: "2023",
+    gallery: [
+      { src: "/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "상품 상세 페이지", caption: "상품 상세 페이지" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "장바구니", caption: "장바구니" },
+      { src: "/placeholder.svg?height=600&width=800", alt: "결제 프로세스", caption: "결제 프로세스" },
+    ],
+  },
+]
+
+export default function PortfolioDetailPage({ params }) {
+  const router = useRouter()
+  const [portfolio, setPortfolio] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // 포트폴리오 아이템 찾기
+    const id = Number.parseInt(params.id)
+
+    if (isNaN(id)) {
+      router.push("/portfolio")
+      return
+    }
+    
+    const item = portfolioItems.find((item) => item.id === id)
+
+    if (item) {
+      setPortfolio(item)
+    } else {
+      router.push("/portfolio")
+    }
+
+    // 로딩 상태 업데이트
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+  }, [params.id, router])
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-white">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-gray-900"></div>
+      </div>
+    )
+  }
+
+  if (!portfolio) {
+    return null
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+      <ScrollProgress color="var(--color-primary)" />
+      <Navbar />
+
+      {/* 히어로 섹션 */}
+      <ParallaxHero imageUrl={portfolio.thumbnail} height="60vh" overlayOpacity={0.7}>
+        <div className="animate-fade-in-down text-center">
+          <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
+            {portfolio.category}
+          </span>
+          <h1 className="mt-4 text-4xl font-bold md:text-5xl lg:text-6xl">{portfolio.title}</h1>
+          <p className="mt-4 text-xl text-gray-200">{portfolio.description}</p>
+        </div>
+      </ParallaxHero>
+
+      <main className="container relative mx-auto px-4 py-12">
+        <ScrollReveal>
+          <div className="animate-fade-in-left">
+            <Button
+              variant="ghost"
+              className="mb-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              onClick={() => router.push("/portfolio")}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              모든 작품 보기
+            </Button>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="mb-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 className="mt-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                  프로젝트 개요
+                </h2>
+                <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
+                  {portfolio.client}와 함께한 {portfolio.duration} 프로젝트
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm">
+                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
+                  <p className="font-medium text-gray-500 dark:text-gray-400">클라이언트</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.client}</p>
+                </InteractiveCard>
+                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
+                  <p className="font-medium text-gray-500 dark:text-gray-400">기간</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.duration}</p>
+                </InteractiveCard>
+                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
+                  <p className="font-medium text-gray-500 dark:text-gray-400">연도</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.year}</p>
+                </InteractiveCard>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <div className="mb-12 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+            <div className="aspect-video">
+              {/* 실제 비디오 플레이어 (예시) */}
+              <div className="flex h-full w-full items-center justify-center">
+                <div className="text-center">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
+                    <Play className="h-10 w-10 text-white" />
+                  </div>
+                  <p className="mt-4 text-white/80">비디오 플레이어</p>
+                  <p className="text-sm text-white/60">(실제 구현 시 비디오 플레이어로 대체)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <div className="mb-12 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+            <Tabs defaultValue="overview" className="w-full">
+              <TabsList className="mb-6 grid w-full grid-cols-3 rounded-lg bg-gray-100 dark:bg-gray-800">
+                <TabsTrigger value="overview" className="rounded-md">
+                  개요
+                </TabsTrigger>
+                <TabsTrigger value="process" className="rounded-md">
+                  프로세스
+                </TabsTrigger>
+                <TabsTrigger value="tools" className="rounded-md">
+                  사용 도구
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="overview" className="mt-6">
+                <div className="prose max-w-none dark:prose-invert">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">프로젝트 상세 정보</h2>
+                  <p className="text-gray-700 dark:text-gray-300">{portfolio.details}</p>
+                </div>
+              </TabsContent>
+              <TabsContent value="process" className="mt-6">
+                <div className="prose max-w-none">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">디자인 프로세스</h2>
+                  <div className="mt-6">
+                    {portfolio.process.map((step, index) => (
+                      <div className="mb-4 flex items-start gap-4" key={index}>
+                        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500">
+                          {index + 1}
+                        </div>
+                        <div className="pt-1">
+                          <p className="text-lg font-medium text-gray-900 dark:text-white">{step}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="tools" className="mt-6">
+                <div className="prose max-w-none">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">사용 도구</h2>
+                  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                    {portfolio.tools.map((tool, index) => (
+                      <InteractiveCard
+                        key={index}
+                        className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
+                      >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
+                          <span className="text-lg font-bold text-white">{tool.charAt(0)}</span>
+                        </div>
+                        <span className="font-medium text-gray-900 dark:text-white">{tool}</span>
+                      </InteractiveCard>
+                    ))}
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </ScrollReveal>
+
+        {/* 갤러리 섹션 */}
+        {portfolio.gallery && (
+          <ScrollReveal delay={0.3}>
+            <div className="mb-12">
+              <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                프로젝트 갤러리
+              </h2>
+              <ImageGallery images={portfolio.gallery} />
+            </div>
+          </ScrollReveal>
+        )}
+
+        <ScrollReveal delay={0.4}>
+          <div className="mt-12 flex justify-center">
+            <Button
+              variant="outline"
+              className="flex items-center gap-2 rounded-full border-gray-300 px-6 py-2 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+              onClick={() => window.open("https://example.com", "_blank")}
+            >
+              <ExternalLink className="h-4 w-4" />
+              프로젝트 웹사이트 방문하기
+            </Button>
+          </div>
+        </ScrollReveal>
+      </main>
+    </div>
+  )
+}
