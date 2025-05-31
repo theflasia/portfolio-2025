@@ -149,7 +149,7 @@ export default function AboutPage() {
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl="/placeholder.svg?height=1080&width=1920"
+        imageUrl="/images/about-top.png?height=760&width=1980"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
         height="25vh"
