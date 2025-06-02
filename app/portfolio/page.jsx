@@ -170,6 +170,7 @@ export default function PortfolioPage() {
           <div id="portfolio-section">
             <ScrollRevealMotion>
               <div className="mb-12 text-center">
+                {/*
                 <h2
                   className={`title-responsive font-bold tracking-tight ${
                     isDark
@@ -179,6 +180,7 @@ export default function PortfolioPage() {
                 >
                   {t("portfolio.worksCollection")}
                 </h2>
+                */}
                 <p className={`mt-4 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
                   {t("portfolio.description")}
                 </p>
