@@ -19,7 +19,7 @@ const portfolioItems = [
   {
     id: 1,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
+    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
     videoUrl: "https://example.com/video1.mp4",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
@@ -65,21 +65,21 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "브랜딩 & 아이덴티티",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
     videoUrl: "https://example.com/video3.mp4",
-    description: "스타트업을 위한 브랜드 아이덴티티 디자인",
-    category: "브랜딩",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイル",
     details:
-      "신생 스타트업의 브랜드 아이덴티티를 개발한 프로젝트입니다. 로고, 컬러 팔레트, 타이포그래피, 그래픽 요소 등을 포함한 종합적인 브랜드 가이드라인을 제작했습니다.",
+      "KonMariメソッドは、物を「ときめくかどうか（Spark Joy）」で判断して整理し、感謝の気持ちを込めて不要な物を手放すことで、自分の理想の暮らしに近づける片づけ術です。",
     process: [
-      "브랜드 전략 및 포지셔닝 수립",
-      "경쟁사 분석 및 시장 조사",
-      "브랜드 아이덴티티 컨셉 개발",
-      "로고 및 시각적 요소 디자인",
-      "브랜드 가이드라인 문서화",
+      "開発からプロジェクトに参画",
+      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "プロモーションムービー制作",
+      "外部の制作会社さんとの連携",
+      "UI最適化",
     ],
-    tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Procreate"],
+    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
     duration: "10주",
     client: "테크 스타트업 C사",
     year: "2023",
@@ -92,21 +92,21 @@ const portfolioItems = [
   },
   {
     id: 4,
-    title: "모션 그래픽 디자인",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
-    videoUrl: "https://example.com/video4.mp4",
-    description: "제품 소개를 위한 모션 그래픽 디자인",
-    category: "모션",
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
+    videoUrl: "https://example.com/video3.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイル",
     details:
-      "신제품 출시를 위한 모션 그래픽 디자인 프로젝트입니다. 제품의 특징과 장점을 시각적으로 표현하고 사용자의 관심을 끌 수 있는 애니메이션을 제작했습니다.",
+      "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
     process: [
-      "스토리보드 및 컨셉 개발",
-      "스타일 프레임 및 디자인 요소 제작",
-      "애니메이션 및 모션 디자인",
-      "사운드 디자인 및 음향 효과 추가",
-      "최종 렌더링 및 출력",
+      "開発からプロジェクトに参画",
+      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "プロモーションムービー制作",
+      "外部の制作会社さんとの連携",
+      "UI最適化",
     ],
-    tools: ["Adobe After Effects", "Adobe Illustrator", "Cinema 4D", "Adobe Premiere Pro", "Audition"],
+    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
     duration: "6주",
     client: "전자제품 제조사 D사",
     year: "2022",
@@ -118,41 +118,38 @@ const portfolioItems = [
   },
   {
     id: 5,
-    title: "대시보드 UI 디자인",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
-    videoUrl: "https://example.com/video5.mp4",
-    description: "데이터 시각화 대시보드 UI 디자인",
-    category: "웹",
+    title: "インタビュー",
+    thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
+    url: "https://voice.aktsk.jp/5436/",
+    videoUrl: "https://example.com/video3.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイル",
     details:
-      "복잡한 데이터를 직관적으로 시각화하는 대시보드 UI 디자인입니다. 사용자가 중요한 정보를 빠르게 파악할 수 있도록 차트, 그래프, 인포그래픽 등 다양한 시각화 요소를 활용했습니다.",
+      "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
     process: [
-      "데이터 분석 및 요구사항 정의",
-      "정보 구조 및 데이터 시각화 전략 수립",
-      "와이어프레임 및 UI 컴포넌트 디자인",
-      "인터랙티브 프로토타입 제작",
-      "사용성 테스트 및 최적화",
+      "開発からプロジェクトに参画",
+      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "プロモーションムービー制作",
+      "外部の制作会社さんとの連携",
+      "UI最適化",
     ],
-    tools: ["Figma", "Tableau", "D3.js", "Sketch", "Abstract"],
+    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
     duration: "14주",
     client: "데이터 분석 기업 E사",
     year: "2023",
     gallery: [
       { src: "/images/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
-      {
-        src: "/placeholder.svg?height=600&width=800",
-        alt: "데이터 시각화 컴포넌트",
-        caption: "데이터 시각화 컴포넌트",
-      },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "데이터 시각화 컴포넌트", caption: "데이터 시각화 컴포넌트" },
       { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
     ],
   },
   {
     id: 6,
-    title: "이커머스 앱 디자인",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
+    title: "HoneyWorks Premium Live",
+    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
     videoUrl: "https://example.com/video6.mp4",
     description: "온라인 쇼핑몰 모바일 앱 디자인",
-    category: "모바일",
+    category: "ゲーム",
     details:
       "사용자 친화적인 이커머스 모바일 앱 디자인 프로젝트입니다. 상품 탐색, 장바구니, 결제 프로세스 등 쇼핑 경험의 모든 단계를 최적화하여 전환율을 높이는 데 중점을 두었습니다.",
     process: [
@@ -399,18 +396,20 @@ export default function PortfolioDetailPage({ params }) {
           </ScrollReveal>
         )}
 
-        <ScrollReveal delay={0.4}>
-          <div className="mt-12 flex justify-center">
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 rounded-full border-gray-300 px-6 py-2 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
-              onClick={() => window.open("https://example.com", "_blank")}
-            >
-              <ExternalLink className="h-4 w-4" />
-              {t("project.visitWebsite")}
-            </Button>
-          </div>
-        </ScrollReveal>
+        {portfolio.url && (
+          <ScrollReveal delay={0.4}>
+            <div className="mt-12 flex justify-center">
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 rounded-full border-gray-300 px-6 py-2 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                onClick={() => window.open(portfolio.url, "_blank")}
+              >
+                <ExternalLink className="h-4 w-4" />
+                {t("project.visitWebsite")}
+              </Button>
+            </div>
+          </ScrollReveal>
+        )}
       </main>
     </div>
   )

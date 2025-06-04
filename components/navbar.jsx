@@ -71,13 +71,12 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <motion.div variants={itemVariants} className="flex items-center">
-            <Link
-              href="/portfolio"
-              className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
+            <Link href="/portfolio">
+              <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
                 isDark ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Portfolio : Shin JeongSoon
+              }`}>Portfolio</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 ${
+                isDark ? "text-white" : "text-gray-900"
+              }`}> : Shin JeongSoon</span>
             </Link>
           </motion.div>
 
