@@ -6,8 +6,8 @@ import { LanguageProvider } from "@/i18n"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "UIアニメーションデザイナーのポートフォリオ",
-  description: "UIアニメーションデザイナーのポートフォリオ用ウェブサイト",
+  title: "Portfolio : Shin JeongSoon",
+  description: "UIアニメーションデザイナー（Shin JeongSoon）のポートフォリオ",
     generator: ''
 }
 

@@ -23,52 +23,45 @@ const portfolioItems = [
     videoUrl: "https://example.com/video1.mp4",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
-    subTitle: "怪獣８号のモバイル・PCゲーム",
+    subTitle: "『怪獣8号』のモバイル・PCゲーム",
     details:
-      "このプロジェクトは現在開発中のプロジェクトで、モバイルとPCに向けたバトルRPGゲームです",
+      "原作マンガ『怪獣8号』を基にしたアクションゲームで、プレイヤーは怪獣と戦う特防隊（怪獣対策のエリート部隊）の一員として活躍するゲームです。",
     process: [
       "開発からプロジェクトに参画",
-      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
-      "プロモーションムービー制作",
+      "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
       "外部の制作会社さんとの連携",
       "UI最適化",
     ],
-    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
+    tools: ["Unity", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator", "GitHub", "Visual Studio Code"],
     duration: "3ヶ月~",
     client: "-",
     year: "2025",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "거래 내역 화면", caption: "거래 내역 화면" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "계좌 관리 화면", caption: "계좌 관리 화면" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "설정 화면", caption: "설정 화면" },
-    ],
   },
   {
     id: 2,
-    title: "웹사이트 리디자인",
-    thumbnail: "/placeholder.svg?height=720&width=1280",
-    videoUrl: "https://example.com/video2.mp4",
-    description: "기업 웹사이트 리디자인 프로젝트",
-    category: "웹",
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
+    videoUrl: "https://example.com/video1.mp4",
+    description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイル・PC",
+    subTitle: [
+      "アカツキゲームスとトゥーキョーゲームスが共同開発した3DアクションRPG『TRIBE NINE』において、UIアニメーション制作セクションのリードとして、アニメーションの制作およびディレクションを担当しました。",
+      "大規模プロジェクトで多岐にわたるセクションと連携を図りながら、長期にわたる開発を経験し、実践的な制作ノウハウとリードとしてのマネジメントスキルを培うことができました。",
+    ],
     details:
-      "기존 기업 웹사이트의 사용성과 시각적 디자인을 개선하는 리디자인 프로젝트입니다. 모던한 디자인 요소를 적용하고 반응형 레이아웃을 구현하여 다양한 디바이스에서 최적의 경험을 제공합니다.",
+      "原作マンガ『怪獣8号』を基にしたアクションゲームで、プレイヤーは怪獣と戦う特防隊（怪獣対策のエリート部隊）の一員として活躍するゲームです。",
     process: [
-      "기존 웹사이트 분석 및 문제점 파악",
-      "사용자 페르소나 및 사용자 여정 맵 작성",
-      "정보 구조 재설계 및 와이어프레임 제작",
-      "시각적 디자인 및 프로토타입 제작",
-      "반응형 디자인 구현 및 테스트",
+      "開発初期からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計とレギュレーション策定",
+      "ゲーム内のUIアニメーション制作全般・ディレクションを担当",
+      "外部の制作会社の開拓と連携",
+      "UI最適化・軽量化",
+      "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    tools: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "InVision", "Google Analytics"],
-    duration: "12주",
-    client: "B 기업",
-    year: "2022",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "홈페이지", caption: "홈페이지" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "서비스 소개 페이지", caption: "서비스 소개 페이지" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 버전", caption: "모바일 버전" },
-    ],
+    tools: ["Unity", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator", "GitHub", "Visual Studio Code"],
+    duration: "3ヶ月~",
+    client: "-",
+    year: "2025",
   },
   {
     id: 3,
@@ -231,7 +224,7 @@ export default function PortfolioDetailPage({ params }) {
       <Navbar />
 
       {/* 히어로 섹션 */}
-      <ParallaxHero imageUrl={portfolio.thumbnail} height="25vh" overlayOpacity={0.7}>
+      <ParallaxHero imageUrl={portfolio.thumbnail} height="30vh" overlayOpacity={0.7}>
         <div className="animate-fade-in-down text-center">
           <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
             {portfolio.category}
@@ -259,14 +252,16 @@ export default function PortfolioDetailPage({ params }) {
           <div className="mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 className="mt-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                <h2 className="mt-2 mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
                   {t("project.overview")}
                 </h2>
-                <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
-                  {portfolio.subTitle}
+                {portfolio.subTitle.map((step, index) => (
+                  <p className="mt-1 text-lg text-gray-700 dark:text-gray-400" key={index}>
+                  {step}
                 </p>
+                ))}
               </div>
-              <div className="flex flex-wrap gap-4 text-sm">
+              {/* <div className="flex flex-wrap gap-4 text-sm">
                 <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
                   <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.client")}</p>
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.client}</p>
@@ -279,13 +274,29 @@ export default function PortfolioDetailPage({ params }) {
                   <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.year")}</p>
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.year}</p>
                 </InteractiveCard>
+              </div> */}
+              <div className="mt-4 prose max-w-none dark:prose-invert">
+                {/* <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.process")}</h2> */}
+                <div className="">
+                  {portfolio.process.map((step, index) => (
+                    <div className="mb-2 flex items-start gap-4" key={index}>
+                      {/* <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500">
+                        {index + 1}・
+                      </div> */}
+                      <div className="mt-2 flex h-3 w-3 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
+                      <div className="pt-0">
+                        <p className="text-lg font-medium text-gray-900 dark:text-white">{step}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="mb-12 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+          <div className="mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               {/* 실제 비디오 플레이어 (예시) */}
               <div className="flex h-full w-full items-center justify-center">
@@ -303,7 +314,23 @@ export default function PortfolioDetailPage({ params }) {
 
         <ScrollReveal delay={0.2}>
           <div className="mb-12 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <Tabs defaultValue="overview" className="w-full">
+            <div className="prose max-w-none dark:prose-invert">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+                {portfolio.tools.map((tool, index) => (
+                  <InteractiveCard
+                    key={index}
+                    className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
+                      <span className="text-lg font-bold text-white">{tool.charAt(0)}</span>
+                    </div>
+                    <span className="font-medium text-gray-900 dark:text-white">{tool}</span>
+                  </InteractiveCard>
+                ))}
+              </div>
+            </div>
+            {/* <Tabs defaultValue="overview" className="w-full">
               <TabsList className="mb-6 grid w-full grid-cols-3 rounded-lg bg-gray-100 dark:bg-gray-800">
                 <TabsTrigger value="overview" className="rounded-md">
                   {t("project.detailsTitle")}
@@ -356,7 +383,7 @@ export default function PortfolioDetailPage({ params }) {
                   </div>
                 </div>
               </TabsContent>
-            </Tabs>
+            </Tabs> */}
           </div>
         </ScrollReveal>
 

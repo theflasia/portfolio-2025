@@ -213,10 +213,10 @@ const translations = {
     // ポートフォリオページ
     portfolio: {
       title: "PORTFOLIO",
-      subtitle: "UIアニメーションデザイナーのポートフォリオサイトです",
-      viewWorks: "制作物を見る",
+      subtitle: "UIアニメーションデザイナーのポートフォリオ",
+      viewWorks: "作品を見る",
       worksCollection: "クリエイティブ",
-      description: "様々なプロジェクトで制作を担当した制作物と経験内容をご覧ください",
+      description: "様々なプロジェクトで制作を担当した制作物と業務内容をご覧ください",
       categories: {
         all: "全て",
         game: "ゲーム",
@@ -237,7 +237,7 @@ const translations = {
     // プロジェクト詳細ページ
     project: {
       viewAll: "すべての作品を見る",
-      overview: "プロジェクト概要",
+      overview: "プロジェクトでの担当業務概要",
       with: "と一緒に",
       project: "プロジェクト",
       client: "クライアント",
@@ -247,7 +247,7 @@ const translations = {
       processTitle: "プロセス",
       toolsTitle: "使用ツール",
       details: "プロジェクト詳細",
-      process: "デザインプロセス",
+      process: "担当業務内容",
       tools: "使用ツール",
       gallery: "プロジェクトギャラリー",
       visitWebsite: "プロジェクトウェブサイトを訪問",

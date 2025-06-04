@@ -23,14 +23,14 @@ const portfolioItems = [
     title: "新規プロジェクト",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
-    description: "新規開発プロジェクトに関する説明になります。",
+    description: "新規開発プロジェクトで担当している業務について",
   },
   {
     id: "2",
     title: "TRIBE NINE",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
-    description: "新規開発プロジェクトに関する説明になります。",
+    description: "2025年2月20日にリリースした「TRIBE NINE」で担当している業務について",
   },
   {
     id: "3",
@@ -144,7 +144,7 @@ export default function PortfolioPage() {
           imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="25vh"
+          height="30vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -170,7 +170,7 @@ export default function PortfolioPage() {
           <div id="portfolio-section">
             <ScrollRevealMotion>
               <div className="mb-12 text-center">
-                <h2
+                {/* <h2
                   className={`title-responsive font-bold tracking-tight ${
                     isDark
                       ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent"
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
                   }`}
                 >
                   {t("portfolio.worksCollection")}
-                </h2>
+                </h2> */}
                 <p className={`mt-4 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
                   {t("portfolio.description")}
                 </p>
