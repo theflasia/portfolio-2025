@@ -144,7 +144,7 @@ export default function PortfolioPage() {
           imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="30vh"
+          height="40vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
