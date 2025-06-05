@@ -13,6 +13,7 @@ import ImageGallery from "@/components/image-gallery"
 import ScrollProgress from "@/components/scroll-progress"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
+import ReactPlayer from 'react-player'
 
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
@@ -221,7 +222,7 @@ export default function PortfolioDetailPage({ params }) {
       <Navbar />
 
       {/* 히어로 섹션 */}
-      <ParallaxHero imageUrl={portfolio.thumbnail} height="30vh" overlayOpacity={0.7}>
+      <ParallaxHero imageUrl={portfolio.thumbnail} height="40vh" overlayOpacity={0.7}>
         <div className="animate-fade-in-down text-center">
           <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
             {portfolio.category}
@@ -295,16 +296,15 @@ export default function PortfolioDetailPage({ params }) {
         <ScrollReveal delay={0.1}>
           <div className="mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
-              {/* 실제 비디오 플레이어 (예시) */}
-              <div className="flex h-full w-full items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
-                    <Play className="h-10 w-10 text-white" />
-                  </div>
-                  <p className="mt-4 text-white/80">비디오 플레이어</p>
-                  <p className="text-sm text-white/60">(실제 구현 시 비디오 플레이어로 대체)</p>
-                </div>
-              </div>
+              {/* 비디오 플레이어 */}
+              <ReactPlayer
+              url = "/movies/tribenine_sample.mp4"
+              muted
+              controls
+              width = {"100%"}
+              height = {"auto"}
+              aspectRatio = "16/9"
+            />
             </div>
           </div>
         </ScrollReveal>
