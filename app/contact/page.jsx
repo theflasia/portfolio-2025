@@ -80,7 +80,7 @@ export default function ContactPage() {
         imageUrl="/placeholder.svg?height=1080&width=1920"
         title={t("contact.title")}
         subtitle={t("contact.subtitle")}
-        height="40vh"
+        height="30vh"
         overlayOpacity={0.7}
       />
 

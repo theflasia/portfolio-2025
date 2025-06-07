@@ -23,14 +23,14 @@ const portfolioItems = [
     title: "新規プロジェクト",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
-    description: "新規開発プロジェクトで担当している業務について",
+    description: "新規開発プロジェクトでUIアニメーションのセクションリードとして制作を担当しています。",
   },
   {
     id: "2",
     title: "TRIBE NINE",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
-    description: "2025年2月20日にリリースした「TRIBE NINE」で担当している業務について",
+    description: "「TRIBE NINE」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
   {
     id: "3",
@@ -144,7 +144,7 @@ export default function PortfolioPage() {
           imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="40vh"
+          height="30vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

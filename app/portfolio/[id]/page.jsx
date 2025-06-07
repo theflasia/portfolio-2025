@@ -222,7 +222,7 @@ export default function PortfolioDetailPage({ params }) {
       <Navbar />
 
       {/* 히어로 섹션 */}
-      <ParallaxHero imageUrl={portfolio.thumbnail} height="40vh" overlayOpacity={0.7}>
+      <ParallaxHero imageUrl={portfolio.thumbnail} height="30vh" overlayOpacity={0.7}>
         <div className="animate-fade-in-down text-center">
           <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
             {portfolio.category}
@@ -250,11 +250,11 @@ export default function PortfolioDetailPage({ params }) {
           <div className="mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 className="mt-2 mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                <h2 className="mt-0 mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
                   {t("project.overview")}
                 </h2>
                 {portfolio.subTitle.map((step, index) => (
-                  <p className="mt-1 text-lg text-gray-700 dark:text-gray-400" key={index}>
+                  <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
                   {step}
                 </p>
                 ))}
@@ -273,17 +273,17 @@ export default function PortfolioDetailPage({ params }) {
                   <p className="font-semibold text-gray-900 dark:text-white">{portfolio.year}</p>
                 </InteractiveCard>
               </div> */}
-              <div className="mt-4 prose max-w-none dark:prose-invert">
+              <div className="mt-0 prose max-w-none dark:prose-invert">
                 {/* <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.process")}</h2> */}
                 <div className="">
                   {portfolio.process.map((step, index) => (
-                    <div className="mb-2 flex items-start gap-4" key={index}>
+                    <div className="mb-1 flex items-start gap-4" key={index}>
                       {/* <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500">
                         {index + 1}・
                       </div> */}
-                      <div className="mt-2 flex h-3 w-3 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
+                      <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
                       <div className="pt-0">
-                        <p className="text-lg font-medium text-gray-900 dark:text-white">{step}</p>
+                        <p className="font-medium text-gray-900 dark:text-white">{step}</p>
                       </div>
                     </div>
                   ))}
