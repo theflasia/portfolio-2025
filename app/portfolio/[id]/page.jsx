@@ -41,8 +41,8 @@ const portfolioItems = [
   {
     id: 2,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
-    videoUrl: "https://example.com/video1.mp4",
+    thumbnail: "/images/portfolio-thumb-tribenine-top.png?height=420&width=762",
+    videoUrl: "/movies/tribenine_portfolio.mp4",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     subTitle: [
@@ -298,12 +298,11 @@ export default function PortfolioDetailPage({ params }) {
             <div className="aspect-video">
               {/* 비디오 플레이어 */}
               <ReactPlayer
-              url = "/movies/tribenine_sample.mp4"
+              url = {portfolio.videoUrl}
               muted
               controls
               width = {"100%"}
               height = {"auto"}
-              aspectRatio = "16/9"
             />
             </div>
           </div>
