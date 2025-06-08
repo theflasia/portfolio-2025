@@ -46,43 +46,43 @@ const portfolioItems = [
     thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
     description: "모션 그래픽 디자인 프로젝트 설명입니다.",
   },
+  // {
+  //   id: "5",
+  //   title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事 - Akatsuki VOICE(アカツキ ボイス)",
+  //   category: "インタビュー",
+  //   thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
+  //   description: "アカツキのオウンドメディアのインタビュー記事になります。",
+  // },
   {
     id: "5",
-    title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事 - Akatsuki VOICE(アカツキ ボイス)",
-    category: "インタビュー",
-    thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
-    description: "アカツキのオウンドメディアのインタビュー記事になります。",
-  },
-  {
-    id: "6",
     title: "HoneyWorks Premium Live",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
     description: "추가 웹 개발 프로젝트 설명입니다.",
   },
   {
-    id: "7",
+    id: "6",
     title: "アイドルマスター SideM LIVE ON ST@GE!",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
-    id: "8",
+    id: "7",
     title: "サモンソウルバトル",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
-    id: "9",
+    id: "8",
     title: "Wake Up, Girls! ステージの天使",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
     description: "추가 모바일 앱 개발 프로젝트 설명입니다.",
   },
   {
-    id: "10",
+    id: "9",
     title: "SKYLOCK(スカイロック)",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
@@ -112,7 +112,7 @@ export default function PortfolioPage() {
     t("portfolio.categories.all"),
     t("portfolio.categories.game"),
     t("portfolio.categories.web"),
-    t("portfolio.categories.interview"),
+    // t("portfolio.categories.interview"),
   ]
 
   // 애니메이션 변수
@@ -288,7 +288,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* 중간 배경 이미지 섹션 */}
-          <div className="my-20">
+          {/* <div className="my-20">
             <ParallaxHero imageUrl="/images/placeholder.svg?height=1080&width=1920" height="400px" overlayOpacity={0.6}>
               <MouseParallax>
                 <div className="max-w-3xl">
@@ -299,7 +299,7 @@ export default function PortfolioPage() {
                 </div>
               </MouseParallax>
             </ParallaxHero>
-          </div>
+          </div> */}
 
           {/* 디자인 철학 섹션 */}
           <div className="my-20">

@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma } from "lucide-react"
+import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
 import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
 import ScrollReveal from "@/components/scroll-reveal"
@@ -15,26 +15,26 @@ import { useLanguage } from "@/i18n"
 // 경력 데이터
 const experiences = [
   {
-    title: "시니어 UI/UX 디자이너",
-    company: "디자인 에이전시 A",
-    period: "2021 - 현재",
+    title: "ジニア UIアニメーションデザイナー",
+    company: "株式会社 アカツキゲームス",
+    period: "2017 - 現在",
     description:
-      "다양한 클라이언트를 위한 웹사이트 및 모바일 앱 디자인 프로젝트를 주도하고 있습니다. 디자인 시스템 구축 및 팀 관리를 담당하고 있습니다.",
+      "多数のプロジェクトにおいてUIアニメーションセクションのリードとして制作とディレクションを担当しました。そして、職種のマネジャーとしてマネジメント業務も担当しました。",
     icon: <Briefcase className="h-5 w-5" />,
   },
   {
-    title: "UI 디자이너",
-    company: "테크 스타트업 B",
-    period: "2018 - 2021",
+    title: "インタラクティブデザイナー",
+    company: "株式会社 gloops",
+    period: "2013 - 2017",
     description:
-      "핀테크 서비스의 사용자 인터페이스 디자인 및 사용자 경험 개선을 담당했습니다. 프로덕트 팀과 협업하여 새로운 기능을 디자인했습니다.",
+      "ソーシャルゲーム制作における演出制作とモバイルゲームの新規/運用タイトルにおける演出全般の業務を担当しました。",
     icon: <Briefcase className="h-5 w-5" />,
   },
   {
-    title: "주니어 디자이너",
-    company: "디지털 마케팅 회사 C",
-    period: "2016 - 2018",
-    description: "웹사이트, 소셜 미디어 그래픽, 마케팅 자료 등 다양한 디지털 콘텐츠를 제작했습니다.",
+    title: "Flash Developer",
+    company: "(株)バードマン(BIRDMAN)",
+    period: "2011 - 2013",
+    description: "WEBサイト制作・モバイルコンテンツの制作を担当しました。",
     icon: <Briefcase className="h-5 w-5" />,
   },
 ]
@@ -57,33 +57,35 @@ const education = [
   },
 ]
 
-// 수상 경력
-const awards = [
+// 인터뷰 경력
+const interviews = [
   {
-    title: "베스트 UI 디자인 어워드",
-    organization: "디자인 어워드",
-    year: "2022",
-    description: "핀테크 앱 UI 디자인으로 수상했습니다.",
-    icon: <Award className="h-5 w-5" />,
+    title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
+    organization: "CGWORLD",
+    year: "2018",
+    description: "UIアニメーションに関するインタビュー記事です。",
+    url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
+    icon: <Newspaper className="h-5 w-5" />,
   },
   {
-    title: "이노베이션 디자인 어워드",
-    organization: "디지털 디자인 협회",
+    title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事",
+    organization: "VOICE Akatsuki",
     year: "2020",
-    description: "혁신적인 사용자 인터페이스 디자인으로 수상했습니다.",
-    icon: <Award className="h-5 w-5" />,
+    description: "UIアニメーションに関するインタビュー記事です。",
+    url: "https://voice.aktsk.jp/5436/",
+    icon: <Newspaper className="h-5 w-5" />,
   },
 ]
 
 // 스킬 데이터
 const skills = [
-  { name: "UI 디자인", level: 95, icon: <Palette className="h-5 w-5" /> },
-  { name: "UX 디자인", level: 90, icon: <Heart className="h-5 w-5" /> },
-  { name: "웹 디자인", level: 85, icon: <Monitor className="h-5 w-5" /> },
-  { name: "모바일 앱 디자인", level: 90, icon: <Smartphone className="h-5 w-5" /> },
-  { name: "프로토타이핑", level: 80, icon: <Code className="h-5 w-5" /> },
-  { name: "Figma", level: 95, icon: <Figma className="h-5 w-5" /> },
-  { name: "Adobe Creative Suite", level: 85, icon: <Palette className="h-5 w-5" /> },
+  { name: "UIアニメーション制作", level: 90, icon: <Palette className="h-5 w-5" /> },
+  { name: "Unityを用いたモUI画面構築", level: 90, icon: <Smartphone className="h-5 w-5" /> },
+  { name: "AfterEffectsを用いたゲーム向けの演出制作", level: 80, icon: <Palette className="h-5 w-5" /> },
+  { name: "C#を用いたUnity内のUIアニメーション制作", level: 60, icon: <Code className="h-5 w-5" /> },
+  { name: "HTML/CSS/JavaScriptコーディング", level: 75, icon: <Code className="h-5 w-5" /> },
+  { name: "Webデザイン", level: 60, icon: <Monitor className="h-5 w-5" /> },
+  // { name: "Adobe Creative Suite", level: 85, icon: <Palette className="h-5 w-5" /> },
 ]
 
 export default function AboutPage() {
@@ -157,7 +159,7 @@ export default function AboutPage() {
       />
 
       <main className="container relative mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* 프로필 섹션 */}
           <ScrollReveal direction="left" className="md:col-span-1">
             <InteractiveCard className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
@@ -165,7 +167,6 @@ export default function AboutPage() {
                 <div className="mb-4 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-r from-gray-900 to-gray-700 p-1 dark:from-gray-700 dark:to-gray-500">
                   <img
                     src="/images/about-photo.png?height=256&width=256"
-                    alt="프로필 이미지"
                     className="h-full w-full rounded-full object-cover"
                   />
                 </div>
@@ -183,13 +184,13 @@ export default function AboutPage() {
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li>📧 email@example.com</li>
-                  <li>📱 010-1234-5678</li>
-                  <li>🌐 www.portfolio.com</li>
+                  <li className="text-xs">📧 <a href="theflasia@gmail.com">theflasia@gmail.com</a></li>
+                  {/* <li>📱 010-1234-5678</li> */}
+                  <li className="text-xs">🌐 <a href="http://theflasia.cafe24.com/portfolio/">http://theflasia.cafe24.com/portfolio/</a></li>
                 </ul>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.interests")}</h3>
                 <div className="flex flex-wrap gap-2">
                   <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
@@ -208,12 +209,12 @@ export default function AboutPage() {
                     WebDesign
                   </span>
                 </div>
-              </div>
+              </div> */}
             </InteractiveCard>
           </ScrollReveal>
 
           {/* 경력 및 스킬 섹션 */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             {/* 경력 */}
             <ScrollReveal direction="right" /*delay={0.1}*/>
               <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
@@ -240,7 +241,7 @@ export default function AboutPage() {
             </ScrollReveal>
 
             {/* 교육 */}
-            <ScrollReveal direction="right" /*delay={0.2}*/>
+            {/* <ScrollReveal direction="right">
               <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
                 <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.education")}</h2>
                 <div className="space-y-6">
@@ -262,26 +263,27 @@ export default function AboutPage() {
                   ))}
                 </div>
               </InteractiveCard>
-            </ScrollReveal>
+            </ScrollReveal> */}
 
-            {/* 수상 경력 */}
-            <ScrollReveal direction="right" /*delay={0.3}*/>
+            {/* 인터뷰 경력 */}
+            <ScrollReveal direction="right">
               <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
-                <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.awards")}</h2>
+                <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.interviews")}</h2>
                 <div className="space-y-6">
-                  {awards.map((award, index) => (
+                  {interviews.map((interview, index) => (
                     <div key={index} className="flex gap-4">
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-white dark:from-gray-700 dark:to-gray-500">
-                        {award.icon}
+                        {interview.icon}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{award.title}</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{interview.title}</h3>
                         <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                          <span>{award.organization}</span>
+                          <span>{interview.organization}</span>
                           <span>•</span>
-                          <span>{award.year}</span>
+                          <span>{interview.year}</span>
                         </div>
-                        <p className="mt-2 text-gray-700 dark:text-gray-300">{award.description}</p>
+                        <p className="mt-2 text-gray-700 dark:text-gray-300">{interview.description}</p>
+                        <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
                       </div>
                     </div>
                   ))}
@@ -290,7 +292,7 @@ export default function AboutPage() {
             </ScrollReveal>
 
             {/* 스킬 */}
-            <ScrollReveal direction="right" /*delay={0.4}*/>
+            <ScrollReveal direction="right">
               <InteractiveCard className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
                 <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.skills")}</h2>
                 <div className="space-y-4">
@@ -320,7 +322,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <ScrollReveal delay={0.5}>
+        {/* <ScrollReveal delay={0.5}>
           <div className="mt-12 flex justify-center">
             <Button
               className="rounded-full bg-gradient-to-r from-gray-900 to-gray-700 px-6 py-2 text-white hover:from-gray-800 hover:to-gray-600 dark:from-gray-700 dark:to-gray-500 dark:hover:from-gray-600 dark:hover:to-gray-400"
@@ -329,7 +331,7 @@ export default function AboutPage() {
               {t("about.contactButton")}
             </Button>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
       </main>
     </div>
   )

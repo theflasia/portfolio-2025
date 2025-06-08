@@ -24,9 +24,9 @@ const portfolioItems = [
     videoUrl: "https://example.com/video1.mp4",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
-    subTitle: "『怪獣8号』のモバイル・PCゲーム",
-    details:
-      "原作マンガ『怪獣8号』を基にしたアクションゲームで、プレイヤーは怪獣と戦う特防隊（怪獣対策のエリート部隊）の一員として活躍するゲームです。",
+    details: [
+      "『怪獣8号』のモバイル・PCゲーム",
+    ],
     process: [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
@@ -45,18 +45,16 @@ const portfolioItems = [
     videoUrl: "/movies/tribenine_portfolio.mp4",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
-    subTitle: [
-      "アカツキゲームスとトゥーキョーゲームスが共同開発した3DアクションRPG『TRIBE NINE』において、UIアニメーション制作セクションのリードとして、アニメーションの制作およびディレクションを担当しました。",
+    details: [
+      "アカツキゲームスとトゥーキョーゲームスが共同開発した3DアクションRPG『TRIBE NINE』の開発において、UIアニメーション制作セクションのリードとして、アニメーションの制作およびディレクションを担当しました。",
       "大規模プロジェクトで多岐にわたるセクションと連携を図りながら、長期にわたる開発を経験し、実践的な制作ノウハウとリードとしてのマネジメントスキルを培うことができました。",
     ],
-    details:
-      "原作マンガ『怪獣8号』を基にしたアクションゲームで、プレイヤーは怪獣と戦う特防隊（怪獣対策のエリート部隊）の一員として活躍するゲームです。",
     process: [
       "開発初期からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計とレギュレーション策定",
       "ゲーム内のUIアニメーション制作全般・ディレクションを担当",
+      "UIやUIアニメーションの最適化・軽量化",
       "外部の制作会社の開拓と連携",
-      "UI最適化・軽量化",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     tools: ["Unity", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator", "GitHub", "Visual Studio Code"],
@@ -71,8 +69,9 @@ const portfolioItems = [
     videoUrl: "https://example.com/video3.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル",
-    details:
+    details: [
       "KonMariメソッドは、物を「ときめくかどうか（Spark Joy）」で判断して整理し、感謝の気持ちを込めて不要な物を手放すことで、自分の理想の暮らしに近づける片づけ術です。",
+    ],
     process: [
       "開発からプロジェクトに参画",
       "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
@@ -98,8 +97,9 @@ const portfolioItems = [
     videoUrl: "https://example.com/video3.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル",
-    details:
+    details: [
       "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
+    ],
     process: [
       "開発からプロジェクトに参画",
       "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
@@ -117,42 +117,44 @@ const portfolioItems = [
       { src: "/images/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 2", caption: "애니메이션 장면 2" },
     ],
   },
+  // {
+  //   id: 5,
+  //   title: "インタビュー",
+  //   thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
+  //   url: "https://voice.aktsk.jp/5436/",
+  //   videoUrl: "https://example.com/video3.mp4",
+  //   description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+  //   category: "モバイル",
+  //   details: [
+  //     "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
+  //   ],
+  //   process: [
+  //     "開発からプロジェクトに参画",
+  //     "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+  //     "プロモーションムービー制作",
+  //     "外部の制作会社さんとの連携",
+  //     "UI最適化",
+  //   ],
+  //   tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
+  //   duration: "14주",
+  //   client: "데이터 분석 기업 E사",
+  //   year: "2023",
+  //   gallery: [
+  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
+  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "데이터 시각화 컴포넌트", caption: "데이터 시각화 컴포넌트" },
+  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
+  //   ],
+  // },
   {
     id: 5,
-    title: "インタビュー",
-    thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
-    url: "https://voice.aktsk.jp/5436/",
-    videoUrl: "https://example.com/video3.mp4",
-    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
-    category: "モバイル",
-    details:
-      "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
-    process: [
-      "開発からプロジェクトに参画",
-      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
-      "プロモーションムービー制作",
-      "外部の制作会社さんとの連携",
-      "UI最適化",
-    ],
-    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
-    duration: "14주",
-    client: "데이터 분석 기업 E사",
-    year: "2023",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "데이터 시각화 컴포넌트", caption: "데이터 시각화 컴포넌트" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
-    ],
-  },
-  {
-    id: 6,
     title: "HoneyWorks Premium Live",
     thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
     videoUrl: "https://example.com/video6.mp4",
     description: "온라인 쇼핑몰 모바일 앱 디자인",
     category: "ゲーム",
-    details:
+    details: [
       "사용자 친화적인 이커머스 모바일 앱 디자인 프로젝트입니다. 상품 탐색, 장바구니, 결제 프로세스 등 쇼핑 경험의 모든 단계를 최적화하여 전환율을 높이는 데 중점을 두었습니다.",
+    ],
     process: [
       "경쟁사 분석 및 벤치마킹",
       "사용자 여정 맵 및 플로우 차트 작성",
@@ -245,42 +247,33 @@ export default function PortfolioDetailPage({ params }) {
             </Button>
           </div>
         </ScrollReveal>
-
         <ScrollReveal>
-          <div className="mb-8">
+          <div className="m-4">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 className="mt-0 mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                <h2 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
                   {t("project.overview")}
                 </h2>
-                {portfolio.subTitle.map((step, index) => (
+              </div>
+            </div>
+          </div>
+          <div className="m-4">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                {portfolio.details.map((detail, index) => (
                   <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
-                  {step}
+                  {detail}
                 </p>
                 ))}
               </div>
-              {/* <div className="flex flex-wrap gap-4 text-sm">
-                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.client")}</p>
-                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.client}</p>
-                </InteractiveCard>
-                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.duration")}</p>
-                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.duration}</p>
-                </InteractiveCard>
-                <InteractiveCard className="rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800 dark:shadow-gray-900/30">
-                  <p className="font-medium text-gray-500 dark:text-gray-400">{t("project.year")}</p>
-                  <p className="font-semibold text-gray-900 dark:text-white">{portfolio.year}</p>
-                </InteractiveCard>
-              </div> */}
+            </div>
+          </div>
+          <div className="mb-8 m-4">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="mt-0 prose max-w-none dark:prose-invert">
-                {/* <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.process")}</h2> */}
                 <div className="">
                   {portfolio.process.map((step, index) => (
                     <div className="mb-1 flex items-start gap-4" key={index}>
-                      {/* <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500">
-                        {index + 1}・
-                      </div> */}
                       <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
                       <div className="pt-0">
                         <p className="font-medium text-gray-900 dark:text-white">{step}</p>
@@ -293,8 +286,8 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <div className="mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+        <ScrollReveal /*delay={0.1}*/>
+          <div className="mb-6 m-4 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               {/* 비디오 플레이어 */}
               <ReactPlayer
@@ -308,8 +301,8 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.2}>
-          <div className="mb-12 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+        <ScrollReveal /*delay={0.2}*/>
+          <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
@@ -385,8 +378,8 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 갤러리 섹션 */}
         {portfolio.gallery && (
-          <ScrollReveal delay={0.3}>
-            <div className="mb-12">
+          <ScrollReveal /*delay={0.3}*/>
+            <div className="mb-12 m-4">
               <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
                 {t("project.gallery")}
               </h2>
@@ -396,7 +389,7 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {portfolio.url && (
-          <ScrollReveal delay={0.4}>
+          <ScrollReveal /*delay={0.4}*/>
             <div className="mt-12 flex justify-center">
               <Button
                 variant="outline"
