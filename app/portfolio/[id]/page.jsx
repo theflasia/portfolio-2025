@@ -21,7 +21,7 @@ const portfolioItems = [
     id: 1,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
-    videoUrl: "https://example.com/video1.mp4",
+    videoUrl: "",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -286,6 +286,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal>
 
+        {portfolio.videoUrl && (
         <ScrollReveal /*delay={0.1}*/>
           <div className="mb-6 m-4 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
@@ -300,18 +301,19 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </div>
         </ScrollReveal>
+        )}
 
         <ScrollReveal /*delay={0.2}*/>
           <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {portfolio.tools.map((tool, index) => (
                   <InteractiveCard
                     key={index}
                     className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
+                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
                       <span className="text-lg font-bold text-white">{tool.charAt(0)}</span>
                     </div>
                     <span className="font-medium text-gray-900 dark:text-white">{tool}</span>
