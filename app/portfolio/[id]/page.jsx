@@ -42,7 +42,7 @@ const portfolioItems = [
     id: 2,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-tribenine-top.png?height=420&width=762",
-    videoUrl: "/movies/tribenine_portfolio.mp4",
+    videoUrl: "/movies/tribenine_portfolio_720p.mp4",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -66,7 +66,7 @@ const portfolioItems = [
     id: 3,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
-    videoUrl: "https://example.com/video3.mp4",
+    videoUrl: "/movies/konmari_portfolio_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル",
     details: [
