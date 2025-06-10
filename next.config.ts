@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   // compress: false,
   // /* distDir: 'dist', */
   // output: 'export',
-  // productionBrowserSourceMaps: true, // 프로덕션 소스 맵 활성화
+  // productionBrowserSourceMaps: true,
   // reactStrictMode: true,
   // swcMinify: false,
   // trailingSlash: true,
