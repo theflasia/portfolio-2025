@@ -14,6 +14,8 @@ import ScrollProgress from "@/components/scroll-progress"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
 import ReactPlayer from 'react-player'
+import * as SimpleIcons from "react-icons/si"
+import * as BoxIcons from "react-icons/bi"
 
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
@@ -33,8 +35,14 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
       "UI最適化",
     ],
-    tools: ["Unity", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator", "GitHub", "Visual Studio Code"],
-    duration: "3ヶ月~",
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+    ],
+    duration: "6ヶ月~",
     client: "-",
     year: "2025",
   },
@@ -42,7 +50,7 @@ const portfolioItems = [
     id: 2,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-tribenine-top.png?height=420&width=762",
-    videoUrl: "/movies/tribenine_portfolio_720p.mp4",
+    videoUrl: "/movies/TribeNine_720p.mp4",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -57,121 +65,145 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    tools: ["Unity", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator", "GitHub", "Visual Studio Code"],
-    duration: "3ヶ月~",
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiAutodeskmaya size="40px" className="mb-2" />, name :"Maya"},
+    ],
+    duration: "3年~",
     client: "-",
-    year: "2025",
+    year: "2022",
   },
   {
     id: 3,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
-    videoUrl: "/movies/konmari_portfolio_720p.mp4",
+    videoUrl: "/movies/KonMari_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
-    category: "モバイル",
+    category: "モバイルゲーム",
     details: [
       "KonMariメソッドは、物を「ときめくかどうか（Spark Joy）」で判断して整理し、感謝の気持ちを込めて不要な物を手放すことで、自分の理想の暮らしに近づける片づけ術です。",
     ],
     process: [
       "開発からプロジェクトに参画",
-      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "ゲーム内のUIアニメーション設計と制作全般",
       "プロモーションムービー制作",
-      "外部の制作会社さんとの連携",
-      "UI最適化",
     ],
-    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
-    duration: "10주",
-    client: "테크 스타트업 C사",
-    year: "2023",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "로고 디자인", caption: "로고 디자인" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "컬러 팔레트", caption: "컬러 팔레트" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "명함 디자인", caption: "명함 디자인" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "브랜드 가이드라인", caption: "브랜드 가이드라인" },
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
     ],
+    duration: "1年~",
+    client: "-",
+    year: "2021",
   },
   {
     id: 4,
+    title: "HoneyWorks Premium Live",
+    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
+    videoUrl: "/movies/HoneyWorks_720p.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイルゲーム",
+    details: [
+      "『HoneyWorks Premium Live』は、HoneyWorksの世界観をリズムゲームとして体験できるよう開発した青春音楽ゲームです。MV連動の演出やフルボイスストーリーを通じて、ファンがキャラと楽曲に深く没入できる設計にしました。2023年3月、約2年4ヵ月の運営を経てサービスを終了しました。",
+    ],
+    process: [
+      "開発からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計と制作全般",
+      "外部の制作会社さんとの連携",
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+    ],
+    duration: "2年~",
+    client: "-",
+    year: "2020",
+  },
+    {
+    id: 5,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
-    videoUrl: "https://example.com/video3.mp4",
+    videoUrl: "/movies/BonBonJourney_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
-    category: "モバイル",
+    category: "モバイルゲーム",
     details: [
       "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
     ],
     process: [
       "開発からプロジェクトに参画",
-      "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
+      "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
       "プロモーションムービー制作",
       "外部の制作会社さんとの連携",
-      "UI最適化",
     ],
-    tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
-    duration: "6주",
-    client: "전자제품 제조사 D사",
-    year: "2022",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "스토리보드", caption: "스토리보드" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 1", caption: "애니메이션 장면 1" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "애니메이션 장면 2", caption: "애니메이션 장면 2" },
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
     ],
+    duration: "2年~",
+    client: "-",
+    year: "2018",
   },
-  // {
-  //   id: 5,
-  //   title: "インタビュー",
-  //   thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
-  //   url: "https://voice.aktsk.jp/5436/",
-  //   videoUrl: "https://example.com/video3.mp4",
-  //   description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
-  //   category: "モバイル",
-  //   details: [
-  //     "『ONE PIECE ボン！ボン！ジャーニー!!』は、人気アニメ「ONE PIECE」を題材にしたパズルRPGで、キャラクターが“ボンボン”と呼ばれる可愛いデフォルメ姿で登場し、タップ操作で敵を倒しながら原作の物語を追体験できるスマホゲームです。",
-  //   ],
-  //   process: [
-  //     "開発からプロジェクトに参画",
-  //     "ゲーム内のUI演出設計と制作全般・ディレクションを担当",
-  //     "プロモーションムービー制作",
-  //     "外部の制作会社さんとの連携",
-  //     "UI最適化",
-  //   ],
-  //   tools: ["Unity", "Adobe Photoshop", "Adobe After Effects", "GitHub"],
-  //   duration: "14주",
-  //   client: "데이터 분석 기업 E사",
-  //   year: "2023",
-  //   gallery: [
-  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "대시보드 메인 화면", caption: "대시보드 메인 화면" },
-  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "데이터 시각화 컴포넌트", caption: "데이터 시각화 컴포넌트" },
-  //     { src: "/images/placeholder.svg?height=600&width=800", alt: "모바일 대시보드", caption: "모바일 대시보드" },
-  //   ],
-  // },
-  {
-    id: 5,
-    title: "HoneyWorks Premium Live",
-    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
-    videoUrl: "https://example.com/video6.mp4",
-    description: "온라인 쇼핑몰 모바일 앱 디자인",
-    category: "ゲーム",
+    {
+    id: 6,
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
+    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイルゲーム",
     details: [
-      "사용자 친화적인 이커머스 모바일 앱 디자인 프로젝트입니다. 상품 탐색, 장바구니, 결제 프로세스 등 쇼핑 경험의 모든 단계를 최적화하여 전환율을 높이는 데 중점을 두었습니다.",
+      "『アイドルマスター SideM LIVE ON ST@GE!』は、アイドルたちのドラマと成長を丁寧に描くため、2D演出と豊富なストーリー構成にこだわって開発しました。プロデューサーとの一体感や“共に歩む”感覚を重視し、ユニットごとの魅力を深く掘り下げました。ライブ演出や感情表現にも細やかな工夫を加え、実在感あるアイドル体験を追求しました。2017年から約4年間、ファンと共に進化しながら運営しました。",
     ],
     process: [
-      "경쟁사 분석 및 벤치마킹",
-      "사용자 여정 맵 및 플로우 차트 작성",
-      "와이어프레임 및 UI 디자인",
-      "프로토타입 제작 및 사용성 테스트",
-      "디자인 시스템 구축 및 문서화",
+      "開発からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
     ],
-    tools: ["Figma", "Protopie", "Framer", "Hotjar", "Optimizely"],
-    duration: "16주",
-    client: "패션 리테일 기업 F사",
-    year: "2023",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "앱 메인 화면", caption: "앱 메인 화면" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "상품 상세 페이지", caption: "상품 상세 페이지" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "장바구니", caption: "장바구니" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "결제 프로세스", caption: "결제 프로세스" },
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
     ],
+    duration: "1年~",
+    client: "-",
+    year: "2017",
+  },
+    {
+    id: 7,
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
+    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイルゲーム",
+    details: [
+      "『サモンソウルバトル』は、gloopsが手がけたリアルタイム3ポジション制ギルドバトル特化のスマホ向けカードRPGです。前衛・中衛・後衛という新たな配置概念を導入し、戦術の幅と協力プレイの深さを追求しました。クエスト中は“仮想ギルド”機能で、他プレイヤーとリアルタイムに協力できる工夫を実装しました。iOS/Android向けに2014年末リリース予定で、無料+アイテム課金制として開発され、10万人超の事前登録者を集めました。",
+    ],
+    process: [
+      "開発からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計と制作全般",
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAutodeskmaya size="40px" className="mb-2" />, name :"Maya"},
+      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+    ],
+    duration: "1年~",
+    client: "-",
+    year: "2017",
   },
 ]
 
@@ -295,6 +327,7 @@ export default function PortfolioDetailPage({ params }) {
               url = {portfolio.videoUrl}
               muted
               controls
+              pip
               width = {"100%"}
               height = {"auto"}
             />
@@ -313,10 +346,8 @@ export default function PortfolioDetailPage({ params }) {
                     key={index}
                     className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
                   >
-                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
-                      <span className="text-lg font-bold text-white">{tool.charAt(0)}</span>
-                    </div>
-                    <span className="font-medium text-gray-900 dark:text-white">{tool}</span>
+                    {tool.icon}
+                    <span className="font-medium text-gray-900 dark:text-white">{tool.name}</span>
                   </InteractiveCard>
                 ))}
               </div>

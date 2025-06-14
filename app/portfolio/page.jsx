@@ -41,24 +41,17 @@ const portfolioItems = [
   },
   {
     id: "4",
-    title: "ONE PIECE ボン！ボン！ジャーニー!!",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
-    description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
-  },
-  // {
-  //   id: "5",
-  //   title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事 - Akatsuki VOICE(アカツキ ボイス)",
-  //   category: "インタビュー",
-  //   thumbnail: "/images/portfolio-thumb-interview-2.png?height=400&width=600",
-  //   description: "アカツキのオウンドメディアのインタビュー記事になります。",
-  // },
-  {
-    id: "5",
     title: "HoneyWorks Premium Live",
     category: "ゲーム",
     thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
     description: "「HoneyWorks Premium Live」でUIアニメーションの制作を担当しました。",
+  },
+  {
+    id: "5",
+    title: "ONE PIECE ボン！ボン！ジャーニー!!",
+    category: "ゲーム",
+    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
+    description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "6",
