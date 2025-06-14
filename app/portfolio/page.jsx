@@ -159,10 +159,10 @@ export default function PortfolioPage() {
           </motion.div>
         </ParallaxHero>
 
-        <main className="container relative mx-auto px-4 py-12">
+        <main className="container relative mx-auto px-4 py-8">
           <div id="portfolio-section">
             <ScrollRevealMotion>
-              <div className="mb-12 text-center">
+              <div className="mb-8 text-center">
                 {/* <h2
                   className={`title-responsive font-bold tracking-tight ${
                     isDark
@@ -224,7 +224,7 @@ export default function PortfolioPage() {
                     backgroundOpacity={0.05}
                     enhanced={true}
                   >
-                    <div className="group relative overflow-hidden rounded-xl">
+                    <div className="group relative overflow-hidden rounded-xl" onClick={() => router.push(`/portfolio/${item.id}`)}>
                       <div className="relative aspect-video overflow-hidden">
                         <OptimizedImage
                           src={item.thumbnail || "/placeholder.svg"}
@@ -244,7 +244,7 @@ export default function PortfolioPage() {
                           </Button>
                         </div>
                       </div>
-                      <div className="p-5">
+                      <div className="p-4 pt-0">
                         <div className="mb-2 flex items-center justify-between">
                           <span
                             className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
@@ -295,9 +295,9 @@ export default function PortfolioPage() {
           </div> */}
 
           {/* 디자인 철학 섹션 */}
-          <div className="my-20">
+          <div className="my-12">
             <ScrollRevealMotion>
-              <div className="mb-12 text-center">
+              <div className="mb-8 text-center">
                 <h2
                   className={`title-responsive font-bold tracking-tight ${
                     isDark
@@ -307,7 +307,7 @@ export default function PortfolioPage() {
                 >
                   {t("portfolio.designPhilosophy")}
                 </h2>
-                <p className={`mt-4 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                <p className={`mt-2 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
                   {t("portfolio.designApproach")}
                 </p>
               </div>

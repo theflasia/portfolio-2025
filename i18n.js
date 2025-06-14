@@ -40,6 +40,7 @@ const translations = {
     project: {
       viewAll: "모든 작품 보기",
       overview: "프로젝트 개요",
+      jobDescription: "담당 업무 내용",
       with: "와 함께한",
       project: "프로젝트",
       client: "클라이언트",
@@ -139,6 +140,7 @@ const translations = {
     project: {
       viewAll: "View All Works",
       overview: "Project Overview",
+      jobDescription: "Job Description",
       with: "with",
       project: "project",
       client: "Client",
@@ -214,7 +216,7 @@ const translations = {
     portfolio: {
       title: "PORTFOLIO",
       subtitle: "UIアニメーションデザイナーのポートフォリオ",
-      viewWorks: "作品を見る",
+      viewWorks: "詳細内容を見る",
       worksCollection: "クリエイティブ",
       description: "様々なプロジェクトで制作を担当した制作物と業務内容をご覧ください",
       categories: {
@@ -223,7 +225,7 @@ const translations = {
         web: "ウェブ",
         interview: "インタビュー",
       },
-      viewProject: "作品を見る",
+      viewProject: "詳細内容を見る",
       designPhilosophy: "デザイン哲学",
       designApproach: "ユーザー中心のデザインアプローチ",
       userCentric: "ユーザー中心",
@@ -237,7 +239,8 @@ const translations = {
     // プロジェクト詳細ページ
     project: {
       viewAll: "すべての作品を見る",
-      overview: "プロジェクトでの担当業務概要",
+      overview: "プロジェクトの紹介",
+      jobDescription: "プロジェクトでの担当業務内容",
       with: "と一緒に",
       project: "プロジェクト",
       client: "クライアント",

@@ -36,15 +36,16 @@ const portfolioItems = [
       "UI最適化",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
     ],
     duration: "6ヶ月~",
     client: "-",
     year: "2025",
+    url: "https://kj8-thegame.com/",
   },
   {
     id: 2,
@@ -66,16 +67,17 @@ const portfolioItems = [
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
-      {icon : <SimpleIcons.SiAutodeskmaya size="40px" className="mb-2" />, name :"Maya"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiAutodeskmaya size="32px" className="mb-2" />, name :"Maya"},
     ],
     duration: "3年~",
     client: "-",
     year: "2022",
+    url: "https://tribenine.tokyo/",
   },
   {
     id: 3,
@@ -93,11 +95,11 @@ const portfolioItems = [
       "プロモーションムービー制作",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
     ],
     duration: "1年~",
     client: "-",
@@ -119,11 +121,11 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
     ],
     duration: "2年~",
     client: "-",
@@ -146,11 +148,11 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="40px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
     ],
     duration: "2年~",
     client: "-",
@@ -171,10 +173,10 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
     ],
     duration: "1年~",
     client: "-",
@@ -183,8 +185,8 @@ const portfolioItems = [
     {
     id: 7,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
-    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
+    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
+    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -195,15 +197,65 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般",
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="40px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="40px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="40px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAutodeskmaya size="40px" className="mb-2" />, name :"Maya"},
-      {icon : <SimpleIcons.SiGithub size="40px" className="mb-2" />, name :"GitHub"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAutodeskmaya size="32px" className="mb-2" />, name :"Maya"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
     ],
     duration: "1年~",
     client: "-",
-    year: "2017",
+    year: "2016",
+  },
+    {
+    id: 8,
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
+    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイルゲーム",
+    details: [
+      "『Wake Up, Girls！ステージの天使』は、アニメ放送に先駆けて2013年12月にMobage向けに開発・リリースしたソーシャルアイドル育成ゲームです。プレイヤーはマネージャーとなり、WUGメンバーや55人以上のオリジナルアイドル（COOL・PRETTY・SUNNYタイプ）を育成します。レッスンや合宿などを通じて成長を実感できる設計にし、人気投票イベントや4コマ漫画連載などでユーザーの継続的な参加を促しました。約30万人がプレイした本作は、2014年12月にサービスを終了しました。",
+    ],
+    process: [
+      "開発からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計と制作全般",
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+    ],
+    duration: "1年~",
+    client: "-",
+    year: "2014",
+  },
+    {
+    id: 9,
+    title: "ゲームのUIアニメーション",
+    thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
+    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
+    description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
+    category: "モバイルゲーム",
+    details: [
+      "『SKYLOCK（スカイロック）』は、gloopsが2013年10月にMobage向けにリリースした王道ファンタジーRPGで、人気漫画家・幹大樹氏によるキャラデザインと脚本家・渡辺雄介氏の壮大な物語を融合して開発しました。",
+      "クエストは選択肢付き探索ダンジョン&600種以上の“魔者”育成や覚醒システムを備え、戦略的かつやり込み性の高いバトルが楽しめる設計でした。ギルド対戦的な“コロシアム”機能や、育成・バトルを通じてプレイヤー同士の競争と協力を促すソーシャル要素も重視しました。",
+      "2013年秋にサービス開始し、2014年には50万DL突破、2014年末には100万DLを達成、運営体制は2019年にマイネットへ移行後、約8年3ヶ月の運営を経て2022年1月に終了しました。",
+    ],
+    process: [
+      "開発からプロジェクトに参画",
+      "ゲーム内のUIアニメーション設計と制作全般",
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+    ],
+    duration: "1年~",
+    client: "-",
+    year: "2013",
   },
 ]
 
@@ -266,12 +318,12 @@ export default function PortfolioDetailPage({ params }) {
         </div>
       </ParallaxHero>
 
-      <main className="container relative mx-auto px-4 py-12">
+      <main className="container relative mx-auto px-4 py-8">
         <ScrollReveal>
           <div className="animate-fade-in-left">
             <Button
               variant="ghost"
-              className="mb-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              className="mb-2 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
               onClick={() => router.push("/portfolio")}
             >
               <ArrowLeft className="h-4 w-4" />
@@ -279,18 +331,23 @@ export default function PortfolioDetailPage({ params }) {
             </Button>
           </div>
         </ScrollReveal>
-        <ScrollReveal>
-          <div className="m-4">
+
+        {/* <ScrollReveal>
+          <div className="m-4 mt-2 mb-2">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
+                <h2 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-2xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
                   {t("project.overview")}
                 </h2>
               </div>
             </div>
           </div>
-          <div className="m-4">
-            <div className="flex flex-wrap items-center justify-between gap-4">
+        </ScrollReveal> */}
+
+        <ScrollReveal>
+          <div className="m-4 mt-2 mb-2 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+            <div className="items-center justify-between gap-4">
+              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{t("project.overview")}</h2>
               <div>
                 {portfolio.details.map((detail, index) => (
                   <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
@@ -300,8 +357,12 @@ export default function PortfolioDetailPage({ params }) {
               </div>
             </div>
           </div>
-          <div className="mb-8 m-4">
-            <div className="flex flex-wrap items-center justify-between gap-4">
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="m-4 mt-2 mb-2 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+            <div className="items-center justify-between gap-4">
+              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{t("project.jobDescription")}</h2>
               <div className="mt-0 prose max-w-none dark:prose-invert">
                 <div className="">
                   {portfolio.process.map((step, index) => (
@@ -339,73 +400,19 @@ export default function PortfolioDetailPage({ params }) {
         <ScrollReveal /*delay={0.2}*/>
           <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
                 {portfolio.tools.map((tool, index) => (
                   <InteractiveCard
                     key={index}
                     className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
                   >
                     {tool.icon}
-                    <span className="font-medium text-gray-900 dark:text-white">{tool.name}</span>
+                    <span className="font-medium text-gray-900 dark:text-white text-xs">{tool.name}</span>
                   </InteractiveCard>
                 ))}
               </div>
             </div>
-            {/* <Tabs defaultValue="overview" className="w-full">
-              <TabsList className="mb-6 grid w-full grid-cols-3 rounded-lg bg-gray-100 dark:bg-gray-800">
-                <TabsTrigger value="overview" className="rounded-md">
-                  {t("project.detailsTitle")}
-                </TabsTrigger>
-                <TabsTrigger value="process" className="rounded-md">
-                  {t("project.processTitle")}
-                </TabsTrigger>
-                <TabsTrigger value="tools" className="rounded-md">
-                  {t("project.toolsTitle")}
-                </TabsTrigger>
-              </TabsList>
-              <TabsContent value="overview" className="mt-6">
-                <div className="prose max-w-none dark:prose-invert">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.details")}</h2>
-                  <p className="text-gray-700 dark:text-gray-300">{portfolio.details}</p>
-                </div>
-              </TabsContent>
-              <TabsContent value="process" className="mt-6">
-                <div className="prose max-w-none">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.process")}</h2>
-                  <div className="mt-6">
-                    {portfolio.process.map((step, index) => (
-                      <div className="mb-4 flex items-start gap-4" key={index}>
-                        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500">
-                          {index + 1}
-                        </div>
-                        <div className="pt-1">
-                          <p className="text-lg font-medium text-gray-900 dark:text-white">{step}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="tools" className="mt-6">
-                <div className="prose max-w-none">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
-                  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-                    {portfolio.tools.map((tool, index) => (
-                      <InteractiveCard
-                        key={index}
-                        className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
-                      >
-                        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-500">
-                          <span className="text-lg font-bold text-white">{tool.charAt(0)}</span>
-                        </div>
-                        <span className="font-medium text-gray-900 dark:text-white">{tool}</span>
-                      </InteractiveCard>
-                    ))}
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs> */}
           </div>
         </ScrollReveal>
 
