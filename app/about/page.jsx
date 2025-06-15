@@ -176,9 +176,11 @@ export default function AboutPage() {
 
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.intro")}</h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  {t("about.introText")}
+                {t("about.introText").map((text, index) => (
+                  <p className="mt-1 text-gray-700 dark:text-gray-300" key={index}>
+                  {text}
                 </p>
+                ))}
               </div>
 
               <div className="mb-6">
@@ -227,7 +229,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{exp.title}</h3>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                           <span>{exp.company}</span>
                           <span>•</span>
                           <span>{exp.period}</span>
@@ -282,7 +284,7 @@ export default function AboutPage() {
                           <span>•</span>
                           <span>{interview.year}</span>
                         </div>
-                        <p className="mt-2 text-gray-700 dark:text-gray-300">{interview.description}</p>
+                        {/* <p className="mt-2 text-gray-700 dark:text-gray-300">{interview.description}</p> */}
                         <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
                       </div>
                     </div>
@@ -303,7 +305,7 @@ export default function AboutPage() {
                           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-white dark:from-gray-700 dark:to-gray-500">
                             {skill.icon}
                           </div>
-                          <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
+                          <span className="text-xs font-medium text-gray-900 dark:text-white">{skill.name}</span>
                         </div>
                         <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
                       </div>

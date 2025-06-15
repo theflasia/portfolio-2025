@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, use } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, Play, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -23,7 +23,6 @@ const portfolioItems = [
     id: 1,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
-    videoUrl: "",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -35,6 +34,7 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
       "UI最適化",
     ],
+    videoUrl: "",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -51,7 +51,6 @@ const portfolioItems = [
     id: 2,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-tribenine-top.png?height=420&width=762",
-    videoUrl: "/movies/TribeNine_720p.mp4",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -66,6 +65,7 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
+    videoUrl: "/movies/TribeNine_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -83,7 +83,6 @@ const portfolioItems = [
     id: 3,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
-    videoUrl: "/movies/KonMari_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -94,6 +93,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般",
       "プロモーションムービー制作",
     ],
+    videoUrl: "/movies/KonMari_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -109,7 +109,6 @@ const portfolioItems = [
     id: 4,
     title: "HoneyWorks Premium Live",
     thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
-    videoUrl: "/movies/HoneyWorks_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -120,6 +119,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般",
       "外部の制作会社さんとの連携",
     ],
+    videoUrl: "/movies/HoneyWorks_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -135,7 +135,6 @@ const portfolioItems = [
     id: 5,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
-    videoUrl: "/movies/BonBonJourney_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -147,6 +146,7 @@ const portfolioItems = [
       "プロモーションムービー制作",
       "外部の制作会社さんとの連携",
     ],
+    videoUrl: "/movies/BonBonJourney_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -162,7 +162,6 @@ const portfolioItems = [
     id: 6,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
-    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -172,6 +171,7 @@ const portfolioItems = [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
     ],
+    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -186,7 +186,6 @@ const portfolioItems = [
     id: 7,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
-    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -196,6 +195,7 @@ const portfolioItems = [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般",
     ],
+    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -211,7 +211,6 @@ const portfolioItems = [
     id: 8,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
-    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -221,6 +220,7 @@ const portfolioItems = [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般",
     ],
+    videoUrl: "/movies/WakeUpGirls_720p.mp4",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -235,7 +235,6 @@ const portfolioItems = [
     id: 9,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
-    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -246,6 +245,13 @@ const portfolioItems = [
     process: [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般",
+    ],
+    videoUrl: "/movies/SkyLock_720p.mp4",
+    gallery: [
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
+      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
@@ -261,6 +267,7 @@ const portfolioItems = [
 
 export default function PortfolioDetailPage({ params }) {
   const router = useRouter()
+  const { id } = use(params);
   const [portfolio, setPortfolio] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const { theme } = useTheme()
@@ -269,14 +276,14 @@ export default function PortfolioDetailPage({ params }) {
 
   useEffect(() => {
     // 포트폴리오 아이템 찾기
-    const id = Number.parseInt(params.id)
+    const parsedId = Number.parseInt(id);
 
-    if (isNaN(id)) {
+    if (isNaN(parsedId)) {
       router.push("/portfolio")
       return
     }
     
-    const item = portfolioItems.find((item) => item.id === id)
+    const item = portfolioItems.find((item) => item.id === parsedId)
 
     if (item) {
       setPortfolio(item)
@@ -288,7 +295,7 @@ export default function PortfolioDetailPage({ params }) {
     setTimeout(() => {
       setIsLoading(false)
     }, 500)
-  }, [params.id, router])
+  }, [id, router])
 
   if (isLoading) {
     return (
@@ -397,6 +404,16 @@ export default function PortfolioDetailPage({ params }) {
         </ScrollReveal>
         )}
 
+        {/* 갤러리 섹션 */}
+        {portfolio.gallery && (
+          <ScrollReveal /*delay={0.3}*/>
+            <div className="mb-12 m-4">
+              {/* <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2> */}
+              <ImageGallery images={portfolio.gallery} />
+            </div>
+          </ScrollReveal>
+        )}
+
         <ScrollReveal /*delay={0.2}*/>
           <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
@@ -415,18 +432,6 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </div>
         </ScrollReveal>
-
-        {/* 갤러리 섹션 */}
-        {portfolio.gallery && (
-          <ScrollReveal /*delay={0.3}*/>
-            <div className="mb-12 m-4">
-              <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">
-                {t("project.gallery")}
-              </h2>
-              <ImageGallery images={portfolio.gallery} />
-            </div>
-          </ScrollReveal>
-        )}
 
         {portfolio.url && (
           <ScrollReveal /*delay={0.4}*/>
