@@ -6,7 +6,7 @@ import { useTheme } from "next-themes"
 export default function InteractiveCard({
   children,
   className = "",
-  depth = 5,
+  depth = 6,
   backgroundImage = "",
   backgroundOpacity = 0.1,
   glareEffect = true,

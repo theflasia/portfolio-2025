@@ -214,16 +214,16 @@ const translations = {
     },
     // ポートフォリオページ
     portfolio: {
-      title: "PORTFOLIO",
-      subtitle: "UIアニメーションデザイナーのポートフォリオ",
-      viewWorks: "詳細内容を見る",
+      title: "WORKS",
+      subtitle: "UIアニメーションデザイナーとしての作品",
+      viewWorks: "作品と業務内容を見る",
       worksCollection: "クリエイティブ",
-      description: "様々なプロジェクトで制作を担当した制作物と業務内容をご覧ください",
+      description: "様々なプロジェクトで制作を担当した作品と業務内容について紹介します。",
       categories: {
         all: "全て",
-        game: "ゲーム",
-        web: "ウェブ",
-        interview: "インタビュー",
+        game: "GAME",
+        web: "WEB",
+        interview: "INTERVIEW",
       },
       viewProject: "詳細内容を見る",
       designPhilosophy: "デザイン哲学",

@@ -4,7 +4,6 @@ import { useEffect, useState, use } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, Play, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
 import ScrollReveal from "@/components/scroll-reveal"
@@ -22,7 +21,7 @@ const portfolioItems = [
   {
     id: 1,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
+    thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -50,7 +49,7 @@ const portfolioItems = [
   {
     id: 2,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-tribenine-top.png?height=420&width=762",
+    thumbnail: "/images/portfolio-top-tribenine.png?height=630&width=1280",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     details: [
@@ -82,7 +81,7 @@ const portfolioItems = [
   {
     id: 3,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
+    thumbnail: "/images/portfolio-top-konmari.png?height=630&width=1200",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -108,7 +107,7 @@ const portfolioItems = [
   {
     id: 4,
     title: "HoneyWorks Premium Live",
-    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
+    thumbnail: "/images/portfolio-top-honeyworks.png?height=720&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -134,7 +133,7 @@ const portfolioItems = [
     {
     id: 5,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
+    thumbnail: "/images/portfolio-top-bonbonjourney.png?height=337&width=1010",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -161,7 +160,7 @@ const portfolioItems = [
     {
     id: 6,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
+    thumbnail: "/images/portfolio-top-idolmastersidem.png?height=751&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -185,7 +184,7 @@ const portfolioItems = [
     {
     id: 7,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
+    thumbnail: "/images/portfolio-top-summonsoulbattle.png?height=4376&width=835",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -210,7 +209,7 @@ const portfolioItems = [
     {
     id: 8,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
+    thumbnail: "/images/portfolio-top-wakeupgirls.png?height=800&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -234,7 +233,7 @@ const portfolioItems = [
     {
     id: 9,
     title: "ゲームのUIアニメーション",
-    thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
+    thumbnail: "/images/portfolio-top-skylock.png?height=380&width=1010",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     details: [
@@ -263,6 +262,192 @@ const portfolioItems = [
     client: "-",
     year: "2013",
   },
+    {
+    id: 10,
+    title: "",
+    thumbnail: "/images/portfolio-top-birdman.png?height=673&width=1280",
+    description: "",
+    category: "",
+    details: [
+      "",
+      "",
+      "",
+    ],
+    process: [
+      "",
+      "",
+    ],
+    videoUrl: "",
+    gallery: [
+      { src: "/images/birdman/lovemusic.png?height=400&width=590", alt: "LOVE MUSIC", caption: "LOVE MUSIC | Portal Audio Player Walkman | Sony" },
+      { src: "/images/birdman/nap.png?height=484&width=580", alt: "Hiroshi Nakamura & NAP Co.,Ltd.", caption: "Hiroshi Nakamura & NAP Co.,Ltd." },
+      { src: "/images/birdman/no1no1.png?height=520&width=560", alt: "No.1 No.1", caption: "HOME'S No.1 No.1(Smartphone Site)" },
+      { src: "/images/birdman/dayz.png?height=560&width=500", alt: "HAPPY BIRTH DAYZ", caption: "NISSAN HAPPY BIRTH DAYZ" },
+      { src: "/images/birdman/dajare_a_day.png?height=520&width=560", alt: "DAJARE-A-DAY", caption: "Domino's Campaign(Smartphone Site)" },
+      { src: "/images/birdman/smooth.png?height=600&width=800", alt: "Smooth inc", caption: "Smooth inc Renewal" },
+      { src: "/images/birdman/regame_vol3.png?height=433&width=640", alt: "REGAME VOL3", caption: "Real Escape Game Online vol.03" },
+      { src: "/images/birdman/birdman_sp.png?height=520&width=560", alt: "BIRDMAN", caption: "BIRDMAN - SMARTPHONE SITE" },
+      { src: "/images/birdman/tokyo2020.png?height=599&width=640", alt: "TOKYO2020", caption: "TOKYO2020 - PLEDGE" },
+      { src: "/images/birdman/noritz.png?height=600&width=640", alt: "NORITZ", caption: "NORITZ - SUNLIGHT PROJECT" },
+      { src: "/images/birdman/cafx.png?height=624&width=512", alt: "CyberAgentFX", caption: "CyberAgentFX - Cymo School" },
+      { src: "/images/birdman/suidobashijuko.png?height=614&width=584", alt: "Suidobashi Heavy Industry", caption: "Suidobashi Heavy Industry - KURATAS" },
+      { src: "/images/birdman/tweet_fantasy.png?height=600&width=584", alt: "Tweet Fantasy", caption: "MEIJI Fruits Gummi Brand Site" },
+      { src: "/images/birdman/ketsume.png?height=590&width=544", alt: "KETSUMEISHI", caption: "KETSUMEISHI Offcial Renewal" },
+      { src: "/images/birdman/z-trial.png?height=760&width=584", alt: "The Z-Trials", caption: "Walkman Z1000-series to the trail" },
+      { src: "/images/birdman/eco_journey.png?height=434&width=680", alt: "Nikon - ECO JOURNEY", caption: "Nikon - ECO JOURNEY" },
+      { src: "/images/birdman/ultrabookPUT.png?height=442&width=640", alt: "Intel Ultrabook POP-UP THEATER", caption: "Intel Ultrabook POP-UP THEATER" },
+      { src: "/images/birdman/hondaN.png?height=386&width=560", alt: "Honda N teaser", caption: "Honda N teaser" }
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+    ],
+    duration: "2年~",
+    client: "-",
+    year: "2011",
+  },
+    {
+    id: 11,
+    title: "",
+    thumbnail: "/images/portfolio-top-ccc.png?height=675&width=1200",
+    description: "",
+    category: "",
+    details: [
+      "",
+      "",
+      "",
+    ],
+    process: [
+      "",
+      "",
+    ],
+    videoUrl: "",
+    gallery: [
+      { src: "/images/ccc/csbooks.png?height=475&width=560", alt: "C's BOOKS Website Renewal", caption: "C's BOOKS" },
+      { src: "/images/ccc/hotel_manzoku.png?height=440&width=560", alt: "HOTEL MAN-ZOKU", caption: "HOTEL MAN-ZOKU" },
+      { src: "/images/ccc/manzoku_renewal.png?height=560&width=535", alt: "MANZOKU Website Renewal", caption: "MANZOKU Website Renewal" },
+      { src: "/images/ccc/yukai_renewal_website.png?height=545&width=568", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Website Renewal" },
+      { src: "/images/ccc/yukai_renewal_mobile.png?height=440&width=560", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Mobile Renewal" },
+      { src: "/images/ccc/manzoku_job_website.png?height=480&width=550", alt: "MANZOKU JOB Website", caption: "MANZOKU JOB Website" },
+      { src: "/images/ccc/manzoku_job_mobile.png?height=440&width=560", alt: "MANZOKU JOB Mobile", caption: "MANZOKU JOB Mobile" },
+      { src: "/images/ccc/japanet_hadaka.png?height=470&width=548", alt: "JAPANET HADAKA Website", caption: "JAPANET HADAKA" },
+      { src: "/images/ccc/mobile_manzoku_tv.png?height=440&width=560", alt: "MANZOKU TV Mobile Site", caption: "MANZOKU TV Mobile" },
+      { src: "/images/ccc/mobile_manzoku_total.png?height=440&width=560", alt: "MANZOKU Mobile Site", caption: "MANZOKU Mobile" },
+      { src: "/images/ccc/manzoku_mall_admin_pc.png?height=360&width=549", alt: "MANZOKU Client Management", caption: "MANZOKU Management" },
+      { src: "/images/ccc/psta.png?height=510&width=426", alt: "PARADiSE STUDiO Website, Mobile Site", caption: "PARADiSE STUDiO" },
+      { src: "/images/ccc/pokepara_proposal.png?height=508&width=550", alt: "POKEPARA Proposal Design", caption: "POKEPARA" },
+      // { src: "/images/ccc/yukai_mobile_samepicgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#3" },
+      // { src: "/images/ccc/yukai_mobile_switchgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#2" },
+      // { src: "/images/ccc/yukai_mobile_piecegame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#1" },
+      // { src: "/images/ccc/yukai_mobile_clock.png?height=400&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Clock" },
+      { src: "/images/ccc/yukai_mobile_motenabi.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - motenabi" },
+      { src: "/images/ccc/yukai_mobile_jobcheck.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - JobCheck" },
+      { src: "/images/ccc/yukai_life_mobile.png?height=440&width=560", alt: "YUKAI LIFE, YUKAI WATERS Mobile Site", caption: "Yukai Mobile Site" },
+      { src: "/images/ccc/yukai_life_website.png?height=480&width=430", alt: "YUKAI LIFE Flash Contents", caption: "Yukai Life" }
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+    ],
+    duration: "2年~",
+    client: "-",
+    year: "2011",
+  },
+    {
+    id: 12,
+    title: "",
+    thumbnail: "/images/portfolio-top-weditdesign.png?height=630&width=1200",
+    description: "",
+    category: "",
+    details: [
+      "",
+      "",
+      "",
+    ],
+    process: [
+      "",
+      "",
+    ],
+    videoUrl: "",
+    gallery: [
+      { src: "/images/weditdesign/kerasys.jpg?width=480&height=472", alt: "Kerasys", caption: "Kerasys Online Promotion" },
+      { src: "/images/weditdesign/rfid.jpg?width=480&height=373", alt: "RFid", caption: "PIFF RFiD Service Experience" },
+      { src: "/images/weditdesign/rentaphone.jpg?width=480&height=480", alt: "Rent a Phone", caption: "PIFF RFiD Phone Rent Service" },
+      { src: "/images/weditdesign/yournz.jpg?width=480&height=459", alt: "YourNZ", caption: "YourNZ Website" },
+      { src: "/images/weditdesign/greenjuice.jpg?width=520&height=410", alt: "Greenjuice", caption: "Pulmuone Greenjuice" },
+      { src: "/images/weditdesign/dsrgroup.jpg?width=480&height=353", alt: "DSRGroup", caption: "DSRGroup Website" },
+      { src: "/images/weditdesign/portfolio_ver4.png?width=568&height=340", alt: "Portfolio ver.4", caption: "Portfolio 4th Renewal" },
+      { src: "/images/weditdesign/kt_telecop.jpg?width=509&height=400", alt: "KT TELECOP", caption: "KT TELECOP Website" },
+      { src: "/images/weditdesign/kt_linkus.jpg?width=492&height=350", alt: "KT LINKUS", caption: "KT LINKUS Website" },
+      { src: "/images/weditdesign/the_hong.jpg?width=477&height=460", alt: "The Hong", caption: "The Hong Website" },
+      { src: "/images/weditdesign/eria.jpg?width=499&height=390", alt: "eria welfare", caption: "eria welfare Website" },
+      { src: "/images/weditdesign/eyenuri.jpg?width=455&height=344", alt: "EyeNuri", caption: "EyeNuri Website" },
+      { src: "/images/weditdesign/macpert.jpg?width=460&height=449", alt: "Macpert", caption: "Macpert - Marketing&Consulting Expert" },
+      { src: "/images/weditdesign/cl_interactive.png?width=480&height=430", alt: "CL INTERACTIVE", caption: "CL INTERACTIVE Website" },
+      { src: "/images/weditdesign/softzen.jpg?width=490&height=428", alt: "Softzen", caption: "Softzen - The Best Mobile Company" },
+      { src: "/images/weditdesign/donga01.jpg?width=428&height=330", alt: "Donga Ilbo Company", caption: "Donga Ilbo Company Website" },
+      { src: "/images/weditdesign/webzine.jpg?width=428&height=292", alt: "TOYA Webzine", caption: "TOYA WEBZINE Website" },
+      { src: "/images/weditdesign/donga02.jpg?width=428&height=408", alt: "Donga Ilbo Cyber Tour", caption: "Donga Ilbo CyberTour Website" },
+      { src: "/images/weditdesign/sicf.jpg?width=428&height=373", alt: "Seoul International Cultural Foundation", caption: "Seoul International DanceCompetition Website" },
+      { src: "/images/weditdesign/design.jpg?width=428&height=448", alt: "Design House", caption: "Design House Website" },
+      { src: "/images/weditdesign/festival.jpg?width=428&height=458", alt: "Seoul Design Festival", caption: "Seoul Design Festival Website" },
+      { src: "/images/weditdesign/innotel.jpg?width=428&height=438", alt: "INNOTELETEK", caption: "INNOTELETEK Website" },
+      { src: "/images/weditdesign/alumni.jpg?width=428&height=294", alt: "Mckinsey Alumni", caption: "McKinsey&Company Alumi Website" },
+      { src: "/images/weditdesign/inno.jpg?width=428&height=348", alt: "INNO Design", caption: "INNO Design Website Renewal" },
+      { src: "/images/weditdesign/living.jpg?width=428&height=448", alt: "Seoul Living Design Fair 2005", caption: "Seoul Living Design Fair 2005 Website" },
+      { src: "/images/weditdesign/osong.jpg?width=430&height=436", alt: "Osong Bio-, alth Science Technopolis", caption: "Osong Bio-, alth Science TechnopolisWebsite" },
+      { src: "/images/weditdesign/expo.jpg?width=428&height=408", alt: "World Ceramic Exposion Foundation", caption: "World Ceramic Exposion Foundation Website" },
+      { src: "/images/weditdesign/vdk.jpg?width=428&height=411", alt: "VonDutch Korea", caption: "VonDutch Korea Website" },
+      { src: "/images/weditdesign/kmasd.jpg?width=428&height=432", alt: "Korea Management Association", caption: "Korea Management Association Website" },
+      { src: "/images/weditdesign/dsa.jpg?width=428&height=380", alt: "DongSeung ARK", caption: "DongSeung ARK Website" },
+      { src: "/images/weditdesign/gnet.jpg?width=428&height=374", alt: "Hyundai Food System", caption: "Hyundai Food System Website" },
+      { src: "/images/weditdesign/konan.jpg?width=428&height=373", alt: "Konan Technology", caption: "Konan Technology Website" },
+      { src: "/images/weditdesign/kokomo02.jpg?width=428&height=337", alt: "KOKOMO Living Store", caption: "KOKOMO ShoppingMall Website" },
+      { src: "/images/weditdesign/mky.jpg?width=428&height=321", alt: "MKY Group", caption: "MKY Group Website" },
+      { src: "/images/weditdesign/kokomo01.jpg?width=428&height=456", alt: "KOKOMO Living", caption: "KOKOMO Living Website" },
+      { src: "/images/weditdesign/interpark01.jpg?width=428&height=468", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
+      { src: "/images/weditdesign/portfolio_ver3.png?width=568&height=400", alt: "Portfolio ver.3", caption: "Portfolio 3rd Renewal" },
+      { src: "/images/weditdesign/lotte01.jpg?width=428&height=457", alt: "Lotte Town Finance", caption: "Lotte Town Finance Website" },
+      { src: "/images/weditdesign/wedi.jpg?width=428&height=320", alt: "The World Ethnic Dance Institute", caption: "The World Ethnic Dance Institute Website" },
+      { src: "/images/weditdesign/kma.jpg?width=428&height=364", alt: "Korea Management Association", caption: "Korea Management Association WebsiteRenewal" },
+      { src: "/images/weditdesign/habitat.jpg?width=428&height=348", alt: "Habitat", caption: "Habitat Website Renewal" },
+      { src: "/images/weditdesign/interpark01.jpg?width=428&height=433", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
+      { src: "/images/weditdesign/hoseo.jpg?width=428&height=346", alt: "Hoseo University Entrance Information", caption: "Hoseo University EntranceInformation Website" },
+      { src: "/images/weditdesign/cs.jpg?width=428&height=358", alt: "Hanbit Soft Counter Strike", caption: "Hanbit Soft Counter Strike Website" },
+      { src: "/images/weditdesign/daum.jpg?width=426&height=334", alt: "Daum Cafe Template", caption: "Daum Communication Cafe Template" },
+      { src: "/images/weditdesign/lemon.jpg?width=428&height=456", alt: "Lotte Lemon", caption: "Lotte Lemon Website" },
+      { src: "/images/weditdesign/asiana02.jpg?width=428&height=336", alt: "Asiana Littles", caption: "Asiana Littles Website" },
+      { src: "/images/weditdesign/mc.jpg?width=600&height=260", alt: "McKinsey&Company", caption: "McKinsey&Company Website" },
+      { src: "/images/weditdesign/toshiba.jpg?width=428&height=267", alt: "Club Toshiba", caption: "Club Toshiba Website" },
+      { src: "/images/weditdesign/ted.jpg?width=428&height=441", alt: "TED Architerior", caption: "TED Architerior Website" },
+      { src: "/images/weditdesign/velox.jpg?width=428&height=441", alt: "Velox Soft", caption: "Velox Soft Website" },
+      { src: "/images/weditdesign/samsung01.jpg?width=428&height=369", alt: "Samsung Everland Publicity Information", caption: "Samsung Everland PublicityInformation System" },
+      { src: "/images/weditdesign/dr01.jpg?width=428&height=459", alt: "DigitalRank 4th", caption: "DigitalRank 4th Renewal" },
+      { src: "/images/weditdesign/yonhap.jpg?width=428&height=430", alt: "Yonhapnews Weather", caption: "Yonhapnews Weather Website" },
+      { src: "/images/weditdesign/livetone.jpg?width=428&height=319", alt: "LiveTone", caption: "LiveTone Website" },
+      { src: "/images/weditdesign/fan.jpg?width=428&height=387", alt: "FanPlus", caption: "FanPlus Website" },
+      { src: "/images/weditdesign/sibc.jpg?width=428&height=404", alt: "SIB Center", caption: "SIB Center Website" },
+      { src: "/images/weditdesign/samsung04.jpg?width=428&height=431", alt: "Samsung Electronics UI", caption: "Samsung Electronics UI Template" },
+      { src: "/images/weditdesign/samsung05.jpg?width=428&height=337", alt: "Samsung Life", caption: "Samsung Life Website" },
+      { src: "/images/weditdesign/dr02.jpg?width=428&height=407", alt: "DigitalRank 3th", caption: "DigitalRank 4th Renewal" },
+      { src: "/images/weditdesign/asiana01.jpg?width=428&height=343", alt: "Asiana Littles", caption: "Asiana Littles Website" },
+      { src: "/images/weditdesign/portfolio_ver1.png?width=560&height=400", alt: "Portfolio ver.1", caption: "Portfolio ver.1"
+      }
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+    ],
+    duration: "2年~",
+    client: "-",
+    year: "2011",
+  },
 ]
 
 export default function PortfolioDetailPage({ params }) {
@@ -275,6 +460,12 @@ export default function PortfolioDetailPage({ params }) {
   const { t } = useLanguage()
 
   useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault(); // 우클릭 방지
+    }
+    // document에 이벤트 리스너 추가
+    document.addEventListener("contextmenu", handleContextMenu);
+    
     // 포트폴리오 아이템 찾기
     const parsedId = Number.parseInt(id);
 
@@ -387,7 +578,7 @@ export default function PortfolioDetailPage({ params }) {
         </ScrollReveal>
 
         {portfolio.videoUrl && (
-        <ScrollReveal /*delay={0.1}*/>
+        <ScrollReveal>
           <div className="mb-6 m-4 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               {/* 비디오 플레이어 */}
@@ -406,7 +597,7 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 갤러리 섹션 */}
         {portfolio.gallery && (
-          <ScrollReveal /*delay={0.3}*/>
+          <ScrollReveal>
             <div className="mb-12 m-4">
               {/* <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2> */}
               <ImageGallery images={portfolio.gallery} />
@@ -414,7 +605,7 @@ export default function PortfolioDetailPage({ params }) {
           </ScrollReveal>
         )}
 
-        <ScrollReveal /*delay={0.2}*/>
+        <ScrollReveal>
           <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
@@ -434,7 +625,7 @@ export default function PortfolioDetailPage({ params }) {
         </ScrollReveal>
 
         {portfolio.url && (
-          <ScrollReveal /*delay={0.4}*/>
+          <ScrollReveal>
             <div className="mt-12 flex justify-center">
               <Button
                 variant="outline"

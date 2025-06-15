@@ -21,65 +21,86 @@ const portfolioItems = [
   {
     id: "1",
     title: "新規プロジェクト",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=400&width=762",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=225&width=400",
     description: "新規開発プロジェクトでUIアニメーションのセクションリードとして制作を担当しています。",
   },
   {
     id: "2",
     title: "TRIBE NINE",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-tribenine.png?height=400&width=762",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-tribenine.png?height=225&width=400",
     description: "「TRIBE NINE」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
   {
     id: "3",
     title: "KonMari Spark Joy!",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-konmari.png?height=400&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-konmari.png?height=225&width=400",
     description: "「KonMari Spark Joy!」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "4",
     title: "HoneyWorks Premium Live",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=400&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=225&width=400",
     description: "「HoneyWorks Premium Live」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "5",
     title: "ONE PIECE ボン！ボン！ジャーニー!!",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=400&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=225&width=400",
     description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "6",
     title: "アイドルマスター SideM LIVE ON ST@GE!",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=400&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=225&width=400",
     description: "「アイドルマスター SideM LIVE ON ST@GE!」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "7",
     title: "サモンソウルバトル",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=424&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=225&width=400",
     description: "「サモンソウルバトル」でUIアニメーションの制作を担当しました。",
   },
   {
     id: "8",
     title: "Wake Up, Girls! ステージの天使",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=375&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=225&width=400",
     description: "「Wake Up, Girls! ステージの天使」でゲーム内の演出制作を担当しました。",
   },
   {
     id: "9",
     title: "SKYLOCK(スカイロック)",
-    category: "ゲーム",
-    thumbnail: "/images/portfolio-thumb-skylock.png?height=280&width=600",
+    category: "GAME",
+    thumbnail: "/images/portfolio-thumb-skylock.png?height=225&width=400",
     description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
+  },
+  {
+    id: "10",
+    title: "(株)BIRDMAN[バードマン]",
+    category: "WEB",
+    thumbnail: "/images/portfolio-thumb-birdman.png?height=225&width=400",
+    description: "Flash Developer / Front-End EngineerとしてWEBコンテンツの制作を担当しました。",
+  },
+  {
+    id: "11",
+    title: "(株)クリエイターズカンパニーコネクション",
+    category: "WEB",
+    thumbnail: "/images/portfolio-thumb-ccc.png?height=225&width=400",
+    description: "Web DesignerとしてWEBコンテンツの制作を担当しました。",
+  },
+  {
+    id: "12",
+    title: "WEDIT DESIGN",
+    category: "WEB",
+    thumbnail: "/images/portfolio-thumb-weditdesign.png?height=225&width=400",
+    description: "Web DesignerとしてWEBコンテンツの制作を担当しました。",
   },
 ]
 
@@ -220,11 +241,11 @@ export default function PortfolioPage() {
                 <motion.div key={item.id} variants={itemVariants} className="hover-lift">
                   <InteractiveCard
                     className={`shadow-lg transition-all duration-300 ${isDark ? "bg-card" : "bg-white"}`}
-                    backgroundImage={item.thumbnail}
+                    // backgroundImage={item.thumbnail}
                     backgroundOpacity={0.05}
                     enhanced={true}
                   >
-                    <div className="group relative overflow-hidden rounded-xl" onClick={() => router.push(`/portfolio/${item.id}`)}>
+                    <div className="group relative overflow-hidden rounded-xl">
                       <div className="relative aspect-video overflow-hidden">
                         <OptimizedImage
                           src={item.thumbnail || "/placeholder.svg"}
@@ -233,11 +254,11 @@ export default function PortfolioPage() {
                           height={400}
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100" onClick={() => router.push(`/portfolio/${item.id}`)}>
                           <Button
                             onClick={() => router.push(`/portfolio/${item.id}`)}
                             variant="outline"
-                            className="flex items-center gap-2 rounded-full border-white bg-white/20 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
+                            className="flex items-center gap-2 rounded-full border-white bg-white/20 px-8 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
                           >
                             <Play className="h-4 w-4" />
                             {t("portfolio.viewProject")}
