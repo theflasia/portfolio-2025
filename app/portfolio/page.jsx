@@ -15,6 +15,7 @@ import { motion } from "framer-motion"
 import { PageTransition, Stagger, StaggerItem, ScrollRevealMotion } from "@/components/animations"
 import OptimizedImage from "@/components/optimized-image"
 import { useBreakpoint } from "@/hooks/use-media-query"
+import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
 
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
@@ -104,6 +105,26 @@ const portfolioItems = [
   },
 ]
 
+// 인터뷰
+const interviews = [
+  {
+    title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
+    organization: "CGWORLD",
+    year: "2018",
+    description: "UIアニメーションに関するインタビュー記事です。",
+    url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
+    icon: <Newspaper className="h-5 w-5" />,
+  },
+  {
+    title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事",
+    organization: "VOICE Akatsuki",
+    year: "2020",
+    description: "UIアニメーションに関するインタビュー記事です。",
+    url: "https://voice.aktsk.jp/5436/",
+    icon: <Newspaper className="h-5 w-5" />,
+  },
+]
+
 export default function PortfolioPage() {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState("全て")
@@ -184,7 +205,7 @@ export default function PortfolioPage() {
           <div id="portfolio-section">
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
-                {/* <h2
+                <h2
                   className={`title-responsive font-bold tracking-tight ${
                     isDark
                       ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent"
@@ -192,7 +213,7 @@ export default function PortfolioPage() {
                   }`}
                 >
                   {t("portfolio.worksCollection")}
-                </h2> */}
+                </h2>
                 <p className={`mt-4 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
                   {t("portfolio.description")}
                 </p>
@@ -265,8 +286,8 @@ export default function PortfolioPage() {
                           </Button>
                         </div>
                       </div>
-                      <div className="p-4 pt-0">
-                        <div className="mb-2 flex items-center justify-between">
+                      <div className="p-4 pt-2">
+                        <div className="mb-0 flex items-center justify-between">
                           <span
                             className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
                               isDark ? "bg-gray-700 text-gray-200" : "bg-gray-100 text-gray-800"
@@ -315,8 +336,10 @@ export default function PortfolioPage() {
             </ParallaxHero>
           </div> */}
 
-          {/* 디자인 철학 섹션 */}
-          <div className="my-12">
+          <hr className="mt-12" style={{ borderTop: `3px dotted #c1c2c3` }}></hr>
+          
+          {/* 인터뷰 섹션 */}
+          <div className="mt-6 my-4">
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
@@ -326,123 +349,36 @@ export default function PortfolioPage() {
                       : "bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
                   }`}
                 >
-                  {t("portfolio.designPhilosophy")}
+                  {t("portfolio.interviewTitle")}
                 </h2>
-                <p className={`mt-2 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
-                  {t("portfolio.designApproach")}
-                </p>
               </div>
             </ScrollRevealMotion>
 
-            <Stagger>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <ScrollRevealMotion>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {interviews.map((interview, index) => (
                 <StaggerItem>
-                  <InteractiveCard
+                  <InteractiveCard key={index}
                     className={`h-full p-6 ${isDark ? "bg-card" : "bg-white"} hover-lift`}
                     enhanced={true}
                   >
                     <div className="flex flex-col items-center text-center">
                       <div
                         className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full text-white ${
-                          isDark ? "bg-gradient-primary" : "bg-gradient-primary"
+                          index % 2 == 0 ? "bg-gradient-primary" : "bg-gradient-secondary"
                         }`}
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M12 20h9"></path>
-                          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                        </svg>
+                        <Newspaper className="h-5 w-5" />
                       </div>
-                      <h3 className={`mb-2 text-xl font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
-                        {t("portfolio.userCentric")}
-                      </h3>
-                      <p className={isDark ? "text-gray-400" : "text-gray-500"}>{t("portfolio.userCentricDesc")}</p>
+                      <h3 className={`mb-2 text-lg font-semibold ${isDark ? "text-white" : "text-gray-900"}`}><a href={interview.url} target="_blank">{interview.title}</a></h3>
+                      <p className={`text-sm font-semibold ${isDark ? "text-gray-400" : "text-gray-500"}`}>{interview.organization} • {interview.year}</p>
+                      <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
                     </div>
                   </InteractiveCard>
                 </StaggerItem>
-
-                <StaggerItem>
-                  <InteractiveCard
-                    className={`h-full p-6 ${isDark ? "bg-card" : "bg-white"} hover-lift`}
-                    enhanced={true}
-                  >
-                    <div className="flex flex-col items-center text-center">
-                      <div
-                        className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full text-white ${
-                          isDark ? "bg-gradient-secondary" : "bg-gradient-secondary"
-                        }`}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                      </div>
-                      <h3 className={`mb-2 text-xl font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
-                        {t("portfolio.accessibility")}
-                      </h3>
-                      <p className={isDark ? "text-gray-400" : "text-gray-500"}>{t("portfolio.accessibilityDesc")}</p>
-                    </div>
-                  </InteractiveCard>
-                </StaggerItem>
-
-                <StaggerItem>
-                  <InteractiveCard
-                    className={`h-full p-6 ${isDark ? "bg-card" : "bg-white"} hover-lift`}
-                    enhanced={true}
-                  >
-                    <div className="flex flex-col items-center text-center">
-                      <div
-                        className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full text-white ${
-                          isDark ? "bg-gradient-accent" : "bg-gradient-accent"
-                        }`}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                          <line x1="6" y1="1" x2="6" y2="4"></line>
-                          <line x1="10" y1="1" x2="10" y2="4"></line>
-                          <line x1="14" y1="1" x2="14" y2="4"></line>
-                        </svg>
-                      </div>
-                      <h3 className={`mb-2 text-xl font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
-                        {t("portfolio.innovation")}
-                      </h3>
-                      <p className={isDark ? "text-gray-400" : "text-gray-500"}>{t("portfolio.innovationDesc")}</p>
-                    </div>
-                  </InteractiveCard>
-                </StaggerItem>
+                ))}
               </div>
-            </Stagger>
+            </ScrollRevealMotion>
           </div>
         </main>
       </div>

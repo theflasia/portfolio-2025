@@ -57,33 +57,33 @@ const education = [
   },
 ]
 
-// 인터뷰 경력
+// 인터뷰
 const interviews = [
-  {
-    title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
-    organization: "CGWORLD",
-    year: "2018",
-    description: "UIアニメーションに関するインタビュー記事です。",
-    url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
-    icon: <Newspaper className="h-5 w-5" />,
-  },
-  {
-    title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事",
-    organization: "VOICE Akatsuki",
-    year: "2020",
-    description: "UIアニメーションに関するインタビュー記事です。",
-    url: "https://voice.aktsk.jp/5436/",
-    icon: <Newspaper className="h-5 w-5" />,
-  },
+  // {
+  //   title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
+  //   organization: "CGWORLD",
+  //   year: "2018",
+  //   description: "UIアニメーションに関するインタビュー記事です。",
+  //   url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
+  //   icon: <Newspaper className="h-5 w-5" />,
+  // },
+  // {
+  //   title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事",
+  //   organization: "VOICE Akatsuki",
+  //   year: "2020",
+  //   description: "UIアニメーションに関するインタビュー記事です。",
+  //   url: "https://voice.aktsk.jp/5436/",
+  //   icon: <Newspaper className="h-5 w-5" />,
+  // },
 ]
 
 // 스킬 데이터
 const skills = [
   { name: "UIアニメーション制作", level: 90, icon: <Palette className="h-5 w-5" /> },
   { name: "Unityを用いたモUI画面構築", level: 90, icon: <Smartphone className="h-5 w-5" /> },
-  { name: "AfterEffectsを用いたゲーム向けの演出制作", level: 80, icon: <Palette className="h-5 w-5" /> },
-  { name: "C#を用いたUnity内のUIアニメーション制作", level: 60, icon: <Code className="h-5 w-5" /> },
-  { name: "HTML/CSS/JavaScriptコーディング", level: 75, icon: <Code className="h-5 w-5" /> },
+  { name: "AfterEffectsを用いた演出制作", level: 80, icon: <Palette className="h-5 w-5" /> },
+  { name: "C#を用いたのUIアニメーション制作", level: 75, icon: <Code className="h-5 w-5" /> },
+  { name: "HTML/CSS/JavaScriptコーディング", level: 70, icon: <Code className="h-5 w-5" /> },
   { name: "Webデザイン", level: 60, icon: <Monitor className="h-5 w-5" /> },
   // { name: "Adobe Creative Suite", level: 85, icon: <Palette className="h-5 w-5" /> },
 ]
@@ -151,7 +151,7 @@ export default function AboutPage() {
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl="/images/about-top.png?height=760&width=1980"
+        imageUrl="/images/about-top-02.png?height=720&width=1280"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
         height="30vh"
@@ -175,7 +175,7 @@ export default function AboutPage() {
               </div>
 
               <div className="mb-6">
-                <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.intro")}</h3>
+                <h3 className="mb-3 text-2xl font-semibold text-gray-900 dark:text-white">{t("about.intro")}</h3>
                 {t("about.introText").map((text, index) => (
                   <p className="mt-1 text-gray-700 dark:text-gray-300" key={index}>
                   {text}
@@ -184,11 +184,11 @@ export default function AboutPage() {
               </div>
 
               <div className="mb-6">
-                <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
+                <h3 className="mb-3 text-2xl font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li className="text-xs">📧 <a href="theflasia@gmail.com">theflasia@gmail.com</a></li>
+                  <li className="text-sm">📧 <a href="theflasia@gmail.com">theflasia@gmail.com</a></li>
                   {/* <li>📱 010-1234-5678</li> */}
-                  <li className="text-xs">🌐 <a href="http://theflasia.cafe24.com/portfolio/">http://theflasia.cafe24.com/portfolio/</a></li>
+                  <li className="text-sm">🌐 <a href="http://theflasia.cafe24.com/">http://theflasia.cafe24.com/</a></li>
                 </ul>
               </div>
 
@@ -268,30 +268,32 @@ export default function AboutPage() {
             </ScrollReveal> */}
 
             {/* 인터뷰 경력 */}
-            <ScrollReveal direction="right">
-              <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
-                <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.interviews")}</h2>
-                <div className="space-y-6">
-                  {interviews.map((interview, index) => (
-                    <div key={index} className="flex gap-4">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-white dark:from-gray-700 dark:to-gray-500">
-                        {interview.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{interview.title}</h3>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                          <span>{interview.organization}</span>
-                          <span>•</span>
-                          <span>{interview.year}</span>
+            {interviews.length >= 1 && (
+              <ScrollReveal direction="right">
+                <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
+                  <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.interviews")}</h2>
+                  <div className="space-y-6">
+                    {interviews.map((interview, index) => (
+                      <div key={index} className="flex gap-4">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-white dark:from-gray-700 dark:to-gray-500">
+                          {interview.icon}
                         </div>
-                        {/* <p className="mt-2 text-gray-700 dark:text-gray-300">{interview.description}</p> */}
-                        <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{interview.title}</h3>
+                          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                            <span>{interview.organization}</span>
+                            <span>•</span>
+                            <span>{interview.year}</span>
+                          </div>
+                          {/* <p className="mt-2 text-gray-700 dark:text-gray-300">{interview.description}</p> */}
+                          <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </InteractiveCard>
-            </ScrollReveal>
+                    ))}
+                  </div>
+                </InteractiveCard>
+              </ScrollReveal>
+            )}
 
             {/* 스킬 */}
             <ScrollReveal direction="right">
@@ -305,7 +307,7 @@ export default function AboutPage() {
                           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-white dark:from-gray-700 dark:to-gray-500">
                             {skill.icon}
                           </div>
-                          <span className="text-xs font-medium text-gray-900 dark:text-white">{skill.name}</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{skill.name}</span>
                         </div>
                         <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
                       </div>

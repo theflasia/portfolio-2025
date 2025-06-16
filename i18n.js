@@ -26,8 +26,7 @@ const translations = {
         interview: "인터뷰",
       },
       viewProject: "작품 보기",
-      designPhilosophy: "디자인 철학",
-      designApproach: "사용자 중심의 디자인 접근 방식",
+      interviewTitle: "인터뷰",
       userCentric: "사용자 중심",
       userCentricDesc: "모든 디자인 결정은 사용자의 니즈와 경험을 최우선으로 고려합니다.",
       accessibility: "접근성",
@@ -126,8 +125,7 @@ const translations = {
         interview: "Interview",
       },
       viewProject: "View Project",
-      designPhilosophy: "Design Philosophy",
-      designApproach: "User-centered design approach",
+      interviewTitle: "Interview",
       userCentric: "User-Centric",
       userCentricDesc: "All design decisions prioritize user needs and experiences.",
       accessibility: "Accessibility",
@@ -214,10 +212,10 @@ const translations = {
     },
     // ポートフォリオページ
     portfolio: {
-      title: "WORKS",
+      title: "PORTFOLIO",
       subtitle: "UIアニメーションデザイナーとしての作品",
       viewWorks: "作品と業務内容を見る",
-      worksCollection: "クリエイティブ",
+      worksCollection: "WORKS",
       description: "様々なプロジェクトで制作を担当した作品と業務内容について紹介します。",
       categories: {
         all: "全て",
@@ -226,8 +224,7 @@ const translations = {
         interview: "INTERVIEW",
       },
       viewProject: "詳細内容を見る",
-      designPhilosophy: "デザイン哲学",
-      designApproach: "ユーザー中心のデザインアプローチ",
+      interviewTitle: "INTERVIEW",
       userCentric: "ユーザー中心",
       userCentricDesc: "すべてのデザイン決定は、ユーザーのニーズと経験を最優先に考慮します。",
       accessibility: "アクセシビリティ",
@@ -257,8 +254,8 @@ const translations = {
     },
     // 紹介ページ
     about: {
-      title: "紹介",
-      subtitle: "UIデザイナーのキャリアとスキルについて知る",
+      title: "ABOUT ME",
+      subtitle: "簡単な自己紹介と経歴やスキルについて",
       name: "申政淳",
       job: "UIアニメーションデザイナー",
       intro: "紹介",
