@@ -108,19 +108,21 @@ const portfolioItems = [
 // 인터뷰
 const interviews = [
   {
-    title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
-    organization: "CGWORLD",
-    year: "2018",
-    description: "UIアニメーションに関するインタビュー記事です。",
-    url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
-    icon: <Newspaper className="h-5 w-5" />,
-  },
-  {
+    id: "1",
     title: "表情やしぐさで体験の質を高める。ゲームアニメーションの仕事",
     organization: "VOICE Akatsuki",
     year: "2020",
     description: "UIアニメーションに関するインタビュー記事です。",
     url: "https://voice.aktsk.jp/5436/",
+    icon: <Newspaper className="h-5 w-5" />,
+  },
+  {
+    id: "2",
+    title: "アカツキ ロジカルクリエイティブ Logic 02：「わかりやすさ」と「体験」を両立するUIアニメーション",
+    organization: "CGWORLD",
+    year: "2018",
+    description: "UIアニメーションに関するインタビュー記事です。",
+    url: "https://cgworld.jp/interview/201812-akatsuki%20.html",
     icon: <Newspaper className="h-5 w-5" />,
   },
 ]
@@ -358,7 +360,7 @@ export default function PortfolioPage() {
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 {interviews.map((interview, index) => (
                 <StaggerItem>
-                  <InteractiveCard key={index}
+                  <InteractiveCard key={interview.id}
                     className={`h-full p-6 ${isDark ? "bg-card" : "bg-white"} hover-lift`}
                     enhanced={true}
                   >

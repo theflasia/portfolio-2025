@@ -235,7 +235,7 @@ const translations = {
     },
     // プロジェクト詳細ページ
     project: {
-      viewAll: "すべての作品を見る",
+      viewAll: "リストに戻る",
       overview: "プロジェクトの紹介",
       jobDescription: "プロジェクトでの担当業務内容",
       with: "と一緒に",

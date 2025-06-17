@@ -151,7 +151,7 @@ export default function AboutPage() {
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl="/images/about-top-02.png?height=720&width=1280"
+        imageUrl="/images/about-top.png?height=720&width=1280"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
         height="30vh"

@@ -594,8 +594,8 @@ export default function PortfolioDetailPage({ params }) {
         {/* 갤러리 섹션 */}
         {portfolio.gallery && (
           <ScrollReveal>
-            <div className="mb-12 m-4">
-              {/* <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2> */}
+            <div className="mt-12 mb-4 m-4">
+              <h2 className="mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2>
               <ImageGallery images={portfolio.gallery} />
             </div>
           </ScrollReveal>
