@@ -10,7 +10,6 @@ import ScrollReveal from "@/components/scroll-reveal"
 import InteractiveCard from "@/components/interactive-card"
 import ImageGallery from "@/components/image-gallery"
 import ScrollProgress from "@/components/scroll-progress"
-import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
 import ReactPlayer from 'react-player'
 import * as SimpleIcons from "react-icons/si"
@@ -451,8 +450,6 @@ export default function PortfolioDetailPage({ params }) {
   const { id } = use(params);
   const [portfolio, setPortfolio] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
   const { t } = useLanguage()
 
   useEffect(() => {
@@ -605,7 +602,7 @@ export default function PortfolioDetailPage({ params }) {
           <div className="mb-12 m-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {portfolio.tools.map((tool, index) => (
                   <InteractiveCard
                     key={index}

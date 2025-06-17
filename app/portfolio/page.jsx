@@ -9,7 +9,6 @@ import ParallaxHero from "@/components/parallax-hero"
 import InteractiveCard from "@/components/interactive-card"
 import ScrollProgress from "@/components/scroll-progress"
 import MouseParallax from "@/components/mouse-parallax"
-import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
 import { motion } from "framer-motion"
 import { PageTransition, Stagger, StaggerItem, ScrollRevealMotion } from "@/components/animations"
@@ -131,8 +130,6 @@ export default function PortfolioPage() {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState("全て")
   const [filteredItems, setFilteredItems] = useState(portfolioItems)
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
   const { t } = useLanguage()
   const { isMobile, isTablet } = useBreakpoint()
 
@@ -171,9 +168,9 @@ export default function PortfolioPage() {
   return (
     <PageTransition>
       <div
-        className={`min-h-screen transition-colors duration-500 ${isDark ? "bg-gradient-dark" : "bg-gradient-light"}`}
+        className={`min-h-screen transition-colors duration-500 bg-gradient-light`}
       >
-        <ScrollProgress color={isDark ? "hsl(var(--primary-color))" : "hsl(var(--primary-color))"} />
+        <ScrollProgress color={"hsl(var(--primary-color))"} />
         <Navbar />
 
         {/* 히어로 섹션 */}
@@ -186,11 +183,7 @@ export default function PortfolioPage() {
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
-              className={`rounded-full px-6 py-2 text-white ${
-                isDark
-                  ? "bg-gradient-primary hover:shadow-lg hover:shadow-primary-color/20"
-                  : "bg-gradient-primary hover:shadow-lg hover:shadow-primary-color/20"
-              }`}
+              className={`rounded-full px-6 py-2 text-white bg-gradient-primary hover:shadow-lg hover:shadow-primary-color/20}`}
               onClick={() => {
                 const portfolioSection = document.getElementById("portfolio-section")
                 if (portfolioSection) {
@@ -208,15 +201,11 @@ export default function PortfolioPage() {
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
-                  className={`title-responsive font-bold tracking-tight ${
-                    isDark
-                      ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent"
-                      : "bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
-                  }`}
+                  className={`title-responsive font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
                   {t("portfolio.worksCollection")}
                 </h2>
-                <p className={`mt-4 text-responsive ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                <p className={`mt-4 text-responsive text-gray-500`}>
                   {t("portfolio.description")}
                 </p>
               </div>
@@ -237,13 +226,7 @@ export default function PortfolioPage() {
                     <Button
                       variant={selectedCategory === category ? "default" : "outline"}
                       className={`rounded-full px-4 py-2 text-sm font-medium ${
-                        selectedCategory === category
-                          ? isDark
-                            ? "bg-gradient-primary text-white"
-                            : "bg-gradient-primary text-white"
-                          : isDark
-                            ? "border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                            : "border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        selectedCategory === category ? "bg-gradient-primary text-white" : "border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                       }`}
                       onClick={() => setSelectedCategory(category)}
                     >
@@ -258,12 +241,11 @@ export default function PortfolioPage() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-            >
+              className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filteredItems.map((item, index) => (
                 <motion.div key={item.id} variants={itemVariants} className="hover-lift">
                   <InteractiveCard
-                    className={`shadow-lg transition-all duration-300 ${isDark ? "bg-card" : "bg-white"}`}
+                    className={`shadow-lg transition-all duration-300 bg-white`}
                     // backgroundImage={item.thumbnail}
                     backgroundOpacity={0.05}
                     enhanced={true}
@@ -291,9 +273,7 @@ export default function PortfolioPage() {
                       <div className="p-4 pt-2">
                         <div className="mb-0 flex items-center justify-between">
                           <span
-                            className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                              isDark ? "bg-gray-700 text-gray-200" : "bg-gray-100 text-gray-800"
-                            }`}
+                            className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-800}`}
                           >
                             {item.category}
                           </span>
@@ -301,19 +281,15 @@ export default function PortfolioPage() {
                             whileHover={{ scale: 1.1, rotate: 15 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => router.push(`/portfolio/${item.id}`)}
-                            className={`rounded-full p-1.5 transition-colors ${
-                              isDark
-                                ? "text-gray-500 hover:bg-gray-700 hover:text-gray-100"
-                                : "text-gray-400 hover:bg-gray-100 hover:text-gray-900"
-                            }`}
+                            className={`rounded-full p-1.5 transition-colors text-gray-400 hover:bg-gray-100 hover:text-gray-900}`}
                           >
                             <ArrowUpRight className="h-4 w-4" />
                           </motion.button>
                         </div>
-                        <h3 className={`text-xl font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
+                        <h3 className={`text-xl font-semibold text-gray-900`}>
                           {item.title}
                         </h3>
-                        <p className={`mt-2 text-sm ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                        <p className={`mt-2 text-sm text-gray-500`}>
                           {item.description}
                         </p>
                       </div>
@@ -329,7 +305,7 @@ export default function PortfolioPage() {
             <ParallaxHero imageUrl="/images/placeholder.svg?height=1080&width=1920" height="400px" overlayOpacity={0.6}>
               <MouseParallax>
                 <div className="max-w-3xl">
-                  <h2 className={`mb-4 text-3xl font-bold md:text-4xl ${isDark ? "text-enhanced" : ""}`}>
+                  <h2 className={`mb-4 text-3xl font-bold md:text-4xl}`}>
                     {t("portfolio.quote")}
                   </h2>
                   <p className="text-lg text-gray-200">- Steve Jobs</p>
@@ -345,11 +321,7 @@ export default function PortfolioPage() {
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
-                  className={`title-responsive font-bold tracking-tight ${
-                    isDark
-                      ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent"
-                      : "bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
-                  }`}
+                  className={`title-responsive font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
                   {t("portfolio.interviewTitle")}
                 </h2>
@@ -361,7 +333,7 @@ export default function PortfolioPage() {
                 {interviews.map((interview, index) => (
                 <StaggerItem>
                   <InteractiveCard key={interview.id}
-                    className={`h-full p-6 ${isDark ? "bg-card" : "bg-white"} hover-lift`}
+                    className={`h-full p-6 bg-white hover-lift`}
                     enhanced={true}
                   >
                     <div className="flex flex-col items-center text-center">
@@ -372,8 +344,8 @@ export default function PortfolioPage() {
                       >
                         <Newspaper className="h-5 w-5" />
                       </div>
-                      <h3 className={`mb-2 text-lg font-semibold ${isDark ? "text-white" : "text-gray-900"}`}><a href={interview.url} target="_blank">{interview.title}</a></h3>
-                      <p className={`text-sm font-semibold ${isDark ? "text-gray-400" : "text-gray-500"}`}>{interview.organization} • {interview.year}</p>
+                      <h3 className={`mb-2 text-lg font-semibold text-gray-900}`}><a href={interview.url} target="_blank">{interview.title}</a></h3>
+                      <p className={`text-sm font-semibold text-gray-500}`}>{interview.organization} • {interview.year}</p>
                       <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">🌐 <a href={interview.url} target="_blank">{interview.url}</a></p>
                     </div>
                   </InteractiveCard>

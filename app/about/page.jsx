@@ -2,14 +2,12 @@
 
 import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
 import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
 import ScrollReveal from "@/components/scroll-reveal"
 import InteractiveCard from "@/components/interactive-card"
 import ScrollProgress from "@/components/scroll-progress"
-import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
 
 // 경력 데이터
@@ -92,8 +90,6 @@ export default function AboutPage() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(true)
   const skillRefs = useRef([])
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
   const { t } = useLanguage()
 
   useEffect(() => {
@@ -144,9 +140,9 @@ export default function AboutPage() {
 
   return (
     <div
-        className={`min-h-screen transition-colors duration-500 ${isDark ? "bg-gradient-dark" : "bg-gradient-light"}`}
+        className={`min-h-screen transition-colors duration-500 bg-gradient-light}`}
       >
-      <ScrollProgress color={isDark ? "hsl(var(--primary-color))" : "hsl(var(--primary-color))"} />
+      <ScrollProgress color={"hsl(var(--primary-color))"} />
       <Navbar />
 
       {/* 히어로 섹션 */}
