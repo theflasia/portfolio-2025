@@ -100,6 +100,12 @@ export default function AboutPage() {
   }, [])
 
   useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault(); // 우클릭 방지
+    }
+    // document에 이벤트 리스너 추가
+    document.addEventListener("contextmenu", handleContextMenu);
+    
     // 스킬 바 애니메이션을 위한 Intersection Observer 설정
     if (!isLoading && skillRefs.current.length > 0) {
       const observer = new IntersectionObserver(

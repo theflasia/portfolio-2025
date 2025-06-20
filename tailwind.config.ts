@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			sans: ['var(--font-noto-sans-jp)'], // font-sans クラスに適用
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -86,21 +86,21 @@ const portfolioItems = [
     title: "(株)BIRDMAN[バードマン]",
     category: "WEB",
     thumbnail: "/images/portfolio-thumb-birdman.png?height=225&width=400",
-    description: "Flash Developer / Front-End EngineerとしてWEBコンテンツの制作を担当しました。",
+    description: "Flash Developer / Front-End EngineerとしてWebコンテンツの制作を担当しました。",
   },
   {
     id: "11",
     title: "(株)クリエイターズカンパニーコネクション",
     category: "WEB",
     thumbnail: "/images/portfolio-thumb-ccc.png?height=225&width=400",
-    description: "Web DesignerとしてWEBコンテンツの制作を担当しました。",
+    description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
   {
     id: "12",
     title: "WEDIT DESIGN",
     category: "WEB",
     thumbnail: "/images/portfolio-thumb-weditdesign.png?height=225&width=400",
-    description: "Web DesignerとしてWEBコンテンツの制作を担当しました。",
+    description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
 ]
 
@@ -134,6 +134,12 @@ export default function PortfolioPage() {
   const { isMobile, isTablet } = useBreakpoint()
 
   useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault(); // 우클릭 방지
+    }
+    // document에 이벤트 리스너 추가
+    document.addEventListener("contextmenu", handleContextMenu);
+
     if (selectedCategory === "全て" || selectedCategory === t("portfolio.categories.all")) {
       setFilteredItems(portfolioItems)
     } else {
@@ -331,8 +337,8 @@ export default function PortfolioPage() {
             <ScrollRevealMotion>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 {interviews.map((interview, index) => (
-                <StaggerItem>
-                  <InteractiveCard key={interview.id}
+                <StaggerItem key={interview.id}>
+                  <InteractiveCard
                     className={`h-full p-6 bg-white hover-lift`}
                     enhanced={true}
                   >
