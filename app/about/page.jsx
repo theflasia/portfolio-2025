@@ -145,15 +145,13 @@ export default function AboutPage() {
   }
 
   return (
-    <div
-        className={`min-h-screen transition-colors duration-500 bg-gradient-light}`}
-      >
+    <div className={`min-h-screen transition-colors duration-500 bg-gradient-light`}>
       <ScrollProgress color={"hsl(var(--primary-color))"} />
       <Navbar />
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl="/images/about-top.png?height=720&width=1280"
+        imageUrl="/images/about-top.png?height=600&width=1200"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
         height="30vh"

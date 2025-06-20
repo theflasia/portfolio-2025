@@ -173,9 +173,7 @@ export default function PortfolioPage() {
 
   return (
     <PageTransition>
-      <div
-        className={`min-h-screen transition-colors duration-500 bg-gradient-light`}
-      >
+      <div className={`min-h-screen transition-colors duration-500 bg-gradient-light`}>
         <ScrollProgress color={"hsl(var(--primary-color))"} />
         <Navbar />
 

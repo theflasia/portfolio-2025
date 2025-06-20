@@ -513,7 +513,7 @@ export default function PortfolioDetailPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-light from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <ScrollProgress color="var(--color-primary)" />
       <Navbar />
 
