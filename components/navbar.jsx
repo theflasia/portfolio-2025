@@ -150,8 +150,8 @@ export default function Navbar() {
           {/* 모바일 메뉴 버튼 */}
           <div className="flex md:hidden">
             <div className="flex items-center space-x-1">
-              <LanguageSwitcher />
-              <ThemeToggle />
+              {/* <LanguageSwitcher />
+              <ThemeToggle /> */}
               <button
                 type="button"
                 className={`inline-flex items-center justify-center rounded-md p-2 ${
@@ -209,7 +209,7 @@ export default function Navbar() {
             >
               {t("nav.about")}
             </Link>
-            <Link
+            {/* <Link
               href="/contact"
               className={`block rounded-md px-3 py-2 text-base font-medium ${
                 isActive("/contact")
@@ -223,7 +223,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.contact")}
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
       )}
