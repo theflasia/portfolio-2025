@@ -74,6 +74,7 @@ const portfolioItems = [
       {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
       {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
       {icon : <SimpleIcons.SiAutodeskmaya size="32px" className="mb-2" />, name :"Maya"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Substance 3D Designer"},
     ],
     duration: "3年~",
     client: "-",
@@ -96,7 +97,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般を担当",
       "プロモーションムービー制作にも部分的に関与",
     ],
-    videoUrl: "/movies/KonMari_720p.mp4",
+    videoUrl: "https://youtu.be/RmUHYBIz5bI",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -123,7 +124,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般",
       "外部の制作会社さんとの連携",
     ],
-    videoUrl: "/movies/HoneyWorks_720p.mp4",
+    videoUrl: "https://youtu.be/pk8VDl1fMBI",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -180,7 +181,7 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約1年）",
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
     ],
-    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
+    videoUrl: "https://youtu.be/OUWrKMLgqIA",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -207,7 +208,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般",
       "Particle Systemを使用したエフェクト制作全般",
     ],
-    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
+    videoUrl: "https://youtu.be/bH1mz65HMVs",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -234,7 +235,7 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約2年）",
       "ゲーム内の演出制作全般",
     ],
-    videoUrl: "/movies/WakeUpGirls_720p.mp4",
+    videoUrl: "https://youtu.be/EZhKmC8nu14",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -261,13 +262,7 @@ const portfolioItems = [
       "開発からプロジェクトに参画",
       "ゲーム内のUIアニメーション設計と制作全般",
     ],
-    videoUrl: "/movies/SkyLock_720p.mp4",
-    gallery: [
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
-      { src: "/images/placeholder.svg?height=600&width=800", alt: "", caption: "" },
-    ],
+    videoUrl: "https://youtu.be/c74T8BkOfU4",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -600,7 +595,7 @@ export default function PortfolioDetailPage({ params }) {
               controls
               pip
               width = {"100%"}
-              height = {"auto"}
+              height = {"100%"}
             />
             </div>
           </div>

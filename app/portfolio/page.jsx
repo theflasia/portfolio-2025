@@ -79,7 +79,7 @@ const portfolioItems = [
     title: "SKYLOCK(スカイロック)",
     category: "GAME",
     thumbnail: "/images/portfolio-thumb-skylock.png?height=225&width=400",
-    description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
+    description: "「SKYLOCK(スカイロック)」でゲーム内の演出制作を担当しました。",
   },
   {
     id: "10",
