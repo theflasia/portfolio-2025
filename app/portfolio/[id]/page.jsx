@@ -18,7 +18,7 @@ import * as BoxIcons from "react-icons/bi"
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
   {
-    id: 1,
+    id: 13,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
@@ -47,7 +47,7 @@ const portfolioItems = [
     url: "https://kj8-thegame.com/",
   },
   {
-    id: 2,
+    id: 12,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-tribenine.png?height=630&width=1280",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
@@ -82,7 +82,37 @@ const portfolioItems = [
     url: "https://tribenine.tokyo/",
   },
   {
-    id: 3,
+    id: 11,
+    title: "UnityのuGUI用Shader作成",
+    thumbnail: "/images/portfolio-top-shader.png?height=640&width=1080",
+    description: "UnityのuGUIに向けたShaderの作成について",
+    category: "GAME",
+    details: [
+      "Unityで、よりリッチなUI表現を実現するために、uGUI向けのShader作成に取り組んでいます。",
+      "現在はまだ比較的シンプルな表現のShaderが中心ですが、今後はスキルを高め、さらに高度で豊かな表現が可能なShader作成を目指しています。",
+    ],
+    process: [
+      "UnityのuGUIで使用できるShaderを作成",
+    ],
+    videoUrl: "",
+    gallery: [
+      { src: "/images/shader/Dissolve.gif?height=500&width=600", alt: "Dissolve", caption: "Dissolve" },
+      { src: "/images/shader/Glitch.gif?height=500&width=600", alt: "Glitch", caption: "Glitch" },
+      { src: "/images/shader/Glow.gif?height=500&width=600", alt: "Glow", caption: "Glow" },
+      { src: "/images/shader/Gradient.gif?height=500&width=600", alt: "Gradient", caption: "Gradient" },
+      { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "Shadow", caption: "Shadow" },
+      { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "Pixelate", caption: "Pixelate" },
+    ],
+    tools: [ 
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+    ],
+    duration: "2年~",
+    client: "-",
+    year: "2011",
+  },
+  {
+    id: 10,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-konmari.png?height=630&width=1200",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
@@ -110,7 +140,7 @@ const portfolioItems = [
     year: "2021",
   },
   {
-    id: 4,
+    id: 9,
     title: "HoneyWorks Premium Live",
     thumbnail: "/images/portfolio-top-honeyworks.png?height=720&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
@@ -136,8 +166,8 @@ const portfolioItems = [
     client: "-",
     year: "2020",
   },
-    {
-    id: 5,
+  {
+    id: 8,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-bonbonjourney.png?height=337&width=1010",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
@@ -165,8 +195,8 @@ const portfolioItems = [
     client: "-",
     year: "2018",
   },
-    {
-    id: 6,
+  {
+    id: 7,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-idolmastersidem.png?height=751&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
@@ -192,8 +222,8 @@ const portfolioItems = [
     client: "-",
     year: "2017",
   },
-    {
-    id: 7,
+  {
+    id: 6,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-summonsoulbattle.png?height=4376&width=835",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
@@ -219,8 +249,8 @@ const portfolioItems = [
     client: "-",
     year: "2016",
   },
-    {
-    id: 8,
+  {
+    id: 5,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-wakeupgirls.png?height=800&width=1280",
     description: "モバイル向けのゲーム開発における演出制作内容",
@@ -246,8 +276,8 @@ const portfolioItems = [
     client: "-",
     year: "2014",
   },
-    {
-    id: 9,
+  {
+    id: 4,
     title: "ゲームのUIアニメーション",
     thumbnail: "/images/portfolio-top-skylock.png?height=380&width=1010",
     description: "モバイル向けのゲーム開発における演出制作内容",
@@ -273,8 +303,8 @@ const portfolioItems = [
     client: "-",
     year: "2013",
   },
-    {
-    id: 10,
+  {
+    id: 3,
     title: "WEBサイト制作",
     thumbnail: "/images/portfolio-top-birdman.png?height=673&width=1280",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
@@ -320,8 +350,8 @@ const portfolioItems = [
     client: "-",
     year: "2011",
   },
-    {
-    id: 11,
+  {
+    id: 2,
     title: "WEBサイト制作",
     thumbnail: "/images/portfolio-top-ccc.png?height=675&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
@@ -369,8 +399,8 @@ const portfolioItems = [
     client: "-",
     year: "2011",
   },
-    {
-    id: 12,
+  {
+    id: 1,
     title: "WEBサイト制作",
     thumbnail: "/images/portfolio-top-weditdesign.png?height=630&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
@@ -564,6 +594,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal>
 
+        {portfolio.process && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-2 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="items-center justify-between gap-4">
@@ -583,6 +614,7 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </div>
         </ScrollReveal>
+        )}
 
         {portfolio.videoUrl && (
         <ScrollReveal>
@@ -605,8 +637,8 @@ export default function PortfolioDetailPage({ params }) {
         {/* 갤러리 섹션 */}
         {portfolio.gallery && (
           <ScrollReveal>
-            <div className="mt-12 mb-4 m-4">
-              <h2 className="mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2>
+            <div className="mt-8 mb-4 m-4">
+              <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{t("project.gallery")}</h2>
               <ImageGallery images={portfolio.gallery} />
             </div>
           </ScrollReveal>
