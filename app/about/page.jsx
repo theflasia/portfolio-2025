@@ -79,10 +79,11 @@ const interviews = [
 const skills = [
   { name: "UIアニメーション制作", level: 90, icon: <Palette className="h-5 w-5" /> },
   { name: "Unityを用いたモUI画面構築", level: 90, icon: <Smartphone className="h-5 w-5" /> },
-  { name: "AfterEffectsを用いた演出制作", level: 80, icon: <Palette className="h-5 w-5" /> },
-  { name: "C#を用いたのUIアニメーション制作", level: 75, icon: <Code className="h-5 w-5" /> },
-  { name: "HTML/CSS/JavaScriptコーディング", level: 70, icon: <Code className="h-5 w-5" /> },
-  { name: "Webデザイン", level: 60, icon: <Monitor className="h-5 w-5" /> },
+  { name: "AfterEffectsを用いた演出制作", level: 75, icon: <Palette className="h-5 w-5" /> },
+  { name: "C#を用いたのUIアニメーション制作", level: 60, icon: <Code className="h-5 w-5" /> },
+  { name: "UnityのuGUIに向けたShader作成", level: 50, icon: <Smartphone className="h-5 w-5" /> },
+  { name: "HTML/CSS/JavaScriptコーディング", level: 75, icon: <Code className="h-5 w-5" /> },
+  { name: "Webデザイン", level: 65, icon: <Monitor className="h-5 w-5" /> },
   // { name: "Adobe Creative Suite", level: 85, icon: <Palette className="h-5 w-5" /> },
 ]
 
