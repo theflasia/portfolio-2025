@@ -186,7 +186,7 @@ export default function AboutPage() {
               <div className="mb-6">
                 <h3 className="mb-3 text-2xl font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li className="text-sm">📧 <a href="theflasia@gmail.com">theflasia@gmail.com</a></li>
+                  <li className="text-sm">📧 <a href="mailto:theflasia@gmail.com">theflasia@gmail.com</a></li>
                   {/* <li>📱 010-1234-5678</li> */}
                   <li className="text-sm">🌐 <a href="http://theflasia.cafe24.com/">http://theflasia.cafe24.com/</a></li>
                 </ul>

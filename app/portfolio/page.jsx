@@ -205,7 +205,7 @@ export default function PortfolioPage() {
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
-                  className={`title-responsive font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
+                  className={`title-responsive font-light tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
                   {t("portfolio.worksCollection")}
                 </h2>
@@ -325,7 +325,7 @@ export default function PortfolioPage() {
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
-                  className={`title-responsive font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
+                  className={`title-responsive font-light tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
                   {t("portfolio.interviewTitle")}
                 </h2>
