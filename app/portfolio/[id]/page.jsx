@@ -66,7 +66,7 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    videoUrl: "/movies/TribeNine.mp4",
+    videoUrl: "https://youtu.be/w_1lwmlqwrQ",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -183,7 +183,7 @@ const portfolioItems = [
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
-    videoUrl: "/movies/BonBonJourney.mp4",
+    videoUrl: "https://youtu.be/0EcQVtHgut0",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
