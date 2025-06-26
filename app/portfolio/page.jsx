@@ -2,19 +2,20 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useLanguage } from "@/i18n"
+import { useBreakpoint } from "@/hooks/use-media-query"
 import { Play, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import ParallaxHero from "@/components/parallax-hero"
-import InteractiveCard from "@/components/interactive-card"
-import ScrollProgress from "@/components/scroll-progress"
-import MouseParallax from "@/components/mouse-parallax"
-import { useLanguage } from "@/i18n"
 import { motion } from "framer-motion"
 import { PageTransition, Stagger, StaggerItem, ScrollRevealMotion } from "@/components/animations"
-import OptimizedImage from "@/components/optimized-image"
-import { useBreakpoint } from "@/hooks/use-media-query"
 import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import InteractiveCard from "@/components/interactive-card"
+import Navbar from "@/components/navbar"
+import MouseParallax from "@/components/mouse-parallax"
+import OptimizedImage from "@/components/optimized-image"
+import ParallaxHero from "@/components/parallax-hero"
+import ParticleBackground from "@/components/particle-background"
+import ScrollProgress from "@/components/scroll-progress"
 
 // 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
 const portfolioItems = [
@@ -180,6 +181,7 @@ export default function PortfolioPage() {
 
   return (
     <PageTransition>
+      <ParticleBackground />
       <div className={`min-h-screen transition-colors duration-500 bg-gradient-light`}>
         <ScrollProgress color={"hsl(var(--primary-color))"} />
         <Navbar />

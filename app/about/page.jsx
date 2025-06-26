@@ -2,13 +2,14 @@
 
 import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useLanguage } from "@/i18n"
 import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import InteractiveCard from "@/components/interactive-card"
 import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
+import ParticleBackground from "@/components/particle-background"
 import ScrollReveal from "@/components/scroll-reveal"
-import InteractiveCard from "@/components/interactive-card"
 import ScrollProgress from "@/components/scroll-progress"
-import { useLanguage } from "@/i18n"
 
 // 경력 데이터
 const experiences = [
@@ -147,6 +148,7 @@ export default function AboutPage() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 bg-gradient-light`}>
+      <ParticleBackground />
       <ScrollProgress color={"hsl(var(--primary-color))"} />
       <Navbar />
 

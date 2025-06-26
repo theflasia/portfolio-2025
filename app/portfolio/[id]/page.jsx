@@ -2,16 +2,17 @@
 
 import { useEffect, useState, use } from "react"
 import { useRouter } from "next/navigation"
+import { useLanguage } from "@/i18n"
 import { ArrowLeft, Play, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import ParallaxHero from "@/components/parallax-hero"
-import ScrollReveal from "@/components/scroll-reveal"
 import InteractiveCard from "@/components/interactive-card"
 import ImageGallery from "@/components/image-gallery"
-import ScrollProgress from "@/components/scroll-progress"
-import { useLanguage } from "@/i18n"
+import Navbar from "@/components/navbar"
+import ParallaxHero from "@/components/parallax-hero"
+import ParticleBackground from "@/components/particle-background"
 import ReactPlayer from 'react-player'
+import ScrollReveal from "@/components/scroll-reveal"
+import ScrollProgress from "@/components/scroll-progress"
 import * as SimpleIcons from "react-icons/si"
 import * as BoxIcons from "react-icons/bi"
 
@@ -66,7 +67,7 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    videoUrl: "https://youtu.be/w_1lwmlqwrQ",
+    videoUrl: "https://youtu.be/Bb5DAItcr_E",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -289,8 +290,8 @@ const portfolioItems = [
       "高品質なビジュアルと快適なユーザー体験の両立に貢献できたことを誇りに思っています。",
     ],
     process: [
-      "開発からプロジェクトに参画",
-      "ゲーム内のUIアニメーション設計と制作全般",
+      "運用時期にプロジェクトに参画（約6ヶ月）",
+      "ゲーム内の演出制作全般",
     ],
     videoUrl: "https://youtu.be/c74T8BkOfU4",
     tools: [ 
@@ -539,6 +540,7 @@ export default function PortfolioDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gradient-light from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+      <ParticleBackground />
       <ScrollProgress color="var(--color-primary)" />
       <Navbar />
 
