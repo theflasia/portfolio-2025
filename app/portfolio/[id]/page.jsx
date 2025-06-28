@@ -306,7 +306,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "(株)BIRDMAN[バードマン]",
+    title: "BIRDMAN「バードマン」",
     thumbnail: "/images/portfolio-top-birdman.png?height=673&width=1280",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
@@ -353,7 +353,7 @@ const portfolioItems = [
   },
   {
     id: 2,
-    title: "(株)クリエイターズカンパニーコネクション",
+    title: "クリエイターズカンパニーコネクション",
     thumbnail: "/images/portfolio-top-ccc.png?height=675&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",

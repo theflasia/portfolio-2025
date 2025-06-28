@@ -91,14 +91,14 @@ const portfolioItems = [
   },
   {
     id: "3",
-    title: "(株)BIRDMAN[バードマン]",
+    title: "BIRDMAN「バードマン」",
     category: "WEB",
     thumbnail: "/images/portfolio-thumb-birdman.png?height=225&width=400",
     description: "Flash Developer / Front-End EngineerとしてWebコンテンツの制作を担当しました。",
   },
   {
     id: "2",
-    title: "(株)クリエイターズカンパニーコネクション",
+    title: "クリエイターズカンパニーコネクション",
     category: "WEB",
     thumbnail: "/images/portfolio-thumb-ccc.png?height=225&width=400",
     description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
