@@ -20,7 +20,7 @@ import * as BoxIcons from "react-icons/bi"
 const portfolioItems = [
   {
     id: 13,
-    title: "ゲームのUIアニメーション",
+    title: "新規プロジェクト",
     thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
@@ -49,7 +49,7 @@ const portfolioItems = [
   },
   {
     id: 12,
-    title: "ゲームのUIアニメーション",
+    title: "TRIBE NINE",
     thumbnail: "/images/portfolio-top-tribenine.png?height=630&width=1280",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
@@ -114,7 +114,7 @@ const portfolioItems = [
   },
   {
     id: 10,
-    title: "ゲームのUIアニメーション",
+    title: "KonMari Spark Joy!",
     thumbnail: "/images/portfolio-top-konmari.png?height=630&width=1200",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
@@ -169,7 +169,7 @@ const portfolioItems = [
   },
   {
     id: 8,
-    title: "ゲームのUIアニメーション",
+    title: "ONE PIECE ボン！ボン！ジャーニー!!",
     thumbnail: "/images/portfolio-top-bonbonjourney.png?height=337&width=1010",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
@@ -198,7 +198,7 @@ const portfolioItems = [
   },
   {
     id: 7,
-    title: "ゲームのUIアニメーション",
+    title: "アイドルマスター SideM LIVE ON ST@GE!",
     thumbnail: "/images/portfolio-top-idolmastersidem.png?height=751&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
@@ -225,7 +225,7 @@ const portfolioItems = [
   },
   {
     id: 6,
-    title: "ゲームのUIアニメーション",
+    title: "サモンソウルバトル",
     thumbnail: "/images/portfolio-top-summonsoulbattle.png?height=4376&width=835",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
@@ -252,7 +252,7 @@ const portfolioItems = [
   },
   {
     id: 5,
-    title: "ゲームのUIアニメーション",
+    title: "Wake Up, Girls! ステージの天使",
     thumbnail: "/images/portfolio-top-wakeupgirls.png?height=800&width=1280",
     description: "モバイル向けのゲーム開発における演出制作内容",
     category: "モバイルゲーム",
@@ -279,7 +279,7 @@ const portfolioItems = [
   },
   {
     id: 4,
-    title: "ゲームのUIアニメーション",
+    title: "SKYLOCK(スカイロック)",
     thumbnail: "/images/portfolio-top-skylock.png?height=380&width=1010",
     description: "モバイル向けのゲーム開発における演出制作内容",
     category: "モバイルゲーム",
@@ -306,7 +306,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "WEBサイト制作",
+    title: "(株)BIRDMAN[バードマン]",
     thumbnail: "/images/portfolio-top-birdman.png?height=673&width=1280",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
@@ -353,7 +353,7 @@ const portfolioItems = [
   },
   {
     id: 2,
-    title: "WEBサイト制作",
+    title: "(株)クリエイターズカンパニーコネクション",
     thumbnail: "/images/portfolio-top-ccc.png?height=675&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
@@ -402,7 +402,7 @@ const portfolioItems = [
   },
   {
     id: 1,
-    title: "WEBサイト制作",
+    title: "WEDIT DESIGN",
     thumbnail: "/images/portfolio-top-weditdesign.png?height=630&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
