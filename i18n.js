@@ -216,7 +216,7 @@ const translations = {
       subtitle: "これまでに携わってきた制作実績をご紹介します。",
       viewWorks: "作品と業務内容を見る",
       worksCollection: "WORKS",
-      description: "様々なプロジェクトで制作を担当した作品と業務内容について紹介します。",
+      description: "様々なプロジェクトで制作を担当した制作実績と業務内容について紹介します。",
       categories: {
         all: "全て",
         game: "GAME",
