@@ -29,10 +29,10 @@ const portfolioItems = [
     ],
     process: [
       "開発中期からプロジェクトに参画（約6ヶ月）",
-      "ゲーム内のUIアニメーションの制作全般とディレクションを担当",
+      "ゲーム内のUIアニメーション制作全般とディレクション業務を担当",
+      "UnityのuGUIを用いたUIの実装と快適にプレイできるようにUIの最適化と軽量化",
       "セクションのリードとして体制管理と進行管理",
       "外部の制作会社さんとの連携",
-      "より快適にプレイできるようにUIの最適化",
     ],
     videoUrl: "",
     tools: [ 
@@ -61,9 +61,11 @@ const portfolioItems = [
     process: [
       "開発初期からプロジェクトに参画（約3年）",
       "ゲーム内のUIアニメーション設計とレギュレーション策定",
-      "ゲーム内のUIアニメーション制作全般とディレクションを担当",
+      "ゲーム内のUIアニメーション制作全般とディレクション業務を担当",
+      "UnityのC#によるUIアニメーション制御",
+      "UnityのuGUIを用いたUIの実装と快適にプレイできるようにUIの最適化と軽量化",
+      "UI表現を目的としてUnityのShader Graphを使用したShader作成",
       "セクションのリードとして体制管理と進行管理",
-      "UIやUIアニメーションの最適化と軽量化",
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
@@ -89,11 +91,11 @@ const portfolioItems = [
     description: "UnityのuGUIに向けたShaderの作成について",
     category: "GAME",
     details: [
-      "Unityで、よりリッチなUI表現を実現するために、uGUI向けのShader作成に取り組んでいます。",
+      "Unityで、よりリッチなUI表現を実現するために、uGUI向けのShader学習と作成に取り組んでいます。",
       "現在はまだ比較的シンプルな表現のShaderが中心ですが、今後はスキルを高め、さらに高度で豊かな表現が可能なShader作成を目指しています。",
     ],
     process: [
-      "UnityのuGUIで使用できるShaderを作成",
+      "UnityのuGUIで使用できるShaderを作成（ShaderLab）",
     ],
     videoUrl: "",
     gallery: [
@@ -153,6 +155,7 @@ const portfolioItems = [
     process: [
       "開発中盤からプロジェクトに参画（約6ヶ月）",
       "ゲーム内のUIアニメーション設計と制作全般",
+      "UnityのC#によるUIアニメーション制御",
       "外部の制作会社さんとの連携",
     ],
     videoUrl: "https://youtu.be/pk8VDl1fMBI",
@@ -181,6 +184,8 @@ const portfolioItems = [
     process: [
       "開発から運用までプロジェクトに参画（約2年半）",
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
+      "UnityのC#によるUIアニメーション制御",
+      "UnityのuGUIを用いたUIの実装と快適にプレイできるようにUIの最適化と軽量化",
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
@@ -211,6 +216,8 @@ const portfolioItems = [
     process: [
       "開発から運用までプロジェクトに参画（約1年）",
       "ゲーム内のUIアニメーション設計と制作全般・ディレクションを担当",
+      "UnityのC#によるUIアニメーション制御",
+      "UnityのuGUIを用いたUIの実装",
     ],
     videoUrl: "https://youtu.be/OUWrKMLgqIA",
     tools: [ 
@@ -238,6 +245,7 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約1年）",
       "ゲーム内のUIアニメーション設計と制作全般",
       "Particle Systemを使用したエフェクト制作全般",
+      "UnityのNGUIを用いたUIの実装",
     ],
     videoUrl: "https://youtu.be/bH1mz65HMVs",
     tools: [ 
