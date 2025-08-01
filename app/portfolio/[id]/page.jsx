@@ -114,6 +114,7 @@ const portfolioItems = [
       { src: "/images/shader/Gradient.gif?height=500&width=600", alt: "Gradient", caption: "Gradient" },
       { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "Shadow", caption: "Shadow" },
       { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "Pixelate", caption: "Pixelate" },
+      { src: "/images/shader/HalfTone.gif?height=500&width=600", alt: "HalfTone", caption: "HalfTone" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},

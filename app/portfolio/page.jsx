@@ -331,7 +331,7 @@ export default function PortfolioPage() {
             </ScrollRevealMotion>
 
             <ScrollRevealMotion>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="mb-10 grid grid-cols-1 gap-8 md:grid-cols-2">
                 {interviews.map((interview, index) => (
                 <StaggerItem key={interview.id}>
                   <InteractiveCard
