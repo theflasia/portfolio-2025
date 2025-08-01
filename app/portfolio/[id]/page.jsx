@@ -69,7 +69,7 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    videoUrl: "https://youtu.be/Bb5DAItcr_E",
+    videoUrl: "https://youtu.be/MAc9YG05rNM",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -130,7 +130,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般を担当",
       "プロモーションムービー制作にも部分的に関与",
     ],
-    videoUrl: "https://youtu.be/RmUHYBIz5bI",
+    videoUrl: "https://youtu.be/UbhDj6wOsqo",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -158,7 +158,7 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "外部の制作会社さんとの連携",
     ],
-    videoUrl: "https://youtu.be/pk8VDl1fMBI",
+    videoUrl: "https://youtu.be/Utsz-ajBvUw",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -189,7 +189,7 @@ const portfolioItems = [
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
-    videoUrl: "https://youtu.be/0EcQVtHgut0",
+    videoUrl: "https://youtu.be/HfFRJdeWR_k",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -219,7 +219,7 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "UnityのuGUIを用いたUIの実装",
     ],
-    videoUrl: "https://youtu.be/OUWrKMLgqIA",
+    videoUrl: "https://youtu.be/YzFR1-4qvr8",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -247,7 +247,7 @@ const portfolioItems = [
       "Particle Systemを使用したエフェクト制作全般",
       "UnityのNGUIを用いたUIの実装",
     ],
-    videoUrl: "https://youtu.be/bH1mz65HMVs",
+    videoUrl: "https://youtu.be/6Y4d1JH939I",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -274,7 +274,7 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約2年）",
       "ゲーム内の演出制作全般",
     ],
-    videoUrl: "https://youtu.be/EZhKmC8nu14",
+    videoUrl: "https://youtu.be/XNOXl7gE2_c",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -301,7 +301,7 @@ const portfolioItems = [
       "運用時期にプロジェクトに参画（約6ヶ月）",
       "ゲーム内の演出制作全般",
     ],
-    videoUrl: "https://youtu.be/c74T8BkOfU4",
+    videoUrl: "https://youtu.be/kPCtgFWWzhM",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -589,6 +589,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal> */}
 
+        {(portfolio.details.length > 0) && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-2 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="items-center justify-between gap-4">
@@ -603,6 +604,7 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </div>
         </ScrollReveal>
+        )}
 
         {portfolio.process && (
         <ScrollReveal>
