@@ -23,7 +23,7 @@ const portfolioItems = [
     id: "13",
     title: "新規プロジェクト",
     category: "GAME",
-    thumbnail: "/images/portfolio-thumb-tmp.png?height=225&width=400",
+    thumbnail: "/images/portfolio-thumb-newgame.png?height=225&width=400",
     description: "新規開発プロジェクトでUIアニメーションのセクションリードとして制作を担当しています。",
   },
   {

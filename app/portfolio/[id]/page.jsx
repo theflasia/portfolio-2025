@@ -22,7 +22,7 @@ const portfolioItems = [
     id: 13,
     title: "新規プロジェクト",
     // thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
-    thumbnail: "/images/page-top-bg.png?height=630&width=1200",
+    thumbnail: "/images/page-top-newgame.png?height=630&width=1200",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     overviewTitle: "プロジェクトの紹介",
