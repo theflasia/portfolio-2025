@@ -74,9 +74,9 @@ export default function Navbar() {
             <Link href="/portfolio">
               <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
                 isDark ? "text-white" : "text-gray-900"
-              }`}>Portfolio</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 ${
-                isDark ? "text-white" : "text-gray-900"
-              }`}> : Shin JeongSoon</span>
+              }`}>Shin JeongSoon</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 ${
+                isDark ? "text-white" : "text-gray-600"
+              }`}>'s Portfolio</span>
             </Link>
           </motion.div>
 

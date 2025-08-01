@@ -17,13 +17,13 @@ import ParallaxHero from "@/components/parallax-hero"
 import ParticleBackground from "@/components/particle-background"
 import ScrollProgress from "@/components/scroll-progress"
 
-// 포트폴리오 데이터 (실제로는 API에서 가져올 수 있습니다)
+// 포트폴리오 데이터
 const portfolioItems = [
   {
     id: "13",
     title: "新規プロジェクト",
     category: "GAME",
-    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=225&width=400",
+    thumbnail: "/images/portfolio-thumb-tmp.png?height=225&width=400",
     description: "新規開発プロジェクトでUIアニメーションのセクションリードとして制作を担当しています。",
   },
   {
@@ -112,7 +112,7 @@ const portfolioItems = [
   },
 ]
 
-// 인터뷰
+// 인터뷰 데이터
 const interviews = [
   {
     id: "1",
@@ -191,7 +191,7 @@ export default function PortfolioPage() {
           imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="30vh"
+          height="40vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -216,10 +216,10 @@ export default function PortfolioPage() {
                 <h2
                   className={`title-responsive font-light tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
-                  {t("portfolio.worksCollection")}
+                  {t("portfolio.worksTitle")}
                 </h2>
-                <p className={`mt-4 text-responsive text-gray-500`}>
-                  {t("portfolio.description")}
+                <p className={`mt-2 text-xl font-light tracking-tight text-gray-500`}>
+                  {t("portfolio.worksDescription")}
                 </p>
               </div>
             </ScrollRevealMotion>
@@ -313,20 +313,6 @@ export default function PortfolioPage() {
             </motion.div>
           </div>
 
-          {/* 중간 배경 이미지 섹션 */}
-          {/* <div className="my-20">
-            <ParallaxHero imageUrl="/images/placeholder.svg?height=1080&width=1920" height="400px" overlayOpacity={0.6}>
-              <MouseParallax>
-                <div className="max-w-3xl">
-                  <h2 className={`mb-4 text-3xl font-bold md:text-4xl}`}>
-                    {t("portfolio.quote")}
-                  </h2>
-                  <p className="text-lg text-gray-200">- Steve Jobs</p>
-                </div>
-              </MouseParallax>
-            </ParallaxHero>
-          </div> */}
-
           <hr className="mt-12" style={{ borderTop: `3px dotted #c1c2c3` }}></hr>
           
           {/* 인터뷰 섹션 */}
@@ -338,6 +324,9 @@ export default function PortfolioPage() {
                 >
                   {t("portfolio.interviewTitle")}
                 </h2>
+                <p className={`mt-2 text-xl font-light tracking-tight text-gray-500`}>
+                  {t("portfolio.interviewDescription")}
+                </p>
               </div>
             </ScrollRevealMotion>
 

@@ -8,12 +8,12 @@ export default function ImageGallery({ images = [] }) {
 
   const openImage = (image) => {
     setSelectedImage(image)
-    document.body.style.overflow = "hidden" // 스크롤 방지
+    // document.body.style.overflow = "hidden" // 스크롤 방지
   }
 
   const closeImage = () => {
     setSelectedImage(null)
-    document.body.style.overflow = "auto" // 스크롤 복원
+    // document.body.style.overflow = "auto" // 스크롤 복원
   }
 
   return (
@@ -37,11 +37,11 @@ export default function ImageGallery({ images = [] }) {
       {/* 확대된 이미지 모달 */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4 animate-fade-in"
+          className="ml-4 mr-4 fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 animate-fade-in rounded-xl shadow-lg"
           onClick={closeImage}
         >
-          <button className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-transform hover:scale-110 active:scale-90">
-            <X className="h-6 w-6" />
+          <button className="absolute right-4 top-4 rounded-full bg-white/25 p-2 text-white backdrop-blur-sm transition-transform hover:scale-110 active:scale-90">
+            <X className="h-8 w-8" />
           </button>
 
           <div className="relative max-h-[90vh] max-w-[90vw] animate-scale-in" onClick={(e) => e.stopPropagation()}>
@@ -50,7 +50,7 @@ export default function ImageGallery({ images = [] }) {
               alt={selectedImage.alt || "Enlarged image"}
               className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain"
             />
-            {selectedImage.caption && <p className="mt-2 text-center text-white">{selectedImage.caption}</p>}
+            {selectedImage.caption && <p className="mt-2 text-sm text-center text-gray-300">{selectedImage.caption}</p>}
           </div>
         </div>
       )}

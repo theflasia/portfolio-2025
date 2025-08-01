@@ -205,18 +205,18 @@ const translations = {
   ja: {
     // ナビゲーション
     nav: {
-      portfolio: "Portfolio", // ポートフォリオ
+      portfolio: "Works", // ポートフォリオ
       about: "About", // 紹介
       contact: "Contact", // お問い合わせ
       theme: "テーマ変更",
     },
     // ポートフォリオページ
     portfolio: {
-      title: "PORTFOLIO",
-      subtitle: "これまでに携わってきた制作実績をご紹介します。",
+      title: "PORTFOLIO : WORKS",
+      subtitle: "これまでに携わってきた制作実績について",
       viewWorks: "作品と業務内容を見る",
-      worksCollection: "WORKS",
-      description: "様々なプロジェクトで制作を担当した制作実績と業務内容について紹介します。",
+      worksTitle: "WORKS",
+      worksDescription: "様々なプロジェクトで制作を担当した制作実績と業務内容について紹介します。",
       categories: {
         all: "全て",
         game: "GAME",
@@ -225,6 +225,7 @@ const translations = {
       },
       viewProject: "詳細内容を見る",
       interviewTitle: "INTERVIEW",
+      interviewDescription: "専門誌や社内メディアで紹介されたインタビュー記事をご紹介します。",
       userCentric: "ユーザー中心",
       userCentricDesc: "すべてのデザイン決定は、ユーザーのニーズと経験を最優先に考慮します。",
       accessibility: "アクセシビリティ",
@@ -249,15 +250,14 @@ const translations = {
       details: "プロジェクト詳細",
       process: "担当業務内容",
       tools: "使用ツール",
-      gallery: "プロジェクトギャラリー",
       visitWebsite: "公式サイトへ",
     },
     // 紹介ページ
     about: {
-      title: "ABOUT ME",
+      title: "PORTFOLIO : ABOUT ME",
       subtitle: "簡単な自己紹介と経歴やスキルについて",
       name: "申政淳",
-      job: "UIアニメーションデザイナー",
+      job: "UIアニメーションデザイナー / インタラクティブデザイナー",
       intro: "自己紹介",
       introText:[
         "私はこれまで、複数のプロジェクトにおいてUIアニメーションセクションのリードとして、ディレクション、マネジメント、進行管理を担当してまいりました。長年の経験と培ってきた技術力を活かし、プロジェクト全体の品質向上に貢献できたと自負しております。また、Webデザイナーおよびフロントエンドエンジニアとしての経験もあり、ゲーム開発現場ではエンジニアとの円滑なコミュニケーションや、実装レベルでのサポートも可能です。",
