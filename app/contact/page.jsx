@@ -27,7 +27,6 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const { theme } = useTheme()
-  const isDark = theme === "dark"
   const { t } = useLanguage()
 
   useEffect(() => {

@@ -16,13 +16,7 @@ export default function InteractiveCard({
   const [rotateY, setRotateY] = useState(0)
   const [scale, setScale] = useState(1)
   const [glarePosition, setGlarePosition] = useState({ x: 0, y: 0 })
-  const { theme } = useTheme()
   const cardRef = useRef(null)
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    setIsDark(theme === "dark")
-  }, [theme])
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return
@@ -85,10 +79,10 @@ export default function InteractiveCard({
 
       {glareEffect && (
         <div
-          className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-white to-transparent opacity-0 transition-opacity duration-300 ${isDark ? "dark-glare" : ""}`}
+          className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-white to-transparent opacity-0 transition-opacity duration-300`}
           style={{
             opacity:
-              Math.sqrt(glarePosition.x * glarePosition.x + glarePosition.y * glarePosition.y) * (isDark ? 0.4 : 0.3),
+              Math.sqrt(glarePosition.x * glarePosition.x + glarePosition.y * glarePosition.y) * 0.3,
             transform: `rotate(${Math.atan2(glarePosition.y, glarePosition.x) * (180 / Math.PI)}deg)`,
           }}
         />

@@ -12,8 +12,6 @@ export default function ParallaxHero({
   children,
 }) {
   const parallaxRef = useRef(null)
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +24,6 @@ export default function ParallaxHero({
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // 다크 모드에서 오버레이 조정
-  const adjustedOpacity = isDark ? overlayOpacity + 0.1 : overlayOpacity
-
   return (
     <div className="relative overflow-hidden" style={{ height }}>
       {/* 패럴랙스 배경 이미지 */}
@@ -39,21 +34,21 @@ export default function ParallaxHero({
           backgroundImage: `url(${imageUrl})`,
           height: `calc(${height} + 200px)`,
           top: "-100px",
-          filter: isDark ? "brightness(0.85)" : "none",
+          filter: "none",
         }}
       />
 
       {/* 오버레이 */}
       <div
         className={`absolute inset-0 bg-black transition-opacity duration-500`}
-        style={{ opacity: adjustedOpacity }}
+        style={{ opacity: overlayOpacity }}
       />
 
       {/* 콘텐츠 */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
         {title && (
           <h1
-            className={`animate-fade-in-down mb-4 text-4xl font-bold md:text-5xl lg:text-6xl ${isDark ? "text-enhanced" : ""}`}
+            className={`animate-fade-in-down mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-50/80`}
           >
             {title}
           </h1>
@@ -61,7 +56,7 @@ export default function ParallaxHero({
 
         {subtitle && (
           <p
-            className={`animate-fade-in-down-delay mb-8 max-w-2xl text-lg text-gray-200 md:text-xl ${isDark ? "text-enhanced" : ""}`}
+            className={`animate-fade-in-down-delay mb-8 max-w-2xl text-lg font-light text-gray-200/80 md:text-xl`}
           >
             {subtitle}
           </p>

@@ -17,7 +17,6 @@ export default function Navbar() {
   const router = useRouter()
   const pathname = usePathname()
   const { theme } = useTheme()
-  const isDark = theme === "dark"
   const { t } = useLanguage()
   const { isMobile } = useBreakpoint()
 
@@ -64,19 +63,13 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
       variants={navVariants}
-      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
-        isDark ? "border-gray-800 bg-gray-900/90 backdrop-blur-md" : "border-gray-100 bg-white/90 backdrop-blur-md"
-      } ${scrolled ? "shadow-sm" : ""}`}
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${"border-gray-100 bg-white/90 backdrop-blur-md"} ${scrolled ? "shadow-sm" : ""}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <motion.div variants={itemVariants} className="flex items-center">
             <Link href="/portfolio">
-              <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-                isDark ? "text-white" : "text-gray-900"
-              }`}>Shin JeongSoon</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 ${
-                isDark ? "text-white" : "text-gray-600"
-              }`}>'s Portfolio</span>
+              <span className={`text-xl font-bold tracking-tight transition-colors duration-300 text-gray-900`}>Shin JeongSoon</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 text-gray-600`}>'s Portfolio</span>
             </Link>
           </motion.div>
 
@@ -88,12 +81,8 @@ export default function Navbar() {
                   href="/portfolio"
                   className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                     isActive("/portfolio")
-                      ? isDark
-                        ? "text-gray-100"
-                        : "text-gray-900"
-                      : isDark
-                        ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      ? "text-gray-900"
+                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                   }`}
                 >
                   {t("nav.portfolio")}
@@ -104,35 +93,26 @@ export default function Navbar() {
                   href="/about"
                   className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                     isActive("/about")
-                      ? isDark
-                        ? "text-gray-100"
-                        : "text-gray-900"
-                      : isDark
-                        ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      ? "text-gray-900"
+                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                   }`}
                 >
                   {t("nav.about")}
                 </Link>
               </motion.div>
-              {/*
-              <motion.div variants={itemVariants}>
+              
+              {/* <motion.div variants={itemVariants}>
                 <Link
                   href="/contact"
                   className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                     isActive("/contact")
-                      ? isDark
-                        ? "text-gray-100"
-                        : "text-gray-900"
-                      : isDark
-                        ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      ? "text-gray-900"
+                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                   }`}
                 >
                   {t("nav.contact")}
                 </Link>
-              </motion.div>
-              */}
+              </motion.div> */}
               
               {/*
               <motion.div variants={itemVariants}>
@@ -154,11 +134,7 @@ export default function Navbar() {
               <ThemeToggle /> */}
               <button
                 type="button"
-                className={`inline-flex items-center justify-center rounded-md p-2 ${
-                  isDark
-                    ? "text-gray-400 hover:bg-gray-800 hover:text-gray-300"
-                    : "text-gray-400 hover:bg-gray-100 hover:text-gray-500"
-                }`}
+                className={`inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500"`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <span className="sr-only">메뉴 열기</span>
@@ -183,12 +159,8 @@ export default function Navbar() {
               href="/portfolio"
               className={`block rounded-md px-3 py-2 text-base font-medium ${
                 isActive("/portfolio")
-                  ? isDark
-                    ? "text-gray-100"
-                    : "text-gray-900"
-                  : isDark
-                    ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                  ? "text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -198,12 +170,8 @@ export default function Navbar() {
               href="/about"
               className={`block rounded-md px-3 py-2 text-base font-medium ${
                 isActive("/about")
-                  ? isDark
-                    ? "text-gray-100"
-                    : "text-gray-900"
-                  : isDark
-                    ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                  ? "text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -213,12 +181,8 @@ export default function Navbar() {
               href="/contact"
               className={`block rounded-md px-3 py-2 text-base font-medium ${
                 isActive("/contact")
-                  ? isDark
-                    ? "text-gray-100"
-                    : "text-gray-900"
-                  : isDark
-                    ? "text-gray-400 hover:bg-gray-800 hover:text-gray-100"
-                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                  ? "text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
