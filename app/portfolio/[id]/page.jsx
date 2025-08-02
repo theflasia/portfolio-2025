@@ -77,6 +77,15 @@ const portfolioItems = [
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     videoUrl: "https://youtu.be/MAc9YG05rNM",
+    galleryTitle: "制作のスナップショット",
+    galleryDetailView: "false",
+    gallery: [
+      { src: "/images/tribenine/tribeninve_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
+      { src: "/images/tribenine/tribeninve_ui_anim_01.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribeninve_ui_anim_02.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribeninve_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribeninve_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作成" },
+    ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
@@ -107,14 +116,15 @@ const portfolioItems = [
     ],
     videoUrl: "",
     galleryTitle: "制作したShaderの実例",
+    galleryDetailView: "true",
     gallery: [
-      { src: "/images/shader/Dissolve.gif?height=500&width=600", alt: "Dissolve", caption: "Dissolve" },
-      { src: "/images/shader/Glitch.gif?height=500&width=600", alt: "Glitch", caption: "Glitch" },
-      { src: "/images/shader/Glow.gif?height=500&width=600", alt: "Glow", caption: "Glow" },
-      { src: "/images/shader/Gradient.gif?height=500&width=600", alt: "Gradient", caption: "Gradient" },
-      { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "Shadow", caption: "Shadow" },
-      { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "Pixelate", caption: "Pixelate" },
       { src: "/images/shader/HalfTone.gif?height=500&width=600", alt: "HalfTone", caption: "HalfTone" },
+      { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "Pixelate", caption: "Pixelate" },
+      { src: "/images/shader/Gradient.gif?height=500&width=600", alt: "Gradient", caption: "Gradient" },
+      { src: "/images/shader/Glow.gif?height=500&width=600", alt: "Glow", caption: "Glow" },
+      { src: "/images/shader/Glitch.gif?height=500&width=600", alt: "Glitch", caption: "Glitch" },
+      { src: "/images/shader/Dissolve.gif?height=500&width=600", alt: "Dissolve", caption: "Dissolve" },
+      { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "Shadow", caption: "Shadow" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
@@ -358,6 +368,7 @@ const portfolioItems = [
     ],
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
+    galleryDetailView: "true",
     gallery: [
       { src: "/images/birdman/lovemusic.png?height=400&width=590", alt: "LOVE MUSIC", caption: "LOVE MUSIC | Portal Audio Player Walkman | Sony" },
       { src: "/images/birdman/nap.png?height=484&width=580", alt: "Hiroshi Nakamura & NAP Co.,Ltd.", caption: "Hiroshi Nakamura & NAP Co.,Ltd." },
@@ -407,6 +418,7 @@ const portfolioItems = [
     ],
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
+    galleryDetailView: "true",
     gallery: [
       { src: "/images/ccc/csbooks.png?height=475&width=560", alt: "C's BOOKS Website Renewal", caption: "C's BOOKS" },
       { src: "/images/ccc/hotel_manzoku.png?height=440&width=560", alt: "HOTEL MAN-ZOKU", caption: "HOTEL MAN-ZOKU" },
@@ -460,6 +472,7 @@ const portfolioItems = [
     ],
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
+    galleryDetailView: "true",
     gallery: [
       { src: "/images/weditdesign/kerasys.jpg?width=480&height=472", alt: "Kerasys", caption: "Kerasys Online Promotion" },
       { src: "/images/weditdesign/rfid.jpg?width=480&height=373", alt: "RFid", caption: "PIFF RFiD Service Experience" },
@@ -687,7 +700,7 @@ export default function PortfolioDetailPage({ params }) {
             <div className="m-4 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
               {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{portfolio.galleryTitle}</h2> */}
               <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.galleryTitle}</h2>
-              <ImageGallery images={portfolio.gallery} />
+              <ImageGallery images={portfolio.gallery} isDetailView = {portfolio.galleryDetailView} />
             </div>
           </ScrollReveal>
         )}

@@ -3,12 +3,14 @@
 import { useState } from "react"
 import { X } from "lucide-react"
 
-export default function ImageGallery({ images = [] }) {
+export default function ImageGallery({ images = [], isDetailView = "true" }) {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const openImage = (image) => {
-    setSelectedImage(image)
-    // document.body.style.overflow = "hidden" // 스크롤 방지
+    if(isDetailView === "true") {
+      setSelectedImage(image)
+      // document.body.style.overflow = "hidden" // 스크롤 방지
+    }
   }
 
   const closeImage = () => {
