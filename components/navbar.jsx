@@ -1,12 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { LanguageSwitcher } from "@/components/language-switcher"
-import { useTheme } from "next-themes"
 import { useLanguage } from "@/i18n"
 import { motion } from "framer-motion"
 import { useBreakpoint } from "@/hooks/use-media-query"
@@ -14,9 +11,7 @@ import { useBreakpoint } from "@/hooks/use-media-query"
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
-  const { theme } = useTheme()
   const { t } = useLanguage()
   const { isMobile } = useBreakpoint()
 

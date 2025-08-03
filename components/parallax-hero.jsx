@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef, useEffect } from "react"
-import { useTheme } from "next-themes"
 
 export default function ParallaxHero({
   imageUrl = "/placeholder.svg?height=1080&width=1920",

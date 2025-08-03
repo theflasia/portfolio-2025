@@ -1,7 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
-import { useTheme } from "next-themes"
+import { useState, useRef } from "react"
 
 export default function InteractiveCard({
   children,
