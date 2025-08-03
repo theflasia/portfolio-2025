@@ -79,6 +79,7 @@ const portfolioItems = [
     videoUrl: "https://youtu.be/MAc9YG05rNM",
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
+    galleryGrids: "sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5",
     gallery: [
       { src: "/images/tribenine/tribeninve_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
       { src: "/images/tribenine/tribeninve_ui_anim_01.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
@@ -117,6 +118,7 @@ const portfolioItems = [
     videoUrl: "",
     galleryTitle: "制作したShaderの実例",
     galleryDetailView: "true",
+    galleryGrids: "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3",
     gallery: [
       { src: "/images/shader/HalfTone.gif?height=500&width=600", alt: "HalfTone", caption: "HalfTone" },
       { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "Pixelate", caption: "Pixelate" },
@@ -698,7 +700,7 @@ export default function PortfolioDetailPage({ params }) {
             <div className="m-4 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
               {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{portfolio.galleryTitle}</h2> */}
               <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.galleryTitle}</h2>
-              <ImageGallery images={portfolio.gallery} isDetailView = {portfolio.galleryDetailView} />
+              <ImageGallery images={portfolio.gallery} isDetailView = {portfolio.galleryDetailView} grids={portfolio.galleryGrids} />
             </div>
           </ScrollReveal>
         )}
