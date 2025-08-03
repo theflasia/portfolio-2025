@@ -139,7 +139,7 @@ export default function AboutPage() {
         imageUrl="/images/about-top.png?height=600&width=1200"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
-        height="40vh"
+        height="35vh"
         overlayOpacity={0.7}
       />
 

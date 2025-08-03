@@ -601,15 +601,13 @@ export default function PortfolioDetailPage({ params }) {
       <Navbar />
 
       {/* 히어로 섹션 */}
-      <ParallaxHero imageUrl={portfolio.thumbnail} height="40vh" overlayOpacity={0.7}>
-        <div className="animate-fade-in-down text-center">
-          <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
-            {portfolio.category}
-          </span>
-          <h1 className="mt-4 text-4xl font-bold md:text-5xl lg:text-6xl">{portfolio.title}</h1>
-          <p className="mt-4 text-xl text-gray-200">{portfolio.description}</p>
-        </div>
-      </ParallaxHero>
+      <ParallaxHero
+        imageUrl={portfolio.thumbnail}
+        title={portfolio.title}
+        subtitle={portfolio.description}
+        height="35vh"
+        overlayOpacity={0.7}
+      ></ParallaxHero>
 
       <main className="container relative mx-auto px-4 py-8">
         <ScrollReveal>
